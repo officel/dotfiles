@@ -1,4 +1,4 @@
-dotfiles
+Dot Files
 ========
 
-my public dot files
+My public dot files.
