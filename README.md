@@ -12,8 +12,8 @@ My public dot files.
 usage
 -----
 
-git clone https://github.com/officel/dotfiles.git .dotfiles
-ln -s .dotfiles/.tmux.conf .tmux.conf
-cp -p .dotfiles/.my.cnf .my.cnf
-echo ". .dotfiles/cheat/env.bash" >> .bashrc
-alias c=cheat
+> git clone https://github.com/officel/dotfiles.git .dotfiles
+> ln -s .dotfiles/.tmux.conf .tmux.conf
+> cp -p .dotfiles/.my.cnf .my.cnf
+> echo ". .dotfiles/cheat/env.bash" >> .bashrc
+> alias c=cheat
