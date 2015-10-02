@@ -14,10 +14,11 @@ usage
 -----
 <pre>
 cd
-git clone https://github.com/officel/dotfiles.git .dot
-ln -s .dot/.tmux.conf .tmux.conf
-ln -s .dot/.vimrc .vimrc
-cp -p .dot/.my.cnf .my.cnf
-echo ". .dot/cheat/env.bash" >> .bashrc
+git clone https://github.com/officel/dotfiles.git .dotfiles
+cp -p .dotfiles.tmux-ssh.sh /your/path/bin/tmux-ssh.sh
+ln -s .dotfiles/.tmux.conf .tmux.conf
+ln -s .dotfiles/.vimrc .vimrc
+cp -p .dotfiles/.my.cnf .my.cnf
+echo ". .dotfiles/cheat/env.bash" >> .bashrc
 alias c=cheat
 </pre>
