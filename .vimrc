@@ -1,6 +1,6 @@
 " vim config
 
-set history=100000
+set history=10000
 set ruler     " Show the line and column number of the cursor position
 set showcmd   " Show (partial) command in the last line of the screen
 
