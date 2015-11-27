@@ -17,7 +17,7 @@ cheat_clear(){
 cheat() {
   cheat_clear;
   # install dir. maybe,it is the directory where this file is put
-  CHEAT_HOME_DIR="$HOME/.dot/cheat"
+  CHEAT_HOME_DIR="$HOME/.dotfiles/cheat"
   # CHEAT_HOME_DIR="$(dirname "${BASH_SOURCE:-${(%):-%N}}")"
 
   # sheets dir. you can change dir if you want. for example your own repos

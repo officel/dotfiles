@@ -20,5 +20,5 @@ ln -s .dotfiles/.tmux.conf .tmux.conf
 ln -s .dotfiles/.vimrc .vimrc
 cp -p .dotfiles/.my.cnf .my.cnf
 echo ". .dotfiles/cheat/env.bash" >> .bashrc
-alias c=cheat
+echo "alias c=cheat" >> .bashrc
 </pre>
