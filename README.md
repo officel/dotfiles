@@ -8,6 +8,7 @@ My public dot files.
 * .ssh/ : ssh config
 * .tmux.conf : tmux config : 師匠( mutsuki99 )にいただいたもの
 * .vimrc : vim
+* ssh_config : ~/.ssh/config
 * cheat : 簡易チートシート
 
 usage
@@ -21,4 +22,6 @@ ln -s .dotfiles/.vimrc .vimrc
 cp -p .dotfiles/.my.cnf .my.cnf
 echo ". .dotfiles/cheat/env.bash" >> .bashrc
 echo "alias c=cheat" >> .bashrc
+cp -p .dotfiles/ssh_config .ssh/config
+chmod 644 .ssh/config
 </pre>

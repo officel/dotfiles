@@ -1,0 +1,33 @@
+# .ssh/config
+Host xxx-* yyy-*
+    # ホスト接続時に違うユーザとして接続
+    # User user_account
+
+    # ~/.ssh/id_rsa 以外の鍵ファイルを使いたい場合は以下に指定。
+    # IdentityFile ~/.ssh/my_aws_keypair.pem
+
+    # 接続先ホスト
+    # HostName IP.A.d.r
+
+    # 接続ポート
+    # Port 10022
+
+    # 接続維持
+    ServerAliveInterval 30
+
+    # GSS-API off
+    GSSAPIAuthentication no
+
+    # ホストキーチェック off （あまり推奨しない）
+    # StrictHostKeyChecking no
+    # 同時に known_hosts への書き込み off
+    # UserKnownHostsFile /dev/null
+
+
+Host sshgw
+    # HostName xxx.xxx.xxx.xxx
+    # Port 22
+
+Host prj-*
+    ProxyCommand ssh sshgw nc %h %p
+
