@@ -21,7 +21,9 @@ Host xxx-* yyy-*
     # ホストキーチェック off （あまり推奨しない）
     # StrictHostKeyChecking no
     # 同時に known_hosts への書き込み off
-    # UserKnownHostsFile /dev/null
+    # UserKnownHostsFile=/dev/null
+    # ログレベルが低いと上記でも警告が出るのを完全に黙らせる
+    # LogLevel QUIET
 
 
 Host sshgw
