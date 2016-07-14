@@ -16,6 +16,9 @@ sysctl vm.overcommit_memory
 sysctl vm.panic_on_oom
 sysctl kernel.panic
 
+# メモリ断片化チェック DMA32の行の左が大きく右が小さいと断片化している
+cat /proc/buddyinfo
+
 # Network
 sysctl net.ipv4.tcp_fin_timeout
 sysctl net.ipv4.tcp_tw_recycle
