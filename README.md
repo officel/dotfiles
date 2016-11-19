@@ -16,7 +16,7 @@ usage
 <pre>
 cd
 git clone https://github.com/officel/dotfiles.git .dotfiles
-cp -p .dotfiles.tmux-ssh.sh /your/path/bin/tmux-ssh.sh
+cp -p .dotfiles/tmux-ssh.sh /your/path/bin/tmux-ssh.sh
 ln -s .dotfiles/.tmux.conf .tmux.conf
 ln -s .dotfiles/.vimrc .vimrc
 cp -p .dotfiles/.my.cnf .my.cnf
