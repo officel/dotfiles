@@ -16,3 +16,14 @@ set incsearch
 set wildmenu
 set wildmode=list:full,full
 
+augroup noo
+  autocmd!
+  autocmd FileType * setlocal tw=0
+  " 自動改行を抑制
+  autocmd FileType * setlocal fo-=t
+  autocmd FileType * setlocal fo-=c
+  " コメントスタイルの自動挿入を抑制
+  autocmd FileType * setlocal fo-=r
+  autocmd FileType * setlocal fo-=o
+augroup END
+
