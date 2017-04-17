@@ -9,6 +9,8 @@
 * git config core.filemode false         # 権限変更を無視する
 * git update-index --add --chmod=+x FILE # 権限をつける（for Win）
 
+* git status --ignored                   # ignore されているファイルを確認
+
 * git diff --staged
 * git diff HEAD..origin/master
 * git log --oneline
