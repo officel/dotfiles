@@ -5,6 +5,7 @@ git config --global user.email "mail"
 git config --global core.autocrlf false
 git config --global core.excludesfile ~/.gitignore_global
 git config --global core.pager 'less -R'
+git config --global core.quotepath false
 git config --global color.ui auto
 git config --global push.default simple
 git config --global credential.helper cache
@@ -21,6 +22,8 @@ git diff --staged
 git diff HEAD..origin/master
 git diff HEAD^ HEAD
 
-git log --oneline
 git log -p --ignore-space-change       # ignore されているファイルを確認
+git log --oneline --decorate --graph --branches --tags --remotes
+git log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
+git log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 
