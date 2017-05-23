@@ -13,3 +13,7 @@ find . -name .git -exec rm -rf {} \;
 
 # シンボリックリンクを探す
 find . -type l -exec ls -l {} \;
+
+# 正規表現を使って拡張子の異なるファイルを探す
+find -regextype posix-egrep -regex ".*\.(php|tpl)" -ls
+
