@@ -1,0 +1,13 @@
+# gcloud
+
+## GLOBAL FLAGS:
+--account= --configuration= --flatten= --project=
+--format= config, csv, json, yaml, ...
+--help
+
+# check
+gcloud components list
+gcloud projects list
+gcloud config list
+
+
