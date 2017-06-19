@@ -10,4 +10,5 @@ gcloud components list
 gcloud projects list
 gcloud config list
 
-
+# compute
+gcloud compute instances list --format json --filter="status='RUNNING'"  | jq -r ".[].name" | sort
