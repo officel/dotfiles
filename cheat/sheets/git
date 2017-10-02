@@ -10,6 +10,10 @@ git config --global color.ui auto
 git config --global push.default simple
 git config --global credential.helper cache
 
+# http://docs.aws.amazon.com/ja_jp/codecommit/latest/userguide/setting-up-https-windows.html#setting-up-https-windows-credential-helper
+git config --global credential.helper "!aws codecommit credential-helper $@"
+git config --global credential.UseHttpPath true
+
 git config -l
 git config --unset                     # 設定を外す
 
