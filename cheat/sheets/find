@@ -17,3 +17,7 @@ find . -type l -exec ls -l {} \;
 # 正規表現を使って拡張子の異なるファイルを探す
 find -regextype posix-egrep -regex ".*\.(php|tpl)" -ls
 
+# 文字列が含まれたファイルを探す
+find . -name "*.php" | xargs grep "search"
+grep "search" -rl .
+
