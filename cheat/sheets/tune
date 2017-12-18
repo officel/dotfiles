@@ -28,3 +28,5 @@ sysctl net.ipv4.tcp_keepalive_intvl
 sysctl net.ipv4.tcp_keepalive_probes
 sysctl net.ipv4.tcp_keepalive_time
 
+# kipmi()
+echo 100 > /sys/module/ipmi_si/parameters/kipmid_max_busy_us
