@@ -25,3 +25,18 @@ echo "alias c=cheat" >> .bashrc
 cp -p .dotfiles/ssh_config .ssh/config
 chmod 644 .ssh/config
 </pre>
+
+git
+---
+<pre>
+git config --global user.name "Y.Nishimura"
+git config --global user.email "nishimuray@gmail.com"
+git config --global core.editor vi
+git config --global core.excludesfile ~/.gitignore_global
+git config --global core.autocrlf false
+cat ~/.gitignore_global
+*
+.DS_Store
+.envrc
+
+</pre>
