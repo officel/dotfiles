@@ -19,6 +19,7 @@ git clone https://github.com/officel/dotfiles.git .dotfiles
 cp -p .dotfiles/tmux-ssh.sh /your/path/bin/tmux-ssh.sh
 ln -s .dotfiles/.tmux.conf .tmux.conf
 ln -s .dotfiles/.vimrc .vimrc
+ln -s .dotfiles/.gitconfig .gitconfig
 cp -p .dotfiles/.my.cnf .my.cnf
 echo ". ~/.dotfiles/cheat/env.bash" >> .bashrc
 echo "alias c=cheat" >> .bashrc
@@ -31,9 +32,7 @@ git
 <pre>
 git config --global user.name "Y.Nishimura"
 git config --global user.email "nishimuray@gmail.com"
-git config --global core.editor vi
 git config --global core.excludesfile ~/.gitignore_global
-git config --global core.autocrlf false
 cat ~/.gitignore_global
 *
 .DS_Store

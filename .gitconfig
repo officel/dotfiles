@@ -1,0 +1,31 @@
+[user]
+	name = Y.Nishimura
+	email = nishimuray@gmail.com
+[alias]
+       # short
+       b  = branch
+       ba = branch -a
+       c  = commit
+       cv = commit -v
+       co = checkout
+       di = diff
+       dc = diff --cached
+       st = status
+
+       # alias
+       cancel = reset --soft HEAD^
+
+       # options
+       alias  = !git config --get-regexp 'alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
+       plog   = log --pretty=format:'%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=format:'%t%Y/%m/%d %H:%M'  --all --graph
+
+[core]
+	editor = vi
+	autocrlf = false
+	filemode = false
+[fetch]
+	prune = true
+[help]
+	autocorrect = 1
+[push]
+	default = current
