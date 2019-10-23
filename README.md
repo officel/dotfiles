@@ -10,6 +10,8 @@ My public dot files.
 * .vimrc : vim
 * ssh_config : ~/.ssh/config
 * cheat : 簡易チートシート
+* .gitconfig : git config global
+* .gitignore_global : git ignore global
 
 usage
 -----
@@ -20,6 +22,7 @@ cp -p .dotfiles/tmux-ssh.sh /your/path/bin/tmux-ssh.sh
 ln -s .dotfiles/.tmux.conf .tmux.conf
 ln -s .dotfiles/.vimrc .vimrc
 ln -s .dotfiles/.gitconfig .gitconfig
+ln -s .dotfiles/.gitignore_global .gitignore_global
 cp -p .dotfiles/.my.cnf .my.cnf
 echo ". ~/.dotfiles/cheat/env.bash" >> .bashrc
 echo "alias c=cheat" >> .bashrc
@@ -27,15 +30,6 @@ cp -p .dotfiles/ssh_config .ssh/config
 chmod 644 .ssh/config
 </pre>
 
-git
----
-<pre>
-git config --global user.name "Y.Nishimura"
-git config --global user.email "nishimuray@gmail.com"
-git config --global core.excludesfile ~/.gitignore_global
-cat ~/.gitignore_global
-*
-.DS_Store
-.envrc
+* install id_rsa (manual)
+* fix git config remote.origin.url after clone
 
-</pre>
