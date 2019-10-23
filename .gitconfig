@@ -8,6 +8,7 @@
        c  = commit
        cv = commit -v
        co = checkout
+       coo = checkout origin/master
        di = diff
        dc = diff --cached
        st = status
