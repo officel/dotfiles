@@ -26,9 +26,11 @@
 	editor = vi
 	autocrlf = false
 	filemode = false
+	excludesfile = ~/.gitignore_global
 [fetch]
 	prune = true
 [help]
 	autocorrect = 1
 [push]
 	default = current
+
