@@ -14,6 +14,8 @@
 
        # alias
        cancel = reset --soft HEAD^
+       save   = stash save
+       load   = stash pop
 
        # options
        alias  = !git config --get-regexp 'alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
