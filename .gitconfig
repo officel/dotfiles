@@ -12,6 +12,7 @@
        di = diff
        dc = diff --cached
        st = status
+       sw = switch
 
        # alias
        cancel = reset --soft HEAD^
