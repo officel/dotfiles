@@ -28,6 +28,7 @@ echo ". ~/.dotfiles/cheat/env.bash" >> .bashrc
 echo "alias c=cheat" >> .bashrc
 cp -p .dotfiles/ssh_config .ssh/config
 chmod 644 .ssh/config
+echo "source $HOME/.dotfiles/alias" >> .bashrc
 </pre>
 
 * install id_rsa (manual)

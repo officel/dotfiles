@@ -1,0 +1,17 @@
+# .dotfiles/alias
+
+# k8s
+alias k='kubectl'
+alias ka='kubectl apply'
+alias kd='kubectl delete'
+alias kg='kubectl get'
+alias kga='kubectl get all'
+alias kgx='kubectl get all,pv,pvc,job'
+
+# terraform
+alias t='terraform'
+alias ta='terraform apply'
+alias tf='terraform fmt'
+alias ti='terraform init'
+alias tp='terraform plan'
+
