@@ -1,12 +1,18 @@
 # .dotfiles/alias
 
+# git
+alias g='git'
+alias gp='git plog -10'
+alias gs='git switch -d origin/master'
+
 # k8s
 alias k='kubectl'
 alias ka='kubectl apply'
 alias kd='kubectl delete'
+alias kds='kubectl describe'
 alias kg='kubectl get'
 alias kga='kubectl get all'
-alias kgx='kubectl get all,pv,pvc,job'
+alias kgx='kubectl get all,pv,pvc,job,ing'
 
 # terraform
 alias t='terraform'
