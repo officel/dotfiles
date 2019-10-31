@@ -8,8 +8,10 @@
        c  = commit
        cv = commit -v
        co = checkout
+       coo= checkout origin/master
        di = diff
        dc = diff --cached
+       f  = fetch --prune
        st = status
        sw = switch
        swo= switch -d origin/master
