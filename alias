@@ -2,6 +2,7 @@
 
 # git
 alias g='git'
+alias gf='git fetch --prune'
 alias gp='git plog -10'
 alias gs='git switch -d origin/master'
 
