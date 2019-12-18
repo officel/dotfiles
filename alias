@@ -18,7 +18,11 @@ alias kd='kubectl delete'
 alias kds='kubectl describe'
 alias kg='kubectl get'
 alias kga='kubectl get all'
+alias kgp='kubectl get pod'
 alias kgx='kubectl get all,pv,pvc,job,ing'
+alias kgpa='kubectl get pod -A'
+alias kgtn='kubectl get node -o wide; kubectl top node'
+alias kdrainf='kubectl drain --ignore-daemonsets --delete-local-data'
 
 # terraform
 alias t='terraform'
