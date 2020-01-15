@@ -29,6 +29,7 @@ echo "alias c=cheat" >> .bashrc
 cp -p .dotfiles/ssh_config .ssh/config
 chmod 644 .ssh/config
 echo "source $HOME/.dotfiles/alias" >> .bashrc
+echo "export HISTCONTROL=ignoreboth" >> .bashrc
 </pre>
 
 * install id_rsa (manual)
