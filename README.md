@@ -4,32 +4,31 @@ Dot Files
 My public dot files.
 --------------------
 
-* .my.cnf : MySQL Client Tips
-* .ssh/ : ssh config
-* .tmux.conf : tmux config : 師匠( mutsuki99 )にいただいたもの
-* .vimrc : vim
+* .ssh/ : ssh config (example)
+* gitconfig : git config global
+* gitignore_global : git ignore global
+* my.cnf : MySQL Client Tips
 * ssh_config : ~/.ssh/config
-* cheat : 簡易チートシート
-* .gitconfig : git config global
-* .gitignore_global : git ignore global
+* tmux.conf : tmux config : 師匠( mutsuki99 )にいただいたもの
+* vimrc : vim
 
 usage
 -----
 <pre>
 cd
 git clone https://github.com/officel/dotfiles.git .dotfiles
-cp -p .dotfiles/tmux-ssh.sh /your/path/bin/tmux-ssh.sh
-ln -s .dotfiles/.tmux.conf .tmux.conf
-ln -s .dotfiles/.vimrc .vimrc
-ln -s .dotfiles/.gitconfig .gitconfig
-ln -s .dotfiles/.gitignore_global .gitignore_global
-cp -p .dotfiles/.my.cnf .my.cnf
-echo ". ~/.dotfiles/cheat/env.bash" >> .bashrc
-echo "alias c=cheat" >> .bashrc
+
+# 管理下から剥がしちゃうもの
+cp -p .dotfiles/my.cnf .my.cnf
 cp -p .dotfiles/ssh_config .ssh/config
-chmod 644 .ssh/config
-echo "source $HOME/.dotfiles/alias" >> .bashrc
-echo "export HISTCONTROL=ignoreboth" >> .bashrc
+cp -p .dotfiles/tmux-ssh.sh /your/path/bin/tmux-ssh.sh
+
+# 管理下に置いておくもの
+ln -s .dotfiles/tmux.conf .tmux.conf
+ln -s .dotfiles/vimrc .vimrc
+ln -s .dotfiles/gitconfig .gitconfig
+ln -s .dotfiles/gitignore_global .gitignore_global
+
 </pre>
 
 * install id_rsa (manual)
