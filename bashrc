@@ -9,3 +9,5 @@ bind '"\C-b": backward-word'
 source $HOME/.dotfiles/alias
 source $HOME/.dotfiles/history
 source $HOME/.dotfiles/peco
+source $HOME/.dotfiles/bash_functions
+
