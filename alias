@@ -10,10 +10,13 @@ alias alpinx='docker run -itd --rm -v `pwd`:/usr/share/nginx/html -p 8081:80 --n
 
 # git
 alias g='git'
+alias ga='git add'
+alias gau='git add -u'
 alias gcv='git commit -v'
 alias gdc='git diff --cached'
 alias gdi='git diff'
 alias gf='git fetch --prune'
+alias gg='git grep -i -P'
 alias gp='git plog -10'
 alias gr='git fetch --prune && git checkout origin/master && git plog -10 && git status'
 alias gs='git switch -d origin/master'
