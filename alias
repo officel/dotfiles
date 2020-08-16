@@ -5,8 +5,14 @@ alias ll='ls -l'
 
 # docker
 alias d='docker'
+alias dl='docker logs'
+alias dps='docker ps'
 alias dri='docker run -itd --rm '
 alias alpinx='docker run -itd --rm -v `pwd`:/usr/share/nginx/html -p 8081:80 --name alpinx nginx:alpine'
+
+alias dc='docker-compose'
+alias dcd='docker-compose down'
+alias dcu='docker-compose up -d'
 
 # git
 alias g='git'
