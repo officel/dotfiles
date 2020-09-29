@@ -5,10 +5,13 @@ alias ll='ls -l'
 
 # docker
 alias d='docker'
+alias de='docker exec -it'
 alias dl='docker logs'
 alias dps='docker ps'
+alias ds='docker stop'
 alias dri='docker run -itd --rm '
 alias alpinx='docker run -itd --rm -v `pwd`:/usr/share/nginx/html -p 8081:80 --name alpinx nginx:alpine'
+alias alpython='docker run --rm -it -d --name alpython python:alpine'
 
 alias dc='docker-compose'
 alias dcd='docker-compose down'
