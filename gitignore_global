@@ -2,5 +2,7 @@
 .envrc
 .terraform/
 .terraformrc
+terraform.tfstate
+terraform.tfstate.backup
 *.swp
 
