@@ -1,4 +1,7 @@
 # .ssh/config
+
+# Include conf.d/*
+
 Host xxx-* yyy-*
     # ホスト接続時に違うユーザとして接続
     # User user_account
