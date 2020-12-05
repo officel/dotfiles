@@ -1,6 +1,6 @@
 [user]
 	name = Y.Nishimura
-	email = nishimuray@gmail.com
+	email = officel@users.noreply.github.com
 [alias]
        # short
        b  = branch
@@ -37,3 +37,5 @@
 [push]
 	default = current
 
+[advice]
+	detachedHead = false
