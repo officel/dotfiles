@@ -2,6 +2,7 @@
 
 # command
 alias ll='ls -l'
+alias tree='tree --charset unicode'
 
 # boundary 
 alias b='boundary'
