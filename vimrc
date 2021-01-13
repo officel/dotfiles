@@ -27,3 +27,6 @@ augroup noo
   autocmd FileType * setlocal fo-=o
 augroup END
 
+set encoding=utf-8
+set fileencodings=utf-8,iso-2022-jp,sjis
+
