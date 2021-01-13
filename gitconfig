@@ -26,7 +26,7 @@
        plog   = log --pretty=format:'%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=format:'%t%Y/%m/%d %H:%M'  --all --graph
 
 [core]
-	editor = vi
+	editor = vim +15 +startinsert
 	autocrlf = false
 	filemode = false
 	excludesfile = ~/.gitignore_global
@@ -39,3 +39,5 @@
 
 [advice]
 	detachedHead = false
+[commit]
+	template = /home/raki/.dotfiles/git_commit_conventions.txt
