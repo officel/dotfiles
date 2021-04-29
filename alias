@@ -5,6 +5,7 @@ alias ll='ls -l'
 alias tree='tree --charset unicode'
 alias myip='curl -s inet-ip.info'
 alias diff='diff --exclude=.terraform --exclude=.git'
+alias greps='grep -v -e '\''^\s*#'\'' -e '\''^\s*$'\'''
 
 # boundary 
 alias b='boundary'
