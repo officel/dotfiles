@@ -11,3 +11,6 @@ source $HOME/.dotfiles/history
 source $HOME/.dotfiles/peco
 source $HOME/.dotfiles/bash_functions
 
+# cd コマンドの補完でディレクトリだけを対象にする
+complete -d cd
+
