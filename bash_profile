@@ -33,3 +33,6 @@ eval "$(direnv hook bash)"
 # aws cli
 complete -C '$HOME/.local/bin/aws_completer' aws
 
+# packer
+complete -C /home/linuxbrew/.linuxbrew/bin/packer packer
+
