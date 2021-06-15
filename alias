@@ -6,6 +6,12 @@ alias tree='tree --charset unicode'
 alias myip='curl -s inet-ip.info'
 alias diff='diff --exclude=.terraform --exclude=.git'
 alias greps='grep -v -e '\''^\s*#'\'' -e '\''^\s*$'\'''
+alias curlh='curl -D - -s -o /dev/null -sSL'
+
+# aws cli with jq
+alias aec2='aws ec2 describe-instances | jq -r '"'"'.Reservations|sort_by(.Instances[].Tags[]|select(.Key == "Name").Value)| .[].Instances[]|[(.Tags[]|select(.Key == "Name").Value), .InstanceId, .PrivateIpAddress, .State.Name] | @tsv'"'"''
+alias aec2start='aws ec2 start-instances --instance-ids'
+alias aec2stop='aws ec2 stop-instances --instance-ids'
 
 # boundary 
 alias b='boundary'
