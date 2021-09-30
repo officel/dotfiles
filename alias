@@ -8,6 +8,9 @@ alias diff='diff --exclude=.terraform --exclude=.git'
 alias greps='grep -v -e '\''^\s*#'\'' -e '\''^\s*$'\'''
 alias curlh='curl -D - -s -o /dev/null -sSL'
 
+# ansible
+alias ansible-playbook='ANSIBLE_LOG_PATH=logs/ansible_$(date "+%Y%m%d%H%M%S").log ansible-playbook'
+
 # aws cli with jq
 alias aec2='aws ec2 describe-instances | jq -r '"'"'.Reservations|sort_by(.Instances[].Tags[]|select(.Key == "Name").Value)| .[].Instances[]|[(.Tags[]|select(.Key == "Name").Value), .InstanceId, .PrivateIpAddress, .State.Name] | @tsv'"'"''
 alias aec2start='aws ec2 start-instances --instance-ids'
