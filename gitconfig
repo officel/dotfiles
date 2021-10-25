@@ -42,3 +42,5 @@
 	detachedHead = false
 [commit]
 	# template = /home/raki/.dotfiles/git_commit_conventions.txt
+[log]
+	follow = true
