@@ -18,3 +18,8 @@ function jqp {
   fi
 }
 
+function av {
+  profile=$1; shift
+  aws-vault exec $profile -- "$@";
+}
+
