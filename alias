@@ -16,6 +16,19 @@ alias aec2='aws ec2 describe-instances | jq -r '"'"'.Reservations|sort_by(.Insta
 alias aec2start='aws ec2 start-instances --instance-ids'
 alias aec2stop='aws ec2 stop-instances --instance-ids'
 
+# aws-vault
+alias av='aws-vault'
+alias avc='aws-vault clear'
+alias ave='aws-vault exec'
+alias avls='aws-vault list'
+
+# aws-vault & terraform
+alias avta='aws-vault exec ${AWS_PROFILE:-default} -- terraform apply'
+alias avte='aws-vault exec ${AWS_PROFILE:-default} -- terraform init --upgrade && aws-vault exec ${AWS_PROFILE:-default} -- terraform fmt && aws-vault exec ${AWS_PROFILE:-default} -- terraform plan'
+alias avto='aws-vault exec ${AWS_PROFILE:-default} -- terraform output'
+alias avtp='aws-vault exec ${AWS_PROFILE:-default} -- terraform plan'
+alias avts='aws-vault exec ${AWS_PROFILE:-default} -- terraform state'
+
 # boundary 
 alias b='boundary'
 
