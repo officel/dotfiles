@@ -20,6 +20,7 @@
        cancel = reset --soft HEAD^
        save   = stash save
        load   = stash pop
+       pr     = "!git push origin HEAD:refs/heads/$1 #"
 
        # options
        alias  = !git config --get-regexp 'alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
