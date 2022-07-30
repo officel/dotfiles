@@ -11,7 +11,7 @@ set noai
 set ic
 
 " visual
-set number
+set nonumber
 " set list      " Show tabs as CTRL-I is displayed
 
 " search
