@@ -50,3 +50,5 @@
 	follow = true
 [init]
 	defaultBranch = main
+[grep]
+	lineNumber = true
