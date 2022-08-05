@@ -8,8 +8,6 @@ My public dot files.
 * alias : my alias
 * bash_profile : (example)
 * bashrc :
-* gitconfig : git config global
-* gitignore_global : git ignore global
 * history : set env for history
 * my.cnf : MySQL Client Tips
 * peco : peco functions
@@ -32,12 +30,11 @@ cp -p .dotfiles/bash_profile ~/.bash_profile
 # 管理下に置いておくもの
 ln -s .dotfiles/tmux.conf .tmux.conf
 ln -s .dotfiles/vimrc .vimrc
-ln -s .dotfiles/gitconfig .gitconfig
-ln -s .dotfiles/gitignore_global .gitignore_global
 ln -s .dotfiles/bashrc .bashrc
 
 </pre>
 
 * install id_rsa (manual)
 * fix git config remote.origin.url after clone
+* https://github.com/officel/config_git
 
