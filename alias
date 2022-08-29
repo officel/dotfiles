@@ -7,6 +7,7 @@ alias myip='curl -s inet-ip.info'
 alias diff='diff --exclude=.terraform --exclude=.git'
 alias greps='grep -v -e '\''^\s*#'\'' -e '\''^\s*$'\'''
 alias curlh='curl -D - -s -o /dev/null -sSL'
+alias pwgen='pwgen -c -n -B -1'
 
 # ansible
 alias ansible-playbook='ANSIBLE_LOG_PATH=logs/ansible_$(date "+%Y%m%d%H%M%S").log ansible-playbook'
