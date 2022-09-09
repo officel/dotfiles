@@ -17,7 +17,8 @@ My public dot files.
 
 usage
 -----
-<pre>
+
+```
 cd
 git clone https://github.com/officel/dotfiles.git .dotfiles
 
@@ -31,8 +32,7 @@ cp -p .dotfiles/bash_profile ~/.bash_profile
 ln -s .dotfiles/tmux.conf .tmux.conf
 ln -s .dotfiles/vimrc .vimrc
 ln -s .dotfiles/bashrc .bashrc
-
-</pre>
+```
 
 * install id_rsa (manual)
 * fix git config remote.origin.url after clone
