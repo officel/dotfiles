@@ -11,3 +11,8 @@ source $HOME/.dotfiles/history
 source $HOME/.dotfiles/peco
 source $HOME/.dotfiles/bash_functions
 
+# ssh-agent for git commit ssh signature verification
+if [ -z "${SSH_AGENT_PID}" ]; then
+    eval $(ssh-agent) 1>/dev/null
+fi
+
