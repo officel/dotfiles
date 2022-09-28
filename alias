@@ -12,6 +12,7 @@ alias fullpath='find `pwd` -maxdepth 1 -name'
 
 # ansible
 alias ansible-playbook='ANSIBLE_LOG_PATH=logs/ansible_$(date "+%Y%m%d%H%M%S").log ansible-playbook'
+alias ansible-groups='ansible-inventory --list | jq -r "keys | .[]"'
 
 # aws cli with jq
 alias aec2='aws ec2 describe-instances | jq -r '"'"'.Reservations|sort_by(.Instances[].Tags[]|select(.Key == "Name").Value)| .[].Instances[]|[(.Tags[]|select(.Key == "Name").Value), .InstanceId, .PrivateIpAddress, .State.Name] | @tsv'"'"''
