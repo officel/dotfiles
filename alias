@@ -32,7 +32,7 @@ alias avto='aws-vault exec ${AWS_PROFILE:-default} -- terraform output'
 alias avtp='aws-vault exec ${AWS_PROFILE:-default} -- terraform plan'
 alias avts='aws-vault exec ${AWS_PROFILE:-default} -- terraform state'
 
-# boundary 
+# boundary
 alias b='boundary'
 
 # docker
@@ -74,8 +74,8 @@ alias gst='git status --short --branch'
 # k8s
 alias k='kubectl'
 alias ka='kubectl apply'
-alias kd='kubectl delete'
-alias kds='kubectl describe'
+alias kd='kubectl describe'
+alias kdel='kubectl delete'
 alias kg='kubectl get'
 alias kga='kubectl get all'
 alias kgn='kubectl get node -o wide'
@@ -100,4 +100,3 @@ alias tv='terraform version'
 
 # waypoint
 alias wp='waypoint'
-
