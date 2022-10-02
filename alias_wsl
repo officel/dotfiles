@@ -1,0 +1,4 @@
+# .dotfiles/alias_wsl
+
+# command
+alias pbcopy='clip.exe'
