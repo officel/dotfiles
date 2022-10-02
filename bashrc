@@ -11,6 +11,11 @@ source $HOME/.dotfiles/history
 source $HOME/.dotfiles/peco
 source $HOME/.dotfiles/bash_functions
 
+# for WSL
+if [[ "$(uname -r)" == *microsoft* ]]; then
+  source $HOME/.dotfiles/alias_wsl
+fi
+
 # ssh-agent for git commit ssh signature verification
 if [ -z "${SSH_AGENT_PID}" ]; then
     eval $(ssh-agent) 1>/dev/null
