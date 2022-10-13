@@ -25,6 +25,7 @@ alias av='aws-vault'
 alias avc='aws-vault clear'
 alias ave='aws-vault exec'
 alias avls='aws-vault list'
+#gitignore で終わる行を ignore してみた
 
 # aws-vault & terraform
 alias avta='aws-vault exec ${AWS_PROFILE:-default} -- terraform apply'
