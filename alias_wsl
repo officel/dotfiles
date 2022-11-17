@@ -2,3 +2,7 @@
 
 # command
 alias pbcopy='clip.exe'
+
+# yq & python-yq installed by brew, switch to use.
+alias usepyq='brew unlink yq python-yq && brew link python-yq && yq --version'
+alias useyq=' brew unlink yq python-yq && brew link yq        && yq --version'
