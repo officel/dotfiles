@@ -18,3 +18,21 @@ function jqp {
   fi
 }
 
+function pipsearch {
+  # alternative pip search, but use pip_search
+  # @todo: args
+  # @todo: result to link
+  # @todo: date to JST?
+  q=${1:-ansible}
+  page=${2:-1}
+  o=${3:-}
+
+  curl -s --get \
+    --data-urlencode "q=${q}" \
+    --data-urlencode "o=${o}" \
+    --data-urlencode "page=${page}" \
+    https://pypi.org/search/ | \
+    pup 'a[class="package-snippet"]' | \
+    pup | xq | \
+    jq -cr '.html.body.a[] | [.h3.span[0,1]."#text"? , .h3.span[2].time."#text"?, .p."#text" ] | @tsv' | tr "\t" "|" | column -s"|" -t
+}
