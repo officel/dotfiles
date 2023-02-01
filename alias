@@ -51,9 +51,9 @@ alias alpinx='docker container run -itd --rm -v `pwd`:/usr/share/nginx/html -p 8
 alias alpython='docker container run --rm -it -d -e "TZ=Asia/Tokyo" --name alpython python:alpine'
 alias jekyll='docker container run -itd --rm -v `pwd`:/srv/jekyll:Z -e "TZ=Asia/Tokyo" --name jekyll jekyll/jekyll jekyll'
 
-alias dc='docker-compose'
-alias dcd='docker-compose down'
-alias dcu='docker-compose up -d'
+alias dc='docker compose'
+alias dcd='docker compose down'
+alias dcu='docker compose up -d'
 
 # git
 alias g='git'
