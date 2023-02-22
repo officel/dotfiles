@@ -74,7 +74,7 @@ alias gpr='git pr'
 alias gr='git fetch --prune --all && git checkout origin/HEAD && git plog -10 && git status'
 alias gs='git switch -d origin/HEAD'
 alias gst='git status --short --branch'
-alias ghome='cd "$(git rev-parse --show-toplevel)"'
+alias cr='cd "$(git rev-parse --show-toplevel)"'
 
 # k8s
 alias k='kubectl'
