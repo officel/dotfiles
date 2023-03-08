@@ -12,7 +12,7 @@ alias pwgen='pwgen -c -n -B -1'
 alias fullpath='find `pwd` -maxdepth 1 -name'
 
 # ansible
-alias ansible-playbook='ANSIBLE_LOG_PATH=logs/ansible_$(date "+%Y%m%d%H%M%S").log ansible-playbook'
+alias ansible-playbook='LC_ALL=en_US.UTF8 TZ="Asia/Tokyo" ANSIBLE_LOG_PATH=logs/ansible_$(date "+%Y%m%d%H%M%S").log ansible-playbook'
 alias ansible-groups='ansible-inventory --list | jq -r "keys | .[]"'
 
 # aws cli with jq
