@@ -73,6 +73,7 @@ alias gp='git plog -10'
 alias gpr='git pr'
 alias gr='git fetch --prune --all && git checkout origin/HEAD && git plog -10 && git status'
 alias gs='git switch -d origin/HEAD'
+alias gss='git show --stat'
 alias gst='git status --short --branch'
 alias cr='cd "$(git rev-parse --show-toplevel)"'
 
