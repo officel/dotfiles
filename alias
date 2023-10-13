@@ -70,6 +70,7 @@ alias gdn='git diff --name-only'
 alias gds='git diff --stat'
 alias gf='git fetch --prune'
 alias gg='git grep -i -P'
+alias glogs='git log -S'
 alias gp='git plog -10'
 alias gpr='git pr'
 alias gr='git fetch --prune --all && git checkout origin/HEAD && git plog -10 && git status'
@@ -91,6 +92,9 @@ alias kgx='kubectl get all,pv,pvc,job,ing'
 alias kgpa='kubectl get pod -A'
 alias kgtn='kubectl get node -o wide; kubectl top node'
 alias kdrainf='kubectl drain --ignore-daemonsets --delete-local-data'
+
+# make
+alias m='make'
 
 # terraform
 alias t='terraform'
