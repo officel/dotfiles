@@ -35,4 +35,3 @@ git reset HEAD <FILE>    # add をなかったことにする
 git rm --cached <FILE>   # まだ管理下になかったファイルをaddしてないことにする
 git reset --soft HEAD^   # 直前のコミットをなかったことにする（ワーキングディレクトリはそのまま）
 git reset --hard HEAD^   # 同上（ワーキングディレクトリもきれいに）
-

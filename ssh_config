@@ -35,4 +35,3 @@ Host sshgw
 
 Host prj-*
     ProxyCommand ssh sshgw nc %h %p
-

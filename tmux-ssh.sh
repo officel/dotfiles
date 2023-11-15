@@ -37,4 +37,3 @@ tmux select-pane -t 0
 tmux select-layout -t "${NEW_SESSION}-window" main-horizontal
 tmux set-window-option synchronize-panes on
 tmux attach-session -t "$NEW_SESSION"
-

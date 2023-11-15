@@ -25,4 +25,3 @@ show grants for 'USER'@'HOST'
 rename user 'OLDUSER'@'HOST' to 'NEWUSER'@'LOCLAHOST';
 revoke all privileges, grant option from USER
 flush privileges;
-

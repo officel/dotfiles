@@ -37,4 +37,3 @@ ln -s .dotfiles/bashrc .bashrc
 * install id_rsa (manual)
 * fix git config remote.origin.url after clone
 * https://github.com/officel/config_git
-
