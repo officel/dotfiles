@@ -11,4 +11,3 @@ $ docker ps -a | grep 'weeks ago' | awk '{print $1}' | xargs docker rm
 
 # タグのついていないイメージを削除
 $ docker images -f "dangling=true" -q | xargs docker rmi
-

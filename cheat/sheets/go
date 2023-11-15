@@ -13,4 +13,3 @@ go get github.com/motemen/gore
 go get github.com/nsf/gocode
 go get github.com/k0kubun/pp
 go get golang.org/x/tools/cmd/godoc
-

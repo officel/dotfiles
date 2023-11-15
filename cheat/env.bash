@@ -45,7 +45,7 @@ cheat() {
     vi $VALUE_F
     return;
   fi
- 
+
   # -c
   if [ "$FLG_C" = "TRUE" ]; then
     vi $VALUE_F

@@ -17,7 +17,7 @@ cheat sheets for cli shell edition.
 
 cheat [-l] [-e|-c][ TARGET]
 
-$ cheat または $ cheat -l で一覧。 
+$ cheat または $ cheat -l で一覧。
 
 $ cheat -e TARGET または -c TARGET で TARGET の編集または作成（どっちも同じ）
 
@@ -72,5 +72,3 @@ Y.Nishimura.
 * Autocompletion できるかな？
 
   google "complete" or "bash_completion" or see /etc/bash_completion
-  
-
