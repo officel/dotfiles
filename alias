@@ -111,6 +111,3 @@ alias to='terraform output'
 alias tp='terraform plan'
 alias ts='terraform state'
 alias tv='terraform version'
-
-# waypoint
-alias wp='waypoint'
