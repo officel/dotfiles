@@ -11,6 +11,7 @@ alias greps='grep -v -e '\''^\s*#'\'' -e '\''^\s*$'\'''
 alias curlh='curl -D - -s -o /dev/null -sSL'
 alias pwgen='pwgen -c -n -B -1'
 alias fullpath='find `pwd` -maxdepth 1 -name'
+alias expenv='export $(grep -v "^#" .env | xargs)'
 
 # ansible
 alias ansible-playbook='LC_ALL=en_US.UTF8 TZ="Asia/Tokyo" ANSIBLE_LOG_PATH=logs/ansible_$(date "+%Y%m%d%H%M%S").log ansible-playbook'
