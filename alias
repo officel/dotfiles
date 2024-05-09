@@ -14,9 +14,11 @@ alias pwgen='pwgen -c -n -B -1'
 alias fullpath='find `pwd` -maxdepth 1 -name'
 alias expenv='export $(grep -v "^#" .env | xargs)'
 
-alias a='aqua'
-alias ali=' a list --installed -a | sort'
-alias agi='aqua g -i -o $AQUA_GLOBAL_CONFIG'
+alias aq='aqua'
+alias aqup='aqua update'
+alias aqia='aqua install --all'
+alias aqli='aqua list --installed --all | sort'
+alias aqgi='aqua generate -i -o $AQUA_GLOBAL_CONFIG'
 
 # ansible
 alias ansible-playbook='LC_ALL=en_US.UTF8 TZ="Asia/Tokyo" ANSIBLE_LOG_PATH=logs/ansible_$(date "+%Y%m%d%H%M%S").log ansible-playbook'
