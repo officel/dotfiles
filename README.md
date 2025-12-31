@@ -1,7 +1,7 @@
 # dotfiles
 
 - 2026年からのdotfiles管理
-- [これまでの履歴](./history.md)
+- [これまでの履歴](./docs/history.md)
 
 ## 方針
 
