@@ -1,0 +1,23 @@
+.DS_Store
+.env
+.envrc
+*.swp
+
+# temporary file
+*.nogit
+*.nogit.md
+__*
+
+# ansible-vault password file in repo
+.vault_password
+
+# for act(github actions localy)
+.act.secrets
+.act.env
+
+# terraform
+.terraform/
+.terraformrc
+terraform.tfstate
+terraform.tfstate.backup
+z.tfstate
