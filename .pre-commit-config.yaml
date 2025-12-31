@@ -49,7 +49,7 @@ repos:
         exclude: |
           (?x)^(
             backup/[\d|\w|_]+\/(.*?)|
-            aqua.yaml
+            aqua/aqua.yaml
           )$
 
   - repo: https://github.com/compilerla/conventional-pre-commit

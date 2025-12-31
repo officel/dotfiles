@@ -15,30 +15,10 @@ tasks:
       - task --list --sort alphanumeric -t {{.TASKFILE}}
       - echo ""
       - echo -n "reminder this package "
-      - task: aqua:packages
+      - task: packages
     silent: true
 
-  util:list:
-    # desc: view all tasks
-    summary: |
-      全タスクの出力
-    aliases:
-      - ul
-      - ls
-    cmd: task --list-all --sort alphanumeric
-    silent: true
-
-  util:summary:
-    # desc: view summary of all tasks
-    summary: |
-      全タスクのサマリー出力
-    aliases:
-      - us
-      - la
-    cmd: task --list-all --sort alphanumeric -j | jq -cr ".tasks[].name" | xargs -i sh -c 'task --summary {}; echo "\n---\n"'
-    silent: true
-
-  aqua:alias:
+  alias:
     desc: show alias for aqua
     summary: |
       aqua のエイリアスを表示
@@ -55,7 +35,7 @@ tasks:
         EOF
     silent: true
 
-  aqua:packages:
+  packages:
     desc: random package from aqua.yaml
     aliases:
       - ap
@@ -76,7 +56,7 @@ tasks:
       - echo "{{.RANDOM_PACKAGE.name}}"
     silent: true
 
-  aqua:update:
+  update:
     desc: Run aqua update, install, list for globally
     aliases:
       - au
@@ -89,7 +69,7 @@ tasks:
       - aqua install -all
       - aqua list --installed --all | sort
 
-  aqua:git:
+  git:
     desc: auto git, use -- COMMIT TITLE
     summary: |
       aqua update の結果を自動で登録
@@ -154,6 +134,7 @@ tasks:
   _git:status:
     internal: true
     cmds:
+      # see https://github.com/officel/config_git/blob/main/config#L21
       - git plog -5
       - git status --short --branch
 
@@ -161,6 +142,7 @@ tasks:
     internal: true
     silent: true
     status:
+      # エラーファイルが存在したら処理する
       - test ! -e {{.ON_ERROR}}
     cmds:
       - defer: rm {{.ON_ERROR}}
