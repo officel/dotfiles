@@ -31,3 +31,8 @@ brew bundle install
 
 - brewでインストール（Brewfileに入れてある）
 - 新環境はtaskfileが入っていない（このaquaでインストールする）ので `aqua install --all` でインストール
+
+## task
+
+- aqua でインストール（aqua.yamlに入れてある）
+- `task link` で必要なシンボリックリンクをはる
