@@ -1,0 +1,89 @@
+[user]
+	name = NISHIMURA Yoshitaka
+	email = officel@users.noreply.github.com
+	signingKey = ~/.ssh/id_ed25519.pub
+
+[commit]
+	gpgSign = true
+	# template = ~/.config/git/git_commit_conventions.txt
+
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	allowedSignersFile = ~/.config/git/allowed_signers
+
+[advice]
+	detachedHead = false
+
+[alias]
+	# short
+	co = checkout
+	sw = switch
+	swo= switch -d origin/HEAD
+
+	# alias
+	cancel = reset --soft HEAD^
+	save   = stash save
+	load   = stash pop
+	pr     = "!git push origin HEAD:refs/heads/$1 #"
+	uns    = restore --staged
+	unt    = ls-files --others --exclude-standard
+	ign    = ls-files --others --exclude-standard --ignored
+	recent = branch --sort=-committerdate --format='%(committerdate:relative)%09%(refname:short)'
+	last   = log -1 HEAD --stat
+
+	# options
+	alias  = !git config --get-regexp 'alias\\.' | sed 's/alias\\.\\([^ ]*\\) \\(.*\\)/\\1\\\t => \\2/' | sort
+	plog   = log --pretty=format:'%C(yellow)%h %C(green)%cd %C(reset)%s %C(red)%d %C(cyan)[%an]' --date=format-local:'%t%Y/%m/%d %H:%M' --graph
+
+	deleted   = log --diff-filter=D --summary
+	restoring = !git checkout $(git rev-list -n 1 HEAD -- "${1:-none}")~1 --
+	chash     = rev-parse --short HEAD
+	goback    = "!git checkout $(git name-rev --name-only --exclude=refs/tags/\\* @{-${1:-1}}) #"
+
+[core]
+	autocrlf = false
+	commentChar = ";"
+	editor = vim +startinsert
+	fileMode = false
+	ignoreCase = false
+	quotePath  = false
+
+[diff]
+	compactionHeuristic = true
+	wsErrorHighlight = all
+
+[fetch]
+	prune = true
+	pruneTags = true
+
+[grep]
+	lineNumber = true
+
+[help]
+	autoCorrect = 1
+
+[init]
+	defaultBranch = main
+
+[log]
+	follow = true
+
+[push]
+	default = current
+
+[rebase]
+  autoSquash = true
+  autoStash = true
+  updateRefs = true
+
+[rerere]
+  enabled = true
+
+[credential "https://github.com"]
+  helper =
+	helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+  helper =
+	helper = !gh auth git-credential
