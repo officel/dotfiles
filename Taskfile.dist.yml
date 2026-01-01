@@ -11,8 +11,19 @@ includes:
       - a
 
 vars:
-  USER_HOME: "~"                # ユーザーホーム（テンプレでパスとして使うので/をつけない）
-  XDG_CONFIG_HOME: "~/.config"  # XDG_CONFIG_HOME 環境変数のデフォルト値
+  # ユーザーホーム（テンプレでパスとして使うので/をつけない）
+  USER_HOME: "~"
+  # ユーザーフォームにシンボリックリンクを作成する設定ファイルのリスト[TARGET,LINK_NAME]
+  USER_HOME_LINKS:
+    - "direnvrc,.direnvrc"
+  # XDG_CONFIG_HOME 環境変数のデフォルト値
+  XDG_CONFIG_HOME: "~/.config"
+  # XDG_CONFIG_HOME にシンボリックリンクを作成するディレクトリのリスト
+  XDG_CONFIG_HOME_LINKS:
+    - "aqua"
+    - "bash"
+    - "git"
+    - "task"
 
 tasks:
   default:
@@ -27,21 +38,19 @@ tasks:
       - mkdir -p {{.XDG_CONFIG_HOME}}
       # USER_HOME にシンボリックリンクを作成[TARGET,LINK_NAME]
       - for:
-          - "direnvrc,.direnvrc"
+          var: USER_HOME_LINKS
         task: _link
         vars:
           TARGET: "{{.TASKFILE_DIR}}/{{index (.ITEM | splitList \",\") 0}}"
           LINK_NAME: "{{.USER_HOME}}/{{index (.ITEM | splitList \",\") 1}}"
       # XDG_CONFIG_HOME にシンボリックリンクを同名のディレクトリで作成
       - for:
-          - "aqua"
-          - "bash"
-          - "git"
-          - "task"
+          var: XDG_CONFIG_HOME_LINKS
         task: _link
         vars:
           TARGET: "{{.TASKFILE_DIR}}/{{.ITEM}}"
           LINK_NAME: "{{.XDG_CONFIG_HOME}}/{{.ITEM}}"
+      - task: _xdg_base_directory_for_bash
     silent: true
 
   _link:
@@ -49,10 +58,36 @@ tasks:
     vars:
       TARGET: "{{.TARGET}}"
       LINK_NAME: "{{.LINK_NAME}}"
+      BACKUP: "{{.LINK_NAME}}.bak"
     cmds:
-      - ln -s -b --suffix=.bak {{.TARGET}} {{.LINK_NAME}}
-      - if test {{.LINK_NAME}} -ef {{.LINK_NAME}}.bak ; then rm {{.LINK_NAME}}.bak ; fi
-      - ls -l {{.LINK_NAME}}*
-      # バックアップをとりつつ、同じリンク先ならバックアップは不要なので削除している
+      - |
+        if test -L {{.LINK_NAME}} ; then
+          # すでにシンボリックリンクが存在する場合はバックアップを作成
+          ln -nsf $(readlink {{.LINK_NAME}}) {{.BACKUP}}
+        fi
+        ln -nsf {{.TARGET}} {{.LINK_NAME}}
+        if test -L {{.BACKUP}}; then
+          # バックアップが存在する場合、リンク先が同じなら不要なので削除
+          if [ $(readlink {{.LINK_NAME}}) = $(readlink {{.BACKUP}}) ] ; then
+            unlink {{.BACKUP}}
+          else
+            # リンク先が異なる場合はバックアップを表示
+            ls -l {{.BACKUP}}
+          fi
+        fi
+        ls -l {{.LINK_NAME}}
+    silent: true
+    internal: true
+
+  _xdg_base_directory_for_bash:
+    desc: "Instructions to set XDG Base Directory for bash"
+    cmds:
+      - |
+        if test -e /etc/profile.d/bash_xdg.sh ; then
+          ls -l /etc/profile.d/bash_xdg.sh
+        else
+          echo "XDG_BASE_DIRECTORY for bash is not set. To set it system-wide, run the following command with sudo:"
+          echo "sudo ln -s {{.TASKFILE_DIR}}/bash/etc_profile.d_bash_xdg.sh /etc/profile.d/bash_xdg.sh"
+        fi
     silent: true
     internal: true
