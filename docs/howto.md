@@ -36,3 +36,19 @@ brew bundle install
 
 - aqua でインストール（aqua.yamlに入れてある）
 - `task link` で必要なシンボリックリンクをはる
+
+## XDG_BASE_DIRECTORY for bash
+
+- たいていのLinuxディストリビューションでは、`/etc/profile` が読み込まれてシェルが設定される
+- その中で `/etc/profile.d/` 下のファイルが自動的に読み込まれる
+- そこに所定のファイルを配置して、`~/.config/bash/` を使用するように設定する
+- 正確には `~/.config/bash/bash_profile` と `~/.config/bash/bashrc` を読み込ませている
+- 設定方針にもよるがbashrcだけでもそんなに困らない
+- ディレクトリ的に特権が必要なので手動
+
+```bash
+dotfiles $ sudo ln -s -b "$(pwd)/bash/etc_profile.d_bash_xdg.sh" /etc/profile.d/bash_xdg.sh
+dotfiles $ ls -l /etc/profile.d/bash_xdg.sh*
+# 問題なければバックアップファイル（~で終わっているほう）を削除
+# task link でこのあたりの表現済
+```
