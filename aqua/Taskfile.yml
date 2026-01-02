@@ -39,6 +39,7 @@ tasks:
     desc: random package from aqua.yaml
     aliases:
       - ap
+    dir: "{{.TASKFILE_DIR}}"
     vars:
       AQUA_YAML_FILE:
         sh: cat aqua.yaml
@@ -60,13 +61,14 @@ tasks:
     desc: Run aqua update, install, list for globally
     aliases:
       - au
-    dir: ~/.config/aqua
-    dotenv:
-      - .env
+    dir: "{{.TASKFILE_DIR}}"
+    env:
+      # GitHub CLI からトークンを取得
+      GITHUB_TOKEN:
+        sh: gh auth token
     cmds:
-      - echo "use github token [${GITHUB_TOKEN:0:20}***]"
       - aqua update
-      - aqua install -all
+      - aqua install --all
       - aqua list --installed --all | sort
 
   git:
@@ -76,12 +78,13 @@ tasks:
       task ag -- コミットタイトル（の一部）
     aliases:
       - ag
+    dir: "{{.TASKFILE_DIR}}"
     cmds:
       - task: _git
         vars:
           TITLE: 'bump: aqua up at {{date "2006-01-02" now}} {{.CLI_ARGS}}'
           BRANCH: 'bump/aqua_up/{{date "2006-01-02" now}}'
-          TARGET: "aqua.yaml"
+          TARGET: "{{relPath .ROOT_DIR .TASKFILE_DIR}}/aqua.yaml"
 
   _git:
     summary: git automation
