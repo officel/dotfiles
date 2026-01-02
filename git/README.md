@@ -1,21 +1,30 @@
-# config_git
+# git
 
 my git config on $XDG_CONFIG_HOME/git/
 
-## usage
+- `~/.ssh/` に鍵を置くのを忘れないこと
+- @TODO .vimrc の分離（コメントを残すのを忘れないこと）
+- @note task で config を管理するのどうかなぁ（中長期に渡って悩んでいる）
+
+## tl;dr
 
 ```bash
-cd ~/.config  # $XDG_CONFIG_HOME or $HOME/.config
-git clone https://github.com/officel/config_git.git ./git
+# このリポジトリのルートディレクトリ（このファイルのひとつ上のディレクトリ）
+dotfiles $ pwd
+/home/raki/officel/dotfiles
 
-# or I do it this way
-cd ~/repos/github.com/officel/
-git clone https://github.com/officel/config_git.git
-ln -s ~/repos/github.com/officel/config_git/ ~/.config/git
+# git の設定は XDG_BASE_DIRECTORY の XDG_CONFIG_HOME/git に置いてある、ということ
+dotfiles $ ls -l ~/.config/git
+lrwxrwxrwx 1 raki raki 31  1月  2 02:56 /home/raki/.config/git -> /home/raki/officel/dotfiles/git
+
+# 中身はこのディレクトリ
+dotfiles $ ls -l ~/.config/git/
+合計 8
+-rwxrwxrwx 1 raki raki 2458 12月 31 14:24 README.md
+-rwxrwxrwx 1 raki raki  114 12月 31 14:25 allowed_signers
+-rwxrwxrwx 1 raki raki 1903 12月 31 14:25 config
+-rwxrwxrwx 1 raki raki  669  1月  3 04:33 ignore
 ```
-
-- install id_rsa (manual)
-- fix git config remote.origin.url after clone
 
 ## see
 
@@ -24,13 +33,6 @@ ln -s ~/repos/github.com/officel/config_git/ ~/.config/git
 - [github/gitignore: A collection of useful .gitignore templates](https://github.com/github/gitignore)
 - [Conventional Commits](https://www.conventionalcommits.org/)
 - [XDG Base Directory Specification](https://specifications.freedesktop.org/basedir-spec/latest/)
-
-# related my projects
-
-- [officel/config_aqua: .config/aqua](https://github.com/officel/config_aqua)
-- [officel/config_bash: .config/bash](https://github.com/officel/config_bash)
-- [officel/config_git: .config/git](https://github.com/officel/config_git)
-- [officel/config_task: .config/task](https://github.com/officel/config_task)
 
 # note
 
@@ -53,7 +55,7 @@ ln -s ~/repos/github.com/officel/config_git/ ~/.config/git
 > The next place Git looks is the ~/.gitconfig (or ~/.config/git/config) file, which is specific to each user.
 > You can make Git read and write to this file by passing the --global option.
 
-## commit 時に自動改行させない
+## commit 時に自動改行させない @TODO .vimrc を管理するようにしたら削除予定
 
 - git のコミット本文は 72 文字でデフォルトで自動改行される
 - `textwidth=0` にすればいいらしいので、`/.vimrc` で設定
