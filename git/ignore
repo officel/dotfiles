@@ -4,14 +4,17 @@
 *.swp
 
 # temporary file
-*.nogit
-*.nogit.md
+## git に含めないファイルの拡張子を変更してしまえば楽だと思った
+## *.nogit
+## VS Code で拡張子がないとファイルタイプを教えるのが手間だなってなった
+## *.nogit.md
+## アンダーバーニ個始まりのファイルはgitに含めないというルールにした（イマココ）
 __*
 
 # ansible-vault password file in repo
 .vault_password
 
-# for act(github actions localy)
+# for act(github actions locally)
 .act.secrets
 .act.env
 
@@ -20,4 +23,5 @@ __*
 .terraformrc
 terraform.tfstate
 terraform.tfstate.backup
+## terraform state pull > z.tfstate ってすると使い勝手がいいので
 z.tfstate
