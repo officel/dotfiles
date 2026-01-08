@@ -1,4 +1,4 @@
-# config_bash
+# bash
 
 My bash config with XDG Base Directory specification. [Bash Reference Manual](https://www.gnu.org/software/bash/manual/bash.html)
 
@@ -18,32 +18,3 @@ Ubuntu 24.04 LTS がリリースされて WSL2 でも利用可能になったの
 ## learn
 
 - `~/.bash_login` を置くと `~/.profile` が処理されない。 -> [ファイルの読み込み順序](https://www.gnu.org/software/bash/manual/bash.html#Bash-Startup-Files)
-
-## note
-
-### XDG Base にするために
-
-- $HOME 下の .bash\* は削除。 .profile も削除
-- bash の読み込みを XDG Base にする sh を処理させる
-
-```bash
-cd /etc/profile.d/
-sudo ln -s /home/raki/officel/config_bash/etc_profile.d_bash_xdg.sh bash_xdg.sh
-# このシェルで読み込みディレクトリを ~/.config/bash にしつつ bash_profile と bashrc があれば読み込むようにしている
-```
-
-### direnv でディレクトリ毎に alias
-
-- [direnv を使用して、同名のコマンドの挙動をディレクトリ毎に変更したい - eidera log](https://eidera.com/blog/2018/12/28/direnv_alias/)
-
-```bash
-cd
-ln -s .config/bash/direnvrc .direnvrc
-```
-
-# related my projects
-
-- [officel/config_aqua: .config/aqua](https://github.com/officel/config_aqua)
-- [officel/config_bash: .config/bash](https://github.com/officel/config_bash)
-- [officel/config_git: .config/git](https://github.com/officel/config_git)
-- [officel/config_task: .config/task](https://github.com/officel/config_task)
