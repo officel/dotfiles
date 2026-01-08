@@ -16,6 +16,7 @@ vars:
   # ユーザーフォームにシンボリックリンクを作成する設定ファイルのリスト[TARGET,LINK_NAME]
   USER_HOME_LINKS:
     - "direnvrc,.direnvrc"
+    - "vimrc,.vimrc"
   # XDG_CONFIG_HOME 環境変数のデフォルト値
   XDG_CONFIG_HOME: "~/.config"
   # XDG_CONFIG_HOME にシンボリックリンクを作成するディレクトリのリスト

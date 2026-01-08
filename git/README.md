@@ -3,8 +3,6 @@
 my git config on $XDG_CONFIG_HOME/git/
 
 - `~/.ssh/` に鍵を置くのを忘れないこと
-- @TODO .vimrc の分離（コメントを残すのを忘れないこと）
-- @note task で config を管理するのどうかなぁ（中長期に渡って悩んでいる）
 
 ## tl;dr
 
@@ -45,7 +43,7 @@ dotfiles $ ls -l ~/.config/git/
 ## config がどこで設定されているか
 
 - Windows ユーザの同僚氏のグローバルな git の設定の場所がぱっとわからなかった
-- `git config --show-origin --show-scope --list`
+- `git config --show-origin --show-scope --list` # alias gcs として登録済
 
 ## global の config
 
@@ -54,14 +52,3 @@ dotfiles $ ls -l ~/.config/git/
 
 > The next place Git looks is the ~/.gitconfig (or ~/.config/git/config) file, which is specific to each user.
 > You can make Git read and write to this file by passing the --global option.
-
-## commit 時に自動改行させない @TODO .vimrc を管理するようにしたら削除予定
-
-- git のコミット本文は 72 文字でデフォルトで自動改行される
-- `textwidth=0` にすればいいらしいので、`/.vimrc` で設定
-- あまり長いのは推奨されないので適度に自分で改行すること
-
-```text
-# ~/.vimrc
-autocmd FileType gitcommit setlocal textwidth=0
-```
