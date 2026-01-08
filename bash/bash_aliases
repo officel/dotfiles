@@ -87,6 +87,8 @@ alias gdc='git diff --cached'
 alias gdi='git diff'
 alias gdn='git diff --name-only'
 alias gds='git diff --stat'
+alias gdw='git diff --no-index  --word-diff-regex="."'  # 文字単位で差分表示
+alias gdww='git diff --no-index --word-diff --word-diff-regex='\''[A-Za-z0-9]+|[^[:space:]]'\'''  # 単語単位で差分表示
 alias gf='git fetch --prune'
 alias gg='git grep -i -P'
 alias glogs='git log -S'
