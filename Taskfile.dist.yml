@@ -10,6 +10,14 @@ includes:
     aliases:
       - a
 
+  azure:
+    taskfile: azure/Taskfile.yml
+    optional: true
+    internal: false
+    flatten: false
+    aliases:
+      - az
+
 vars:
   # ユーザーホーム（テンプレでパスとして使うので/をつけない）
   USER_HOME: "~"

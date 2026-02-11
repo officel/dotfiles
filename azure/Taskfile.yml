@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+# https://taskfile.dev/
+
+version: "3"
+
+# Azure を操作するタスク
+# 正直コマンドをメモっておくだけで充分な気もするけど、育てばそれなりになるかもしれない
+# ~/.azure を管理しないのは環境差を全部吸収するのが面倒なため。azure cli 経由でやり取りできるものだけを管理する
+# ../bash/azure_functions も参照のこと
+
+tasks:
+  default:
+    cmds:
+      - echo "This is {{.TASKFILE}} at v{{.TASK_VERSION}}"
+      - task --list --sort alphanumeric -t {{.TASKFILE}}
+    silent: true
+
+  az:alias:export:
+    desc: "Export Azure CLI aliases"
+    summary: |
+      Export Azure CLI aliases to ./azure/ directory
+      -p でファイルを指定すると既に存在している場合にエラーを返すのでディレクトリだけ指定している
+      force 的なオプションがないようなので苦肉の策
+    cmds:
+      - az alias export -p ./azure/
+      - az alias list
+    silent: true
+    aliases:
+      - export
+      - e
+
+  az:alias:import:
+    desc: "Import Azure CLI aliases"
+    summary: |
+      Import Azure CLI aliases from ./azure/alias file
+      export で出力されたファイルを指定してインポートする
+    cmds:
+      - az alias import -s ./azure/alias
+      - az alias list
+    silent: true
+    aliases:
+      - import
+      - i
