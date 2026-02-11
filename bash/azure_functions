@@ -1,0 +1,21 @@
+# Azure CLI functions
+
+# List Azure RBAC roles that have permissions for a specific action
+# Usage: azrbac <action>
+# Example: azrbac "Microsoft.Storage/storageAccounts/read"
+function azrbac() {
+  local action="$1"
+
+  az role definition list -o json \
+  | jq -r --arg action "$action" '
+      .[]
+      | select(
+          any(.permissions[]?;
+              (any(.actions[]?; . == $action)
+               or
+               any(.dataActions[]?; . == $action))
+          )
+        )
+      | .roleName
+    '
+}
