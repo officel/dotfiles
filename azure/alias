@@ -1,0 +1,5 @@
+[su]
+command = account list -o table
+
+[roledef]
+command = role definition list -o json --name
