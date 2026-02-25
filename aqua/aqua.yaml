@@ -54,3 +54,4 @@ packages:
 - name: ajeetdsouza/zoxide@v0.9.9
 - name: junegunn/fzf@v0.68.0
 - name: Orange-OpenSource/hurl@7.1.0
+- name: github/copilot-cli@v0.0.418
