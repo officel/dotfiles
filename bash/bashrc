@@ -192,4 +192,5 @@ export PATH="$HOME/.volta/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 
 # cd alternative zoxide
+export _ZO_EXCLUDE_DIRS="/tmp/*:/mnt/c/*:/mnt/d/*"
 eval "$(zoxide init bash)"
