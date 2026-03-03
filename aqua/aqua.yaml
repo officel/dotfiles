@@ -37,7 +37,7 @@ packages:
 - name: argoproj/argo-cd@v3.3.2
 - name: istio/istio/istioctl@1.29.0
 - name: go-task/task@v3.48.0
-- name: newrelic/newrelic-cli@v0.107.0
+- name: newrelic/newrelic-cli@v0.107.1
 - name: astral-sh/uv@0.10.7
 - name: neilotoole/sq@v0.50.0
 - name: terraform-docs/terraform-docs@v0.21.0
@@ -48,10 +48,10 @@ packages:
 - name: j178/prek@v0.3.4
 - name: hairyhenderson/gomplate@v5.0.0
 - name: hashicorp/vault@v1.21.2
-- name: aquasecurity/trivy@v0.69.1
+- name: aquasecurity/trivy@v0.69.3
 - name: miniscruff/changie@v1.24.0
 - name: twistedpair/google-cloud-sdk@558.0.0
 - name: ajeetdsouza/zoxide@v0.9.9
-- name: junegunn/fzf@v0.68.0
+- name: junegunn/fzf@v0.70.0
 - name: Orange-OpenSource/hurl@7.1.0
 - name: github/copilot-cli@v0.0.420
