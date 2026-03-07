@@ -8,18 +8,18 @@
 #   - all
 registries:
 - type: standard
-  ref: v4.476.0 # renovate: depName=aquaproj/aqua-registry
+  ref: v4.478.0 # renovate: depName=aquaproj/aqua-registry
 packages:
 - name: cli/cli@v2.87.3
 - name: volta-cli/volta@v2.0.2
-- name: golang/go@go1.26.0
+- name: golang/go@go1.26.1
 - name: nektos/act@v0.2.84
 - name: jqlang/jq@jq-1.8.1
 - name: mikefarah/yq@v4.52.4
 - name: google/yamlfmt@v0.21.0
 - name: direnv/direnv@v2.37.1
 - name: stateful/runme@v3.16.5
-- name: aws/aws-cli@2.34.0
+- name: aws/aws-cli@2.34.4
 - name: 99designs/aws-vault@v7.2.0
 - name: charmbracelet/glow@v2.1.1
 - name: kayac/ecspresso@v2.7.1
@@ -37,8 +37,8 @@ packages:
 - name: argoproj/argo-cd@v3.3.2
 - name: istio/istio/istioctl@1.29.0
 - name: go-task/task@v3.48.0
-- name: newrelic/newrelic-cli@v0.107.1
-- name: astral-sh/uv@0.10.7
+- name: newrelic/newrelic-cli@v0.107.2
+- name: astral-sh/uv@0.10.9
 - name: neilotoole/sq@v0.50.0
 - name: terraform-docs/terraform-docs@v0.21.0
 - name: marp-team/marp-cli@v4.2.3
@@ -47,11 +47,11 @@ packages:
 - name: anchore/grype@v0.109.0
 - name: j178/prek@v0.3.4
 - name: hairyhenderson/gomplate@v5.0.0
-- name: hashicorp/vault@v1.21.2
+- name: hashicorp/vault@v1.21.4
 - name: aquasecurity/trivy@v0.69.3
 - name: miniscruff/changie@v1.24.0
-- name: twistedpair/google-cloud-sdk@558.0.0
+- name: twistedpair/google-cloud-sdk@559.0.0
 - name: ajeetdsouza/zoxide@v0.9.9
 - name: junegunn/fzf@v0.70.0
 - name: Orange-OpenSource/hurl@7.1.0
-- name: github/copilot-cli@v0.0.420
+- name: github/copilot-cli@v1.0.2
