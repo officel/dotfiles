@@ -11,7 +11,6 @@ registries:
   ref: v4.478.0 # renovate: depName=aquaproj/aqua-registry
 packages:
 - name: cli/cli@v2.87.3
-- name: volta-cli/volta@v2.0.2
 - name: golang/go@go1.26.1
 - name: nektos/act@v0.2.84
 - name: jqlang/jq@jq-1.8.1
@@ -55,3 +54,4 @@ packages:
 - name: junegunn/fzf@v0.70.0
 - name: Orange-OpenSource/hurl@7.1.0
 - name: github/copilot-cli@v1.0.2
+- name: nodejs/node@v25.8.0
