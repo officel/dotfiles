@@ -26,6 +26,7 @@
 	cancel = reset --soft HEAD^
 	save   = stash save
 	load   = stash pop
+	drop   = stash drop
 	pr     = "!git push origin HEAD:refs/heads/$1 #"
 	uns    = restore --staged
 	unt    = ls-files --others --exclude-standard
