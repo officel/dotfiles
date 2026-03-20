@@ -55,3 +55,4 @@ packages:
 - name: Orange-OpenSource/hurl@7.1.0
 - name: github/copilot-cli@v1.0.9
 - name: nodejs/node@v25.8.1
+- name: suzuki-shunsuke/pinact@v3.9.0
