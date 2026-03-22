@@ -25,6 +25,7 @@ vars:
   USER_HOME_LINKS:
     - "direnvrc,.direnvrc"
     - "vimrc,.vimrc"
+    - "Taskfile.home.yml,Taskfile.yml"
   # XDG_CONFIG_HOME 環境変数のデフォルト値
   XDG_CONFIG_HOME: "~/.config"
   # XDG_CONFIG_HOME にシンボリックリンクを作成するディレクトリのリスト

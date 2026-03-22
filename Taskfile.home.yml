@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: "3"
+
+# home ディレクトリに配置してグローバルな作業を行う
+# リポジトリに既に taskfile が存在する場合は `t -g` で呼べる
+
+# vars:
+
+tasks:
+  default:
+    cmds:
+      - echo "This is {{.TASKFILE}} at v{{.TASK_VERSION}}"
+      - task --list --sort alphanumeric -t {{.TASKFILE}}
+    silent: true
+
+  repos:use_prek:
+    desc: "prek への切替実行"
+    summary: |
+      - pre-commit を prek へ切り替える。
+      - 何度実行しても問題ない。
+      - WF の名前は pre-commit に統一する（grep でチェック）
+    aliases:
+      - up
+    cmds:
+      - pre-commit uninstall
+      - prek install
+      - prek autoupdate --freeze
+      - pinact run -u
+      - git grep -i -p "prek" || echo "No 'prek' found in the repository."
+      - grep "groups" .github/dependabot.yml || echo "No 'groups' found in .github/dependabot.yml."
+    dir: "{{.USER_WORKING_DIR}}"
