@@ -19,8 +19,6 @@
 [alias]
 	# short
 	co = checkout
-	sw = switch
-	swo= switch -d origin/HEAD
 
 	# alias
 	cancel = reset --soft HEAD^
