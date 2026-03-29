@@ -1,5 +1,11 @@
 ---
-# https://pre-commit.com/
+# Original: https://pre-commit.com/
+# Recommended: https://prek.j178.dev/
+
+default_install_hook_types:
+  - pre-commit
+  - commit-msg
+
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks.git
     rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c  # frozen: v6.0.0
@@ -30,7 +36,6 @@ repos:
     rev: ea2eb407b4cbce87cf0d502f36578950494f5ac9  # frozen: v1.23.1
     hooks:
       - id: zizmor
-
 
   - repo: https://github.com/jackdewinter/pymarkdown
     rev: 6d3c1b70d44ea2202b23552af93aca3b5017ee83  # frozen: v0.9.36
@@ -63,4 +68,3 @@ repos:
     hooks:
       - id: conventional-pre-commit
         stages: [commit-msg]
-        args: [feat, fix, build, chore, ci, docs, perf, refactor, revert, style, test]
