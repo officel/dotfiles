@@ -74,29 +74,32 @@ alias dcr='docker compose run'
 
 # git
 alias g='git'
-alias ga='git add ":!**\!\!*"'  # :! は除外設定。 !! で始まるファイルを add しない
-alias gau='git add -u ":!**\!\!*"'
+alias ga='git add'
+alias gau='git add -u'
 alias gb='git branch'
 alias gba='git branch -a'
-alias gcan='git commit --amend --no-edit'
+alias gca='git commit --amend'
 alias gcv='git commit -v'
 alias gcm='git commit -m'
-alias gcl='git config --list'
-alias gcs='git config --show-origin --show-scope --list'
+alias gcl='git config list'
+alias gcs='git config list --show-origin --show-scope'
 alias gdc='git diff --cached'
 alias gdi='git diff'
 alias gdn='git diff --name-only'
 alias gds='git diff --stat'
 alias gdw='git diff --no-index  --word-diff-regex="."'  # 文字単位で差分表示
 alias gdww='git diff --no-index --word-diff --word-diff-regex='\''[A-Za-z0-9]+|[^[:space:]]'\'''  # 単語単位で差分表示
-alias gf='git fetch --prune'
+# zoxide と一緒に fzf を入れたので、ログからハッシュを取得しやすいようにした(git find commit 的な)
+alias gfc='git log --all --oneline --graph --decorate -50 | fzf --no-multi | grep -oE '\''[a-f0-9]{7}'\'' | head -c -1'
+# リストからブランチを選択してチェックアウト
+alias gfo='git branch --all --sort=-refname | fzf --no-multi | xargs git checkout '
 alias gg='git grep -i -P'
 alias glogs='git log -S'
 alias gp='git plog -10'
 alias gpa='git plog --all -10'
+# 引数が必要な場合は function にする必要があって面倒なので
 alias gpr='git pr'
 alias gr='git fetch --prune --all && git checkout origin/HEAD && git plog --all -10 && git status'
-alias gs='git switch -d origin/HEAD'
 alias gss='git show --stat'
 alias gst='git status --short --branch'
 alias cr='cd "$(git rev-parse --show-toplevel)"'
