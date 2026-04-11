@@ -85,7 +85,7 @@ tasks:
         vars:
           TITLE: 'bump: aqua up at {{date "2006-01-02" now}} {{.CLI_ARGS}}'
           BRANCH: 'bump/aqua_up/{{date "2006-01-02" now}}'
-          TARGET: "{{relPath .ROOT_DIR .TASKFILE_DIR}}/aqua.yaml"
+          TARGET: "{{relPath .ROOT_DIR .TASKFILE_DIR}}/aqua*"
 
   _git:
     summary: git automation
