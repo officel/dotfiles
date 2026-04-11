@@ -68,6 +68,7 @@ tasks:
         sh: gh auth token
     cmds:
       - aqua update
+      - aqua update-checksum
       - aqua install --all
       - aqua list --installed --all | sort
 
