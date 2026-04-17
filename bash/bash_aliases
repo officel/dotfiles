@@ -96,6 +96,18 @@ alias gfc='git log --all --oneline --graph --decorate -50 | fzf --no-multi | gre
 alias gfo='git branch --all --sort=-refname | fzf --no-multi | xargs git checkout '
 alias gg='git grep -i -P'
 alias glogs='git log -S'
+
+# 直近1年で変更の多いファイルトップ20
+alias gl1='git log --format="" --name-only --since="1 year ago"          | sort | uniq -c | sort -nr | head -20'
+# 直近1年でバグ修正の多いファイルトップ20
+alias gl2='git log --format="" --name-only -i -E --grep="fix|bug|broken" | sort | uniq -c | sort -nr | head -20'
+# 直近1年のコミット数を月ごとに集計
+alias gl3='git log --format="%ad" --date=format:"%Y-%m"                  | sort | uniq -c | tail -13'
+# 直近1年のリバートや緊急修正のコミットを表示
+alias gl4='git log --format="%ad %h %s" --date=short --since="1 year ago" | grep -iE "revert|hotfix|emergency|rollback"'
+# コントリビュータートップ20
+alias gl5='git shortlog -sn --no-merges | head -20'
+
 alias gp='git plog -10'
 alias gpa='git plog --all -10'
 # 引数が必要な場合は function にする必要があって面倒なので
