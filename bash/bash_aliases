@@ -75,6 +75,7 @@ alias dcr='docker compose run'
 # git
 alias g='git'
 alias ga='git add'
+alias gai='git add -i'
 alias gau='git add -u'
 alias gb='git branch'
 alias gba='git branch -a'
