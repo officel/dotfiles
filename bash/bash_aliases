@@ -4,7 +4,7 @@
 alias ls='ls --group-directories-first'
 alias ll='ls -l'
 alias lla='ls -al'
-alias tree='tree --charset unicode -aNI ".git|node_modules|.terraform|.ruff_cache"'
+alias tree='tree --charset unicode -aNI ".git|node_modules|.terraform|.ruff_cache|.expo"'
 alias myip='curl -s inet-ip.info'
 alias mypath='echo $PATH | tr ":" "\n"'
 alias diff='diff --exclude=.terraform --exclude=.git'
@@ -117,6 +117,7 @@ alias gr='git fetch --prune --all && git checkout origin/HEAD && git plog --all 
 alias gss='git show --stat'
 alias gst='git status --short --branch'
 alias cr='cd "$(git rev-parse --show-toplevel)"'
+alias aliasg='alias | grep git'
 
 # k8s use kubecolor
 alias k='kubecolor'
@@ -132,8 +133,33 @@ alias kgx='kubectl get all,pv,pvc,job,ing'
 alias kgpa='kubectl get pod -A'
 alias kgtn='kubectl get node -o wide; kubectl top node'
 alias kdrainf='kubectl drain --ignore-daemonsets --delete-local-data'
-
 alias stern='kubectl stern'
+alias aliask='alias | grep kubectl'
+
+# pnpm
+alias pn='pnpm'
+alias pna='pnpm add'
+alias pnad='pnpm add --save-dev'
+alias pnag='pnpm add --global'
+alias pnb='pnpm build'
+alias pnd='pnpm dev'
+alias pne='pnpm exec'
+alias pnf='pnpm --recursive --filter'
+alias pni='pnpm install'
+alias pnls='pnpm list'
+alias pnlsg='pnpm list --global'
+alias pnr='pnpm run'
+alias pnrm='pnpm remove'
+alias pnrmg='pnpm remove --global'
+alias pns='pnpm start'
+alias pnt='pnpm test'
+alias pnup='pnpm update'
+alias pnupg='pnpm update --global'
+alias pnvm='pnpm env use --global'
+alias pnw='pnpm why'
+alias pnx='pnpm dlx'
+# 普段そんなに使わない alias をリストできるようにしておくと便利かも
+alias aliaspn='alias | grep "pnpm"'
 
 # taskfile.dev
 alias t='task'
