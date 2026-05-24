@@ -2,7 +2,14 @@
 version: "3"
 
 # home ディレクトリに配置してグローバルな作業を行う
-# リポジトリに既に taskfile が存在する場合は `t -g` で呼べる
+# リポジトリに既に taskfile が存在する場合は `t -g` または `tg`
+
+includes:
+  repos:
+    taskfile: Taskfile.repos.yml
+    flatten: true
+    internal: false
+    optional: true
 
 # vars:
 
