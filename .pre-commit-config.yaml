@@ -27,10 +27,18 @@ repos:
       - id: trailing-whitespace
       - id: check-merge-conflict
 
-  - repo: https://github.com/gitleaks/gitleaks
-    rev: 83d9cd684c87d95d656c1458ef04895a7f1cbd8e  # frozen: v8.30.1
+  - repo: https://github.com/betterleaks/betterleaks
+    rev: ea102f10e2255c28a2e45cd58db643ee5864e05b  # frozen: v1.3.1
     hooks:
-      - id: gitleaks
+      - id: betterleaks
+
+  - repo: https://github.com/betterleaks/betterleaks
+    rev: ea102f10e2255c28a2e45cd58db643ee5864e05b  # frozen: v1.3.1
+    hooks:
+      - id: betterleaks
+        entry: betterleaks dir ./ --verbose
+        stages: [manual]
+        # prek run -a --hook-stage manual
 
   - repo: https://github.com/rhysd/actionlint
     rev: 914e7df21a07ef503a81201c76d2b11c789d3fca  # frozen: v1.7.12
@@ -43,7 +51,7 @@ repos:
       - id: zizmor
 
   - repo: https://github.com/jackdewinter/pymarkdown
-    rev: 6d3c1b70d44ea2202b23552af93aca3b5017ee83  # frozen: v0.9.36
+    rev: 491b8945442244c6b03028a96e9a8bde9ad63400  # frozen: v0.9.37
     hooks:
       - id: pymarkdown
         args:
