@@ -1,9 +1,9 @@
 # .dotfiles/alias
 
 # command
+alias l='ls -al'
 alias ls='ls --group-directories-first'
 alias ll='ls -l'
-alias lla='ls -al'
 alias tree='tree --charset unicode -aNI ".git|node_modules|.terraform|.ruff_cache|.expo"'
 alias myip='curl -s inet-ip.info'
 alias mypath='echo $PATH | tr ":" "\n"'
@@ -15,41 +15,41 @@ alias pwgen='pwgen -c -n -B -1'
 alias fullpath='find `pwd` -maxdepth 1 -name'
 alias expenv='export $(grep -v "^#" .env | xargs)'
 
+alias da='direnv allow'
+
 alias aq='aqua'
 alias aqcd="cd ${XDG_CONFIG_HOME:-$HOME/.config}/aqua/"
 alias aqgi='aqua generate -i -o $AQUA_GLOBAL_CONFIG'
 alias aqia='aqua install --all'
 alias aqli='aqua list --installed --all | sort'
 alias aqup='aqua update'
+alias aliasaq='alias | grep aqua'
 
 # ansible
-alias ansible-playbook='TZ="Asia/Tokyo" ANSIBLE_LOG_PATH=logs/ansible_$(date "+%Y%m%d%H%M%S").log ansible-playbook'
-alias ansible-groups='ansible-inventory --list | jq -r "keys | .[]"'
+# alias ansible-playbook='TZ="Asia/Tokyo" ANSIBLE_LOG_PATH=logs/ansible_$(date "+%Y%m%d%H%M%S").log ansible-playbook'
+# alias ansible-groups='ansible-inventory --list | jq -r "keys | .[]"'
 
 # aws cli with jq
-alias aec2='aws ec2 describe-instances | jq -r '"'"'.Reservations|sort_by(.Instances[].Tags[]|select(.Key == "Name").Value)| .[].Instances[]|[(.Tags[]|select(.Key == "Name").Value), .InstanceId, .PrivateIpAddress, .State.Name] | @tsv'"'"''
-alias aec2start='aws ec2 start-instances --instance-ids'
-alias aec2stop='aws ec2 stop-instances --instance-ids'
-alias aw='aws sts get-caller-identity || (aws sso login --profile default && aws sts get-caller-identity)'
-alias awclear='rm -f ~/.aws/*/cache/*'
-alias awc='rm -f ~/.aws/*/cache/*; aws sso login --profile default && aws sts get-caller-identity'
+# alias aec2='aws ec2 describe-instances | jq -r '"'"'.Reservations|sort_by(.Instances[].Tags[]|select(.Key == "Name").Value)| .[].Instances[]|[(.Tags[]|select(.Key == "Name").Value), .InstanceId, .PrivateIpAddress, .State.Name] | @tsv'"'"''
+# alias aec2start='aws ec2 start-instances --instance-ids'
+# alias aec2stop='aws ec2 stop-instances --instance-ids'
+# alias aw='aws sts get-caller-identity || (aws sso login --profile default && aws sts get-caller-identity)'
+# alias awclear='rm -f ~/.aws/*/cache/*'
+# alias awc='rm -f ~/.aws/*/cache/*; aws sso login --profile default && aws sts get-caller-identity'
 
 # aws-vault
-alias av='aws-vault'
-alias avc='aws-vault clear'
-alias ave='aws-vault exec'
-alias avls='aws-vault list'
+# alias av='aws-vault'
+# alias avc='aws-vault clear'
+# alias ave='aws-vault exec'
+# alias avls='aws-vault list'
 #gitignore で終わる行を ignore してみた
 
 # aws-vault & terraform
-alias avta='aws-vault exec ${AWS_PROFILE:-default} -- terraform apply'
-alias avte='aws-vault exec ${AWS_PROFILE:-default} -- terraform init --upgrade && aws-vault exec ${AWS_PROFILE:-default} -- terraform fmt && aws-vault exec ${AWS_PROFILE:-default} -- terraform plan'
-alias avto='aws-vault exec ${AWS_PROFILE:-default} -- terraform output'
-alias avtp='aws-vault exec ${AWS_PROFILE:-default} -- terraform plan'
-alias avts='aws-vault exec ${AWS_PROFILE:-default} -- terraform state'
-
-# boundary
-alias b='boundary'
+# alias avta='aws-vault exec ${AWS_PROFILE:-default} -- terraform apply'
+# alias avte='aws-vault exec ${AWS_PROFILE:-default} -- terraform init --upgrade && aws-vault exec ${AWS_PROFILE:-default} -- terraform fmt && aws-vault exec ${AWS_PROFILE:-default} -- terraform plan'
+# alias avto='aws-vault exec ${AWS_PROFILE:-default} -- terraform output'
+# alias avtp='aws-vault exec ${AWS_PROFILE:-default} -- terraform plan'
+# alias avts='aws-vault exec ${AWS_PROFILE:-default} -- terraform state'
 
 # docker
 alias     d='docker'
@@ -61,16 +61,19 @@ alias  dps='docker ps'
 alias dpss="docker ps | awk 'NR <= 1; NR > 1 { print \$0 | \"sort -k7 -V\" };'"
 alias   ds='docker stop'
 
-alias al2='docker container run -itd --rm -e "TZ=Asia/Tokyo" --name al2 amazonlinux'
+# alias al2='docker container run -itd --rm -e "TZ=Asia/Tokyo" --name al2 amazonlinux'
 alias alpinx='docker container run -itd --rm -v `pwd`:/usr/share/nginx/html -p 8081:80 -e "TZ=Asia/Tokyo" --name alpinx nginx:alpine'
-alias alpython='docker container run --rm -it -d -e "TZ=Asia/Tokyo" --name alpython python:alpine'
-alias jekyll='docker container run -itd --rm -v `pwd`:/srv/jekyll:Z -e "TZ=Asia/Tokyo" --name jekyll jekyll/jekyll jekyll'
+# alias alpython='docker container run --rm -it -d -e "TZ=Asia/Tokyo" --name alpython python:alpine'
+# alias jekyll='docker container run -itd --rm -v `pwd`:/srv/jekyll:Z -e "TZ=Asia/Tokyo" --name jekyll jekyll/jekyll jekyll'
 
 alias dc='docker compose'
 alias dcd='docker compose down'
 alias dcu='docker compose up'
 alias dcud='docker compose up -d'
 alias dcr='docker compose run'
+
+# docker をひっかける alias 多いな
+alias aliasd='alias | grep docker'
 
 # git
 alias g='git'
@@ -161,12 +164,12 @@ alias pnupg='pnpm update --global'
 alias pnvm='pnpm env use --global'
 alias pnw='pnpm why'
 alias pnx='pnpm dlx'
-# 普段そんなに使わない alias をリストできるようにしておくと便利かも
 alias aliaspn='alias | grep "pnpm"'
 
 # taskfile.dev
 alias t='task'
 alias tg='task --global'
+alias aliast='alias | grep "task"'
 
 # terraform
 alias tf='terraform'
@@ -184,5 +187,7 @@ alias tfo='terraform output'
 alias tfp='terraform plan'
 alias tfq='terraform query'
 alias tfs='terraform state'
+alias tft='terraform test'
 alias tfv='terraform version'
 alias tfva='terraform validate'
+alias aliastf='alias | grep "terraform"'
