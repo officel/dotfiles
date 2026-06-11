@@ -881,6 +881,31 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/owenlamont/ryl/v0.15.0/ryl-aarch64-apple-darwin.tar.gz",
+      "checksum": "0AC4A6A6D014B63A248C696A99EE556753A7EBA23980E873B2D966793B8FDB0A",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/owenlamont/ryl/v0.15.0/ryl-aarch64-pc-windows-msvc.zip",
+      "checksum": "E421D42411A9395D3268C000AFFADA8D1739AF05FECCE1B476830CCF1886D107",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/owenlamont/ryl/v0.15.0/ryl-aarch64-unknown-linux-musl.tar.gz",
+      "checksum": "0B73BDB9AABD0F9462163D8DD79B06D8E72513C6471E72AB63E74D4B923D0E7B",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/owenlamont/ryl/v0.15.0/ryl-x86_64-pc-windows-msvc.zip",
+      "checksum": "E22250F4B2F04B50DEF5BF772416F7A93FC17A184C7F6B1BA2BEEE4DB4F90EB0",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/owenlamont/ryl/v0.15.0/ryl-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "F506DC124F29C8F3428BACBD28E90BAF9FC8824DAA3A21E48E3B1F9DA68A8490",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/runmedev/runme/v3.16.11/runme_darwin_arm64.tar.gz",
       "checksum": "0DAF3CFEE447DC4C31D98B916F8CB05BEDDF1AC6CF1750B9A4E975DB0F3BB02D",
       "algorithm": "sha256"
