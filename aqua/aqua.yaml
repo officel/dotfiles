@@ -60,3 +60,4 @@ packages:
   - name: BurntSushi/ripgrep@15.1.0
   - name: sharkdp/fd@v10.4.2
   - name: dandavison/delta@0.19.2
+  - name: owenlamont/ryl@v0.15.0
