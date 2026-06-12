@@ -6,7 +6,7 @@ version: "3"
 
 includes:
   repos:
-    taskfile: Taskfile.repos.yml
+    taskfile: Taskfile.private.yml
     flatten: true
     internal: false
     optional: true
@@ -19,3 +19,16 @@ tasks:
       - echo "This is {{.TASKFILE}} at v{{.TASK_VERSION}}"
       - task --list --sort alphanumeric -t {{.TASKFILE}}
     silent: true
+
+  update_repository_tools:
+    desc: "update repository tools"
+    aliases:
+      - u
+    cmds:
+      - git fetch --all --prune
+      - git checkout origin/HEAD
+      - pinact run -u
+      - zizmor .
+      - prek auto-update --freeze
+      - git status
+    dir: "{{.USER_WORKING_DIR}}"
