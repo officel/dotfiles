@@ -936,6 +936,31 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/rvben/rumdl/v0.2.15/rumdl-v0.2.15-aarch64-apple-darwin.tar.gz",
+      "checksum": "D8D4869260D287F1AB3B71A449586A0743BA8597B6FAA8E65A08E512FCC8490E",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/rvben/rumdl/v0.2.15/rumdl-v0.2.15-aarch64-unknown-linux-musl.tar.gz",
+      "checksum": "E13E01E2A4132C996DE30F2001CA1258C39C9052D4A933E64D7EA08FBFAF4B70",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/rvben/rumdl/v0.2.15/rumdl-v0.2.15-x86_64-apple-darwin.tar.gz",
+      "checksum": "171325D11154C25D099AF9F828EAFF50AAE707453D841B549F0C38E7B24BD0A0",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/rvben/rumdl/v0.2.15/rumdl-v0.2.15-x86_64-pc-windows-msvc.zip",
+      "checksum": "D015885CE8461BE36517C4B3A6139C3C594C60C793CB592DDE0B487ED1AAFAED",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/rvben/rumdl/v0.2.15/rumdl-v0.2.15-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "C484D01440E5920BC3F49533B56F7AD32DFF4E54D98596E6BD6D7B9F804B98B4",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/sharkdp/fd/v10.4.2/fd-v10.4.2-aarch64-apple-darwin.tar.gz",
       "checksum": "623DC0AFC81B92E4D4606B380D7BC91916BA7B97814263E554D50923A39E480A",
       "algorithm": "sha256"
@@ -1071,18 +1096,18 @@
       "algorithm": "sha256"
     },
     {
-      "id": "http/awscli.amazonaws.com/AWSCLIV2-2.35.3.pkg",
-      "checksum": "C3222EE8613CDB72EE9735577DECB32E2FBC1A7F46AED23C81F16F7D3E552A1F",
+      "id": "http/awscli.amazonaws.com/AWSCLIV2-2.35.4.pkg",
+      "checksum": "0491124E8BE5414595506DD4E280CD62F0CD1BD8CA2FA872EE2F3E89CB6CAB83",
       "algorithm": "sha256"
     },
     {
-      "id": "http/awscli.amazonaws.com/awscli-exe-linux-aarch64-2.35.3.zip",
-      "checksum": "6AA748F9D9FB89D74187D4A681D6CEBA5390FB082106F4A6F67238F77CA17E7F",
+      "id": "http/awscli.amazonaws.com/awscli-exe-linux-aarch64-2.35.4.zip",
+      "checksum": "377C4B9D49FDF179B0A5AB9E548063A4C172D4720AD0BF7E975166A54DA6FC9C",
       "algorithm": "sha256"
     },
     {
-      "id": "http/awscli.amazonaws.com/awscli-exe-linux-x86_64-2.35.3.zip",
-      "checksum": "9D1E661E9A3F7BA33021206B47A0F3D5B1EEF016DFE9F2027F36E8F15CE11D2C",
+      "id": "http/awscli.amazonaws.com/awscli-exe-linux-x86_64-2.35.4.zip",
+      "checksum": "EB037F2DF27B653B24B7942FDD7C62BB350354A906C16F70E82D92A2CE49084B",
       "algorithm": "sha256"
     },
     {
@@ -1151,28 +1176,28 @@
       "algorithm": "sha256"
     },
     {
-      "id": "http/get.helm.sh/helm-v4.2.0-darwin-amd64.tar.gz",
-      "checksum": "1376EA697140E4DB316736E760D5A47D12AFC1524DCE704476EF06FD7FDEDDC6",
+      "id": "http/get.helm.sh/helm-v4.2.1-darwin-amd64.tar.gz",
+      "checksum": "2A21C9F368D608BCF6EB794EBC06514EB6B529A846B60FE4A43DEA7BCCE65228",
       "algorithm": "sha256"
     },
     {
-      "id": "http/get.helm.sh/helm-v4.2.0-darwin-arm64.tar.gz",
-      "checksum": "F13F959015447B6BC309F9FD506509926543988A39035C088B52522EC95E2ACB",
+      "id": "http/get.helm.sh/helm-v4.2.1-darwin-arm64.tar.gz",
+      "checksum": "896472D2EC0740C60F64A9DF0FC30D478BEEE38A1A2A6ED91AA6E6EE177C1575",
       "algorithm": "sha256"
     },
     {
-      "id": "http/get.helm.sh/helm-v4.2.0-linux-amd64.tar.gz",
-      "checksum": "97DBEB971BE4AC4B27E3839976D9564C0FB35C6F3B1DA89DD1E292D236AF4096",
+      "id": "http/get.helm.sh/helm-v4.2.1-linux-amd64.tar.gz",
+      "checksum": "479DCA836E5B45E8BD222400C5591B0E3A647378F03FF96597180DB97C17FDAE",
       "algorithm": "sha256"
     },
     {
-      "id": "http/get.helm.sh/helm-v4.2.0-linux-arm64.tar.gz",
-      "checksum": "1F8DE130DFBD04DE64978E7B852A7A547BE1404956A366608276D2520B678670",
+      "id": "http/get.helm.sh/helm-v4.2.1-linux-arm64.tar.gz",
+      "checksum": "596B9A73D366C1E72CE67D595C22805480E30914593AAFBC9F547694E72814DB",
       "algorithm": "sha256"
     },
     {
-      "id": "http/get.helm.sh/helm-v4.2.0-windows-amd64.tar.gz",
-      "checksum": "34BF9659F8F04F3841A60131183B8E2ACC44E260DB4C93B889FF09718CACCA6F",
+      "id": "http/get.helm.sh/helm-v4.2.1-windows-amd64.tar.gz",
+      "checksum": "36B603D5C4F4AF526035631EAD3ADBA5535250AD85F2B052960F7F874BDAFA68",
       "algorithm": "sha256"
     },
     {
