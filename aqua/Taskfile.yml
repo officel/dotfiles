@@ -83,8 +83,8 @@ tasks:
     cmds:
       - task: _git
         vars:
-          TITLE: 'bump: aqua up at {{date "2006-01-02" now}} {{.CLI_ARGS}}'
-          BRANCH: 'bump/aqua_up/{{date "2006-01-02" now}}'
+          TITLE: 'feat(aqua): aqua up at {{date "2006-01-02" now}} {{.CLI_ARGS}}'
+          BRANCH: 'feat/aqua_up/{{date "2006-01-02" now}}'
           TARGET: "{{relPath .ROOT_DIR .TASKFILE_DIR}}/aqua*"
 
   _git:
