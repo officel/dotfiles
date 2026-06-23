@@ -22,13 +22,37 @@ tasks:
 
   update_repository_tools:
     desc: "update repository tools"
+    summary: |
+      リポジトリで使用しているツール類を一斉に更新する
+      - aqua-checksums.json は蓄積されるため、一度削除してから更新する
+      - aqua up で aqua.yaml が更新（バージョンアップ）される
+      - aqua upc で aqua-checksums.json が更新される
+      - pinact run -u で .github/workflows/ 下のワークフローなどが更新される
+      - zizmor . で .github/workflows/ 下のワークフローなどがチェックされる
+      - prek auto-update --freeze で .pre-commit-config.yaml が更新される
+      - 各ツールがインストールされていなくてエラーになっても無視する（ignore_error: true）
+      - 注: 各コマンドの実行時エラーも無視してしまう（ログは見ましょう）
+      - 注: アップデートされたバージョンが必要なバージョンであるかの確認はしましょう
     aliases:
       - u
+    env:
+      # GitHub CLI からトークンを取得
+      GITHUB_TOKEN:
+        sh: gh auth token
     cmds:
       - git fetch --all --prune
       - git checkout origin/HEAD
-      - pinact run -u
-      - zizmor .
-      - prek auto-update --freeze
+      - cmd: rm -f aqua-checksums.json
+        ignore_error: true
+      - cmd: aqua up
+        ignore_error: true
+      - cmd: aqua upc
+        ignore_error: true
+      - cmd: pinact run -u -min-age 2
+        ignore_error: true
+      - cmd: zizmor .
+        ignore_error: true
+      - cmd: prek auto-update --freeze --cooldown-days 2
+        ignore_error: true
       - git status
     dir: "{{.USER_WORKING_DIR}}"
