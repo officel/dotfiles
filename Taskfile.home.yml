@@ -42,11 +42,9 @@ tasks:
     cmds:
       - git fetch --all --prune
       - git checkout origin/HEAD
-      - cmd: rm -f aqua-checksums.json
-        ignore_error: true
       - cmd: aqua up
         ignore_error: true
-      - cmd: aqua upc
+      - cmd: aqua upc -prune
         ignore_error: true
       - cmd: pinact run -u -min-age 2
         ignore_error: true
