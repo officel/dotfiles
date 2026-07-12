@@ -561,33 +561,33 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/j178/prek/v0.4.8/prek-aarch64-apple-darwin.tar.gz",
-      "checksum": "F0084A9B5CE467C00306B2B329CC929744E2723ED1E7C369929A60AB10196FCC",
+      "id": "github_release/github.com/j178/prek/v0.4.9/prek-aarch64-apple-darwin.tar.gz",
+      "checksum": "D6D705468C95AC01A9768DA952645385A8E3CB93EC9A105F9F0F7BD177AE3867",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/j178/prek/v0.4.8/prek-aarch64-pc-windows-msvc.zip",
-      "checksum": "774B8D3B2B64A4C16B2F5555493F8B50983AFB88E43393B33230C1FE5C0B2A02",
+      "id": "github_release/github.com/j178/prek/v0.4.9/prek-aarch64-pc-windows-msvc.zip",
+      "checksum": "9EBA043C3345FF669C5587811D7ACEAD1ABCAD8089F467579F2AD4B136F771A5",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/j178/prek/v0.4.8/prek-aarch64-unknown-linux-musl.tar.gz",
-      "checksum": "379108E6B2DB7D49277AD2986446097F442B252EF27FF07BD0CBF716DE982EB1",
+      "id": "github_release/github.com/j178/prek/v0.4.9/prek-aarch64-unknown-linux-musl.tar.gz",
+      "checksum": "ADCD6D3B2C6D2314525C214EAD1A3584DE3EA3DFD608262D60711C3DDE4D5E82",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/j178/prek/v0.4.8/prek-x86_64-apple-darwin.tar.gz",
-      "checksum": "DC402357BC5074791F4F1BCF5CE8622DA38272E210FF84A551D3044E8DA6F05D",
+      "id": "github_release/github.com/j178/prek/v0.4.9/prek-x86_64-apple-darwin.tar.gz",
+      "checksum": "86CE383F8D40AE874E432FE6DB04C2253CF2BED2CD74E67C8E3BC4B16E158471",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/j178/prek/v0.4.8/prek-x86_64-pc-windows-msvc.zip",
-      "checksum": "7C17DBA682812AB24E04A4982DCCC228DBF74B695444BD9FA8CBB8C1DC78664C",
+      "id": "github_release/github.com/j178/prek/v0.4.9/prek-x86_64-pc-windows-msvc.zip",
+      "checksum": "E49A7C8FEDB4F16038556E19C8BF7A68FFAE46445EF693B28C1FA461F03DF2C7",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/j178/prek/v0.4.8/prek-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "21DF9AC0C3D3C047E424BE612CC55F5B243546F9EF5CDE12ED134752312BDF7B",
+      "id": "github_release/github.com/j178/prek/v0.4.9/prek-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "22545EEE5091CE233192BC97C6EDB7F045081EC615E4649633D5FFAD97937658",
       "algorithm": "sha256"
     },
     {
@@ -931,28 +931,28 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/rvben/rumdl/v0.2.30/rumdl-v0.2.30-aarch64-apple-darwin.tar.gz",
-      "checksum": "EA40C02FBE1C483959CD4A44226EEDDEE1433E1298AEC0F1351D54F1C08C9F5D",
+      "id": "github_release/github.com/rvben/rumdl/v0.2.31/rumdl-v0.2.31-aarch64-apple-darwin.tar.gz",
+      "checksum": "368A02639247BE530043ABC36C40310090C09EF69B32F5744F9A0D9CC2673BE5",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/rvben/rumdl/v0.2.30/rumdl-v0.2.30-aarch64-unknown-linux-musl.tar.gz",
-      "checksum": "0D55107E6070E0C0F755102BF3583F209E889511BB82D5ABCB9E5547A2A7AF1F",
+      "id": "github_release/github.com/rvben/rumdl/v0.2.31/rumdl-v0.2.31-aarch64-unknown-linux-musl.tar.gz",
+      "checksum": "D5AA4AC3F94DE9B6508021F70D78BE592C6DC8B67EA499C6E203C1E3DAF044B0",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/rvben/rumdl/v0.2.30/rumdl-v0.2.30-x86_64-apple-darwin.tar.gz",
-      "checksum": "75E0D97D9CD304FEE4F0F9DD736B2D8BE641B6B5F4D5B49460DCB4790172B8AC",
+      "id": "github_release/github.com/rvben/rumdl/v0.2.31/rumdl-v0.2.31-x86_64-apple-darwin.tar.gz",
+      "checksum": "BC8933E04B5C83B8B14C21793C7F7902BC8B1A841BB1F1964C5F177B3CF7D05F",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/rvben/rumdl/v0.2.30/rumdl-v0.2.30-x86_64-pc-windows-msvc.zip",
-      "checksum": "B280ADEF30036E5FC0152C1C2E49D48E585C20A4EAA676F30B31F6A2DBB13170",
+      "id": "github_release/github.com/rvben/rumdl/v0.2.31/rumdl-v0.2.31-x86_64-pc-windows-msvc.zip",
+      "checksum": "F8A4B2ABF774301FD4FFD04F56E12FB0B2BF4357B28C63EC355405D57F0CFE88",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/rvben/rumdl/v0.2.30/rumdl-v0.2.30-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "5D1C80418463AA7CA7EDF1854602DB717A3AA9BE05FE9DC6A337263F5E78EBE0",
+      "id": "github_release/github.com/rvben/rumdl/v0.2.31/rumdl-v0.2.31-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "5550F7954457248C6E29715B69D4EC2E9394613DE51F98B50FA81F197A29AF92",
       "algorithm": "sha256"
     },
     {
@@ -1091,18 +1091,18 @@
       "algorithm": "sha256"
     },
     {
-      "id": "http/awscli.amazonaws.com/AWSCLIV2-2.35.20.pkg",
-      "checksum": "EF6F2EC15E44A51BEFB011C26683DB932A0953733071907421B72823B24A4C20",
+      "id": "http/awscli.amazonaws.com/AWSCLIV2-2.35.21.pkg",
+      "checksum": "747DF1653FCFCB34F744A42E6DC6C55D8CB457819B7BB23D9DC604CFB25B2125",
       "algorithm": "sha256"
     },
     {
-      "id": "http/awscli.amazonaws.com/awscli-exe-linux-aarch64-2.35.20.zip",
-      "checksum": "58799CE9276D4E8815FD19E4DC35649626C6B4FBD4D0E3DF7433AF9CFDE41882",
+      "id": "http/awscli.amazonaws.com/awscli-exe-linux-aarch64-2.35.21.zip",
+      "checksum": "1D7A1F26A1BD9F0610663B7A4B571DEF6990692C8C66223EBE09AC2445787BCC",
       "algorithm": "sha256"
     },
     {
-      "id": "http/awscli.amazonaws.com/awscli-exe-linux-x86_64-2.35.20.zip",
-      "checksum": "A4AA00212A97E6A5ABD38CDE5524719F7F5F122A6DCFDBC974EEFDF741DE1BE6",
+      "id": "http/awscli.amazonaws.com/awscli-exe-linux-x86_64-2.35.21.zip",
+      "checksum": "1FE665267A6149DFB8551CEC52B419FA6E82533FAB6DD7678939209246E792EE",
       "algorithm": "sha256"
     },
     {
@@ -1321,8 +1321,8 @@
       "algorithm": "sha256"
     },
     {
-      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.534.0/registry.yaml",
-      "checksum": "A09B1A70F0B4AE01A1DBC95602BFD56E34A09EFA858FD30217494CA5A65FE4C9",
+      "id": "registries/github_content/github.com/aquaproj/aqua-registry/v4.536.1/registry.yaml",
+      "checksum": "149100F507AD8C4E75D9C5CA5DB050FB88817005DDD72E76A40C92379233C170",
       "algorithm": "sha256"
     }
   ]
