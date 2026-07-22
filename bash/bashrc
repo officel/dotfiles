@@ -155,7 +155,7 @@ source <(kubectl completion bash)
 [[ -r "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh" ]] && . "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh"
 . /usr/local/bin/complete_alias
 
-# complete -F _complete_alias k
+complete -o default -F __start_kubectl kubecolor k
 complete -F _complete_alias g
 
 # 2024-06-05 krew for kubectl
@@ -191,3 +191,9 @@ export PATH="$HOME/go/bin:$PATH"
 # cd alternative zoxide
 export _ZO_EXCLUDE_DIRS="/tmp/*:/mnt/c/*:/mnt/d/*"
 eval "$(zoxide init bash)"
+
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+# https://github.com/lincheney/fzf-tab-completion
+source ${XDG_CONFIG_HOME:-$HOME/.config}/bash/fzf-bash-completion.sh
+bind -x '"\t": fzf_bash_completion'

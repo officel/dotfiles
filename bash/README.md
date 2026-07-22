@@ -18,3 +18,9 @@ Ubuntu 24.04 LTS がリリースされて WSL2 でも利用可能になったの
 ## learn
 
 - `~/.bash_login` を置くと `~/.profile` が処理されない。 -> [ファイルの読み込み順序](https://www.gnu.org/software/bash/manual/bash.html#Bash-Startup-Files)
+- fzf の補完を便利にする
+
+```bash
+# see .gitignore
+wget https://raw.githubusercontent.com/lincheney/fzf-tab-completion/refs/heads/master/bash/fzf-bash-completion.sh
+```
