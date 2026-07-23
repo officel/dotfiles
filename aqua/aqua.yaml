@@ -62,3 +62,4 @@ packages:
   - name: dandavison/delta@0.19.2
   - name: owenlamont/ryl@v0.21.0
   - name: rvben/rumdl@v0.2.40
+  - name: kyverno/chainsaw@v0.2.15
