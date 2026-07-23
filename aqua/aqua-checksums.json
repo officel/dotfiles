@@ -731,6 +731,36 @@
       "algorithm": "sha256"
     },
     {
+      "id": "github_release/github.com/kyverno/chainsaw/v0.2.15/chainsaw_darwin_amd64.tar.gz",
+      "checksum": "DDB56002FF8C6265F55EC40C82EB0EF0DDDEC5127DD12D4FC5E7953453481F4B",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/kyverno/chainsaw/v0.2.15/chainsaw_darwin_arm64.tar.gz",
+      "checksum": "502BEF17DD822217E82590E9CCF01C1E26A56B3FA34A835789B9AF73E82A169A",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/kyverno/chainsaw/v0.2.15/chainsaw_linux_amd64.tar.gz",
+      "checksum": "295D226C89F126C0A97775D364BE149F47A810C8A3F9829EE410583D0C1ABE3C",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/kyverno/chainsaw/v0.2.15/chainsaw_linux_arm64.tar.gz",
+      "checksum": "FECF5F3EA74D11DA2CD5D95A4C016D5D2543CBC4844CE21ADF5E727E7FFD9E44",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/kyverno/chainsaw/v0.2.15/chainsaw_windows_amd64.tar.gz",
+      "checksum": "02E7D519C4E815C89DC8A4B14E2B70474D5301F514E721C0E5B3062F67294229",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/kyverno/chainsaw/v0.2.15/chainsaw_windows_arm64.tar.gz",
+      "checksum": "D580CBFC17FC5FC3CD7FBDAF5AB6246DCBE33799F2A79284AF8EB6EBDB861B8A",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/marp-team/marp-cli/v4.5.0/marp-cli-v4.5.0-linux.tar.gz",
       "checksum": "AE46FF054919DCCD20F2402FD1747A2363AB2DC5A652F2D589DF211ED5E26D88",
       "algorithm": "sha256"
