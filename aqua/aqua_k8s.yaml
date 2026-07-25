@@ -1,0 +1,13 @@
+---
+# k8s 関係のツール
+packages:
+  - name: argoproj/argo-cd@v3.4.5
+  - name: Azure/kubelogin@v0.2.19
+  - name: derailed/k9s@v0.51.0
+  - name: helm/helm@v4.2.3
+  - name: istio/istio/istioctl@1.30.3
+  - name: kubecolor/kubecolor@v0.6.0
+  - name: kubernetes-sigs/kind@v0.32.0
+  - name: kubernetes/kubeadm@v1.36.3
+  - name: kubernetes/kubectl@v1.36.3
+  - name: kyverno/chainsaw@v0.2.15
