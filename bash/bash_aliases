@@ -134,7 +134,7 @@ alias k='kubecolor'
 alias kubectl='kubecolor'
 alias ka='kubectl apply'
 alias kd='kubectl describe'
-alias kdel='kubectl delete'
+alias krm='kubectl delete'
 alias kg='kubectl get'
 alias kga='kubectl get all'
 alias kgn='kubectl get node -o wide'
@@ -145,6 +145,10 @@ alias kgtn='kubectl get node -o wide; kubectl top node'
 alias kdrainf='kubectl drain --ignore-daemonsets --delete-local-data'
 alias stern='kubectl stern'
 alias aliask='alias | grep kubectl'
+
+# k9s
+alias k9s='LC_CTYPE="en_US.UTF-8" k9s'
+alias k9sr='LC_CTYPE="en_US.UTF-8" k9s --readonly'
 
 # pnpm
 alias pn='pnpm'
