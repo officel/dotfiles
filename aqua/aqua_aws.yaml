@@ -1,0 +1,5 @@
+---
+# aws 関係のツール
+packages:
+  - name: 99designs/aws-vault@v7.2.0
+  - name: aws/aws-cli@2.36.8

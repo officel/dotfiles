@@ -10,36 +10,17 @@ registries:
   - type: standard
     ref: v4.543.0 # renovate: depName=aquaproj/aqua-registry
 packages:
+  - import: aqua_aws.yaml
+  - import: aqua_fav.yaml
   - import: aqua_k8s.yaml
+  - import: aqua_lang.yaml
   - import: aqua_prek.yaml
   - import: aqua_tf.yaml
   - name: cli/cli@v2.96.0
-  - name: golang/go@go1.26.5
-  - name: nektos/act@v0.2.89
-  - name: jqlang/jq@jq-1.8.2
-  - name: mikefarah/yq@v4.53.3
-  - name: google/yamlfmt@v0.21.0
-  - name: direnv/direnv@v2.37.1
   - name: stateful/runme@v3.17.2
-  - name: aws/aws-cli@2.36.8
-  - name: 99designs/aws-vault@v7.2.0
-  - name: charmbracelet/glow@v2.1.2
   - name: ericchiang/pup@v0.4.0
-  - name: go-task/task@v3.52.0
   - name: newrelic/newrelic-cli@v0.113.2
-  - name: astral-sh/uv@0.11.32
-  - name: neilotoole/sq@v0.54.1
   - name: marp-team/marp-cli@v4.5.0
-  - name: 01mf02/jaq@v3.1.0
   - name: anchore/grype@v0.116.0
-  - name: hairyhenderson/gomplate@v5.2.0
   - name: miniscruff/changie@v1.25.1
-  - name: twistedpair/google-cloud-sdk@562.0.0
-  - name: ajeetdsouza/zoxide@v0.10.0
-  - name: junegunn/fzf@v0.74.1
-  - name: Orange-OpenSource/hurl@8.0.1
   - name: github/copilot-cli@v1.0.75
-  - name: nodejs/node@v26.5.0
-  - name: BurntSushi/ripgrep@15.2.0
-  - name: sharkdp/fd@v10.4.2
-  - name: dandavison/delta@0.19.2
