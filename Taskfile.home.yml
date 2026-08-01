@@ -66,6 +66,17 @@ tasks:
       - git add -u
       - git commit -m "{{.COMMIT_TITLE}}"
       - git push origin HEAD:refs/heads/{{.BRANCH_NAME}}
+      - sleep 1
       - gh pr create -t "{{.COMMIT_TITLE}}" -b "- 使用しているツールのバージョンを更新" -H "{{.BRANCH_NAME}}" -B "main"
+      - sleep 1
       - gh pr merge "{{.BRANCH_NAME}}" --auto -s
+    dir: "{{.USER_WORKING_DIR}}"
+
+  auto_update_tools:
+    desc: "auto update tools"
+    aliases:
+      - au
+    cmds:
+      - task: update_repository_tools
+      - task: bump
     dir: "{{.USER_WORKING_DIR}}"
