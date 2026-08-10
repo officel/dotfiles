@@ -62,12 +62,13 @@ tasks:
     vars:
       COMMIT_TITLE: "chore: bump tools version"
       BRANCH_NAME: "chore/bump-{{ date \"2006-01-02\" now}}"
+      PR_BODY: "- 使用しているツールのバージョンを更新"
     cmds:
       - git add -u
       - git commit -m "{{.COMMIT_TITLE}}"
       - git push origin HEAD:refs/heads/{{.BRANCH_NAME}}
       - sleep 1
-      - gh pr create -t "{{.COMMIT_TITLE}}" -b "- 使用しているツールのバージョンを更新" -H "{{.BRANCH_NAME}}" -B "main"
+      - gh pr create -t "{{.COMMIT_TITLE}}" -b "{{.PR_BODY}}" -H "{{.BRANCH_NAME}}" -B "main"
       - sleep 1
       - gh pr merge "{{.BRANCH_NAME}}" --auto -s
     dir: "{{.USER_WORKING_DIR}}"
