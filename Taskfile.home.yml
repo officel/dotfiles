@@ -81,3 +81,34 @@ tasks:
       - task: update_repository_tools
       - task: bump
     dir: "{{.USER_WORKING_DIR}}"
+
+  brew:
+    desc: "brew all update"
+    silent: false
+    vars:
+      LOG_FILE: '{{.USER_WORKING_DIR}}/brew_update_{{now | date "20060102"}}.log'
+    env:
+      HOMEBREW_NO_SANDBOX_LINUX: 1
+    cmds:
+      - date > "{{.LOG_FILE}}"
+
+      - echo "$ brew update" 1>> "{{.LOG_FILE}}" 2>&1
+      -         brew update  1>> "{{.LOG_FILE}}" 2>&1
+
+      - echo "$ brew outdated --formula" 1>> "{{.LOG_FILE}}" 2>&1
+      -         brew outdated --formula  1>> "{{.LOG_FILE}}" 2>&1
+
+      - echo "$ brew outdated --cask --greedy-latest" 1>> "{{.LOG_FILE}}" 2>&1
+      -         brew outdated --cask --greedy-latest  1>> "{{.LOG_FILE}}" 2>&1
+
+      - echo "$ brew upgrade --yes" 1>> "{{.LOG_FILE}}" 2>&1
+      -         brew upgrade --yes  1>> "{{.LOG_FILE}}" 2>&1
+
+      - echo "$ brew cleanup" 1>> "{{.LOG_FILE}}" 2>&1
+      -         brew cleanup  1>> "{{.LOG_FILE}}" 2>&1
+
+      - echo "$ brew doctor" 1>> "{{.LOG_FILE}}" 2>&1
+      -         brew doctor  1>> "{{.LOG_FILE}}" 2>&1
+
+      - echo "$ brew missing" 1>> "{{.LOG_FILE}}" 2>&1
+      -         brew missing  1>> "{{.LOG_FILE}}" 2>&1
