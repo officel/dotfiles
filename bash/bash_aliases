@@ -178,8 +178,10 @@ alias pnx='pnpm dlx'
 alias aliaspn='alias | grep "pnpm"'
 
 # taskfile.dev
-alias t='task'
+alias t='task --list --json | jq -r .tasks[].name | fzf --preview "task --summary {}" | xargs task'
+alias ta='task'
 alias tg='task --global'
+alias tl='task --list'
 alias aliast='alias | grep "task"'
 
 # terraform
