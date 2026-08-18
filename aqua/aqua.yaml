@@ -8,7 +8,7 @@ checksum:
     - all
 registries:
   - type: standard
-    ref: v4.550.0 # renovate: depName=aquaproj/aqua-registry
+    ref: v4.553.0 # renovate: depName=aquaproj/aqua-registry
 packages:
   - import: aqua_aws.yaml
   - import: aqua_fav.yaml
@@ -17,10 +17,10 @@ packages:
   - import: aqua_prek.yaml
   - import: aqua_tf.yaml
   - name: cli/cli@v2.97.0
-  - name: stateful/runme@v3.17.2
+  - name: stateful/runme@v3.17.4
   - name: ericchiang/pup@v0.4.0
-  - name: newrelic/newrelic-cli@v0.113.4
+  - name: newrelic/newrelic-cli@v0.113.6
   - name: marp-team/marp-cli@v4.5.0
-  - name: anchore/grype@v0.116.1
+  - name: anchore/grype@v0.117.0
   - name: miniscruff/changie@v1.25.2
-  - name: github/copilot-cli@v1.0.78
+  - name: github/copilot-cli@v1.0.80

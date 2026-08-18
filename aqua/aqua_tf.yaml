@@ -1,7 +1,7 @@
 ---
 # terraform 関係のツール（HashiCorp製品含む）trivy は tfsec の名残で
 packages:
-  - name: aquasecurity/trivy@v0.73.0
+  - name: aquasecurity/trivy@v0.74.0
   - name: hashicorp/levant@v0.4.0
   - name: hashicorp/packer@v1.16.0
   - name: hashicorp/vault@v2.0.4
