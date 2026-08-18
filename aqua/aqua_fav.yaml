@@ -3,11 +3,11 @@
 packages:
   - name: ajeetdsouza/zoxide@v0.10.0
   - name: BurntSushi/ripgrep@15.2.0
-  - name: charmbracelet/glow@v2.1.2
+  - name: charmbracelet/glow@v3.0.0
   - name: dandavison/delta@0.19.2
   - name: direnv/direnv@v2.37.1
-  - name: go-task/task@v3.52.0
-  - name: junegunn/fzf@v0.74.2
+  - name: go-task/task@v3.53.1
+  - name: junegunn/fzf@v0.74.3
   - name: nektos/act@v0.2.89
   - name: Orange-OpenSource/hurl@8.0.1
   - name: sharkdp/fd@v10.4.2

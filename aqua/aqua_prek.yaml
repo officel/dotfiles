@@ -1,8 +1,8 @@
 ---
 # prek(pre-commit) で使っているツール
 packages:
-  - name: j178/prek@v0.4.12
+  - name: j178/prek@v0.4.14
   - name: owenlamont/ryl@v0.21.0
-  - name: rvben/rumdl@v0.2.53
+  - name: rvben/rumdl@v0.2.57
   - name: suzuki-shunsuke/pinact@v4.1.1
   - name: zizmorcore/zizmor@v1.29.0
