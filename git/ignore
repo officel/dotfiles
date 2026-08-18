@@ -25,3 +25,6 @@ terraform.tfstate
 terraform.tfstate.backup
 ## terraform state pull > z.tfstate ってすると使い勝手がいいので
 z.tfstate
+
+# task(go-task)
+.task/
