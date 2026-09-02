@@ -50,7 +50,7 @@ tasks:
         ignore_error: true
       - cmd: zizmor .
         ignore_error: true
-      - cmd: prek auto-update --freeze
+      - cmd: prek update --freeze
         ignore_error: true
       - git status
     dir: "{{.USER_WORKING_DIR}}"
