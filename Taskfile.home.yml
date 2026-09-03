@@ -29,10 +29,12 @@ tasks:
       - aqua upc で aqua-checksums.json が更新される
       - pinact run -u で .github/workflows/ 下のワークフローなどが更新される
       - zizmor . で .github/workflows/ 下のワークフローなどがチェックされる
-      - prek auto-update --freeze で .pre-commit-config.yaml が更新される
+      - prek update --freeze --include-tag 'v*.*.*' で .pre-commit-config.yaml が更新される
       - 各ツールがインストールされていなくてエラーになっても無視する（ignore_error: true）
       - 注: 各コマンドの実行時エラーも無視してしまう（ログは見ましょう）
       - 注: アップデートされたバージョンが必要なバージョンであるかの確認はしましょう
+      - 注: prek auto-update は廃止になった。update に統一した
+      - 注: prek update の際にリポジトリのタグ付け順序によって必要なバージョンが選択されないケースを確認した。 --include-tag 'v*.*.*' を付けることで回避
     aliases:
       - u
     env:
@@ -50,7 +52,7 @@ tasks:
         ignore_error: true
       - cmd: zizmor .
         ignore_error: true
-      - cmd: prek update --freeze
+      - cmd: prek update --freeze --include-tag 'v*.*.*'
         ignore_error: true
       - git status
     dir: "{{.USER_WORKING_DIR}}"
@@ -62,7 +64,11 @@ tasks:
     vars:
       COMMIT_TITLE: "chore: bump tools version"
       BRANCH_NAME: "chore/bump-{{ date \"2006-01-02\" now}}"
-      PR_BODY: "- 使用しているツールのバージョンを更新"
+      PR_BODY: |
+        - 使用しているツールのバージョンを更新
+        - pre-commit-hook の repo URL の .git が zizmor で impostor-commit になったので対応
+        - actionlint の元リポジトリが更新されなくなって機能に追従できなくなっているので fork に変更して対応
+        - [rhysd (the author) inactive. Any active forks? · Issue #719 · rhysd/actionlint](https://github.com/rhysd/actionlint/issues/719)
     cmds:
       - git add -u
       - git commit -m "{{.COMMIT_TITLE}}"

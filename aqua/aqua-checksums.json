@@ -291,33 +291,33 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/cli/cli/v2.99.0/gh_2.99.0_linux_amd64.tar.gz",
-      "checksum": "ED4960225D2833E04A61590D9FA2B5773D147F3AA375459E5466A40C102F3832",
+      "id": "github_release/github.com/cli/cli/v2.100.0/gh_2.100.0_linux_amd64.tar.gz",
+      "checksum": "E4D4BB4498E8D007ABE545B6568926793ACE1B6447DA598294A610018CB164BE",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/cli/cli/v2.99.0/gh_2.99.0_linux_arm64.tar.gz",
-      "checksum": "564EFF56A61E8CAF193EFDE16937FBA879EB62A3A479C9DD6BE2001E7647680B",
+      "id": "github_release/github.com/cli/cli/v2.100.0/gh_2.100.0_linux_arm64.tar.gz",
+      "checksum": "EA4E7A581A32CCAD6CC7923CB1576AC5859BA4B9A16AB22EB8F8A96E78E2E961",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/cli/cli/v2.99.0/gh_2.99.0_macOS_amd64.zip",
-      "checksum": "70C05750C75DF9465BC73B994E8BC379243BB494271F1B51F54EAD2E19E45471",
+      "id": "github_release/github.com/cli/cli/v2.100.0/gh_2.100.0_macOS_amd64.zip",
+      "checksum": "FCD7799E85EB575F3C7D2B1679BFBFEDAEFA1269D4BC7D096B51E10939B4812B",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/cli/cli/v2.99.0/gh_2.99.0_macOS_arm64.zip",
-      "checksum": "94D4BD7E88563A9CB414E651E88ACC4F1728A87476752460906D824230748D37",
+      "id": "github_release/github.com/cli/cli/v2.100.0/gh_2.100.0_macOS_arm64.zip",
+      "checksum": "45F9A62DA2F6E641A7FAD57E2CE39656DFD7EF331372D80A2A2AED65ABB01642",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/cli/cli/v2.99.0/gh_2.99.0_windows_amd64.zip",
-      "checksum": "EA040D0BA03176440D13481CAF67F742236C3B38CE1D4442A9DA37E9BB98D8F2",
+      "id": "github_release/github.com/cli/cli/v2.100.0/gh_2.100.0_windows_amd64.zip",
+      "checksum": "227E35230B25DB3FA1B997BAB7CF4D67DF0470A3B75B99E4EE66BCE1A7CD4E72",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/cli/cli/v2.99.0/gh_2.99.0_windows_arm64.zip",
-      "checksum": "59878454CBCB67EFB6D2CFF0652D14FC6938C459FCFAE23AAFCFA01EE5AF7068",
+      "id": "github_release/github.com/cli/cli/v2.100.0/gh_2.100.0_windows_arm64.zip",
+      "checksum": "7BEAEB4743CF255809A8E574A2724C685B566545E04EABEA284FE38A56C15B02",
       "algorithm": "sha256"
     },
     {
@@ -561,33 +561,33 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/j178/prek/v0.5.1/prek-aarch64-apple-darwin.tar.gz",
-      "checksum": "9E5384F128D8731203D7CDD683E2786C269AC5C9DC04D5962F7D078966B16177",
+      "id": "github_release/github.com/j178/prek/v0.5.2/prek-aarch64-apple-darwin.tar.gz",
+      "checksum": "F3EF7692F8873C36D9437C77389833D3165FBE705EA66E53E169D83A89055F9B",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/j178/prek/v0.5.1/prek-aarch64-pc-windows-msvc.zip",
-      "checksum": "C9A443249459631213981223EC09B4556515FF76D85A2B3E7AB7C62F14B5FD9B",
+      "id": "github_release/github.com/j178/prek/v0.5.2/prek-aarch64-pc-windows-msvc.zip",
+      "checksum": "0C5C762B44630BFB08461B90ACCB46AB7B8EFECFAF0AD0C804A1EAE37948B0F4",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/j178/prek/v0.5.1/prek-aarch64-unknown-linux-musl.tar.gz",
-      "checksum": "1507BD22F6AE5FFB465AFF6E7A0159D6F419770286C8B3A8B2F51C5919949997",
+      "id": "github_release/github.com/j178/prek/v0.5.2/prek-aarch64-unknown-linux-musl.tar.gz",
+      "checksum": "FFC9334CDAC13B2DF716D391353D5E8307C06A08C135B844DABD3781C4C6518B",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/j178/prek/v0.5.1/prek-x86_64-apple-darwin.tar.gz",
-      "checksum": "F3FD514C2F2FF0B00B06CA48AF161C64DB723F6300849C77D504C27CA0926C80",
+      "id": "github_release/github.com/j178/prek/v0.5.2/prek-x86_64-apple-darwin.tar.gz",
+      "checksum": "5DFD123B8CF15F51DC8CBFF6F12B674448B19A684FF1696DB20F963EC2417E11",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/j178/prek/v0.5.1/prek-x86_64-pc-windows-msvc.zip",
-      "checksum": "0560F9BB198602241491ABDCAC0D0AECDB18FE64EEAFF240B92EFA224479FBCC",
+      "id": "github_release/github.com/j178/prek/v0.5.2/prek-x86_64-pc-windows-msvc.zip",
+      "checksum": "03B6A7261D3A7E2D184CECA9C7E5FCB43B9DEC83C8945976CDDC3CAA8B34B4C0",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/j178/prek/v0.5.1/prek-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "01F873AC49F157885774A5BDB1AA1BC8E3B9DB6941D79539DF02CC182BDBBCEC",
+      "id": "github_release/github.com/j178/prek/v0.5.2/prek-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "6B4F5C74A621D71F8DBA09A9C0669F0D9488207805861C8A7D5F6B15201D4771",
       "algorithm": "sha256"
     },
     {
@@ -856,28 +856,28 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/newrelic/newrelic-cli/v0.113.9/newrelic-cli_0.113.9_Darwin_arm64.tar.gz",
-      "checksum": "BC1A62B5EC33BB04447B0CEC04365B37B71214123BC12D3A1173572D14CCD365",
+      "id": "github_release/github.com/newrelic/newrelic-cli/v0.113.10/newrelic-cli_0.113.10_Darwin_arm64.tar.gz",
+      "checksum": "4075453C1B31037497C9D7F4F268FBB2761C11A4B590D8B745E22CF879CC6020",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/newrelic/newrelic-cli/v0.113.9/newrelic-cli_0.113.9_Darwin_x86_64.tar.gz",
-      "checksum": "84F051320FD93C8151239D0544E93988D83834BE972090DB88C6AD20F6803FCC",
+      "id": "github_release/github.com/newrelic/newrelic-cli/v0.113.10/newrelic-cli_0.113.10_Darwin_x86_64.tar.gz",
+      "checksum": "1969FB4AB82B873B5A0FE14F64562332D3F30D93DD2DFCE56D0E539E2D184A90",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/newrelic/newrelic-cli/v0.113.9/newrelic-cli_0.113.9_Linux_arm64.tar.gz",
-      "checksum": "C491C437BEF236DF5E5D711F7CE4DC5B7BC38ED35F8C198F3A717391DC260C5E",
+      "id": "github_release/github.com/newrelic/newrelic-cli/v0.113.10/newrelic-cli_0.113.10_Linux_arm64.tar.gz",
+      "checksum": "8A55DD1C5CC0584ABA31363BB20FDEE3D14F66D9AEC432D8B7EA72045EAAE1D4",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/newrelic/newrelic-cli/v0.113.9/newrelic-cli_0.113.9_Linux_x86_64.tar.gz",
-      "checksum": "FB67E7DA278A16AA1F06BBD57085B331137197908EEBE71C4BEFF0435C97D1CC",
+      "id": "github_release/github.com/newrelic/newrelic-cli/v0.113.10/newrelic-cli_0.113.10_Linux_x86_64.tar.gz",
+      "checksum": "42528A7504AA7F620040422D848FA5D1FA63B1AF1B07254B8D06289CBA98B0C2",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/newrelic/newrelic-cli/v0.113.9/newrelic-cli_0.113.9_Windows_x86_64.zip",
-      "checksum": "1B72FD7DAA906EA9F0BCA483684258A6AF0FD1CBAC57892D844189FC721BF936",
+      "id": "github_release/github.com/newrelic/newrelic-cli/v0.113.10/newrelic-cli_0.113.10_Windows_x86_64.zip",
+      "checksum": "8DC4B9ADE707DA92532C9FB3E3D7185485F7626147DD2CB333BE19405D9367C9",
       "algorithm": "sha256"
     },
     {
@@ -936,28 +936,28 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/rvben/rumdl/v0.2.63/rumdl-v0.2.63-aarch64-apple-darwin.tar.gz",
-      "checksum": "3CCB2F8E0F762AD0A276C6137DA5A4CA633C8FD43346AD1C2DCE02A81F1ACB24",
+      "id": "github_release/github.com/rvben/rumdl/v0.2.64/rumdl-v0.2.64-aarch64-apple-darwin.tar.gz",
+      "checksum": "0BC09741AD3E4CACCBE88C97601E6B093391D476323FD3F44CB5C57157FA209E",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/rvben/rumdl/v0.2.63/rumdl-v0.2.63-aarch64-unknown-linux-musl.tar.gz",
-      "checksum": "5C7AD264C4FD46D0E4779285B601A567D334AC1839CEA7DFFD9BDB0994630145",
+      "id": "github_release/github.com/rvben/rumdl/v0.2.64/rumdl-v0.2.64-aarch64-unknown-linux-musl.tar.gz",
+      "checksum": "1F5CFE7963CE2C0CFE03168BF7E848BCDACC264F3C5348FBA34A41C3316B68A1",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/rvben/rumdl/v0.2.63/rumdl-v0.2.63-x86_64-apple-darwin.tar.gz",
-      "checksum": "56009F09E310B73F9306349EB91D41420814451EFE82C65B47C7F63B33967D61",
+      "id": "github_release/github.com/rvben/rumdl/v0.2.64/rumdl-v0.2.64-x86_64-apple-darwin.tar.gz",
+      "checksum": "6E0B97487425F66702E801BF5DBB1293D5B52977D856887CA66FBC269949C74E",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/rvben/rumdl/v0.2.63/rumdl-v0.2.63-x86_64-pc-windows-msvc.zip",
-      "checksum": "6EA401E2F3077433D8B51991D40E1F0D80C1E96D917D3E89852135F11320E76B",
+      "id": "github_release/github.com/rvben/rumdl/v0.2.64/rumdl-v0.2.64-x86_64-pc-windows-msvc.zip",
+      "checksum": "ADF3EC6D49C3308D080A01B75E82FBF8D1AEFED00CAA80D4E7E63C6DAF67231C",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/rvben/rumdl/v0.2.63/rumdl-v0.2.63-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "6CFDF4973AC899BE6884CF64743998AACBA8478DFBA425DA3EE6379B71C94B7D",
+      "id": "github_release/github.com/rvben/rumdl/v0.2.64/rumdl-v0.2.64-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "F08AC2F6B0E512F2FC53E33F8D3168471BF3BA9F0E41BE978C495EF371987FAC",
       "algorithm": "sha256"
     },
     {
@@ -1096,18 +1096,18 @@
       "algorithm": "sha256"
     },
     {
-      "id": "http/awscli.amazonaws.com/AWSCLIV2-2.36.37.pkg",
-      "checksum": "999121CED911A03A28C9F3C53F16C2BF32DDCA505C52026BF2CE24994CA3EC2C",
+      "id": "http/awscli.amazonaws.com/AWSCLIV2-2.36.38.pkg",
+      "checksum": "984322235326292E781EA18F00414ADC53E5EB60954B9FE38F60F30B1DF8388A",
       "algorithm": "sha256"
     },
     {
-      "id": "http/awscli.amazonaws.com/awscli-exe-linux-aarch64-2.36.37.zip",
-      "checksum": "EE79B5FE6393402F6878EB6538F5F9F436C6E53485138DA09FCB8AB1A7148109",
+      "id": "http/awscli.amazonaws.com/awscli-exe-linux-aarch64-2.36.38.zip",
+      "checksum": "52B045F09058A8E9F54976EC136BB2085463F4CE6DB3008980D62381BFECCFF5",
       "algorithm": "sha256"
     },
     {
-      "id": "http/awscli.amazonaws.com/awscli-exe-linux-x86_64-2.36.37.zip",
-      "checksum": "821B3EFA415B13EB0D47004E7163324AFA08EEA75E33259051441533276AA405",
+      "id": "http/awscli.amazonaws.com/awscli-exe-linux-x86_64-2.36.38.zip",
+      "checksum": "1056BC30B892F4A80E65B05EAC856FBF175D0C5AEDA051D782450D2218DB6657",
       "algorithm": "sha256"
     },
     {
