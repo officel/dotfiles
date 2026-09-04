@@ -190,6 +190,7 @@ export PATH="$HOME/go/bin:$PATH"
 
 # cd alternative zoxide
 export _ZO_EXCLUDE_DIRS="/tmp/*:/mnt/c/*:/mnt/d/*"
+export _ZO_ECHO=1
 eval "$(zoxide init bash)"
 
 # Set up fzf key bindings and fuzzy completion
