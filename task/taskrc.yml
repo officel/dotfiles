@@ -5,5 +5,5 @@ verbose: false
 concurrency: 2
 
 # Enable experimental features
-experiments:
-  REMOTE_TASKFILES: 1
+# experiments:
+#  REMOTE_TASKFILES: 1
