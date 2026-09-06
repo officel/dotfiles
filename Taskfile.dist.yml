@@ -60,6 +60,11 @@ tasks:
         vars:
           TARGET: "{{.TASKFILE_DIR}}/{{.ITEM}}"
           LINK_NAME: "{{.XDG_CONFIG_HOME}}/{{.ITEM}}"
+      - # uchi のディレクトリを決めかねているがとりあえず dist をリンク
+        task: _link
+        vars:
+          TARGET: "{{.TASKFILE_DIR}}/dist"
+          LINK_NAME: "{{.XDG_CONFIG_HOME}}/uchi"
       - task: _xdg_base_directory_for_bash
     silent: true
 
