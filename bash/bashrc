@@ -100,12 +100,33 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # 環境変数 XDG_CONFIG_HOME が設定されていないとうまく機能しないやつがいる
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
 
-if [ -f ${XDG_CONFIG_HOME:-$HOME/.config}/bash/bash_aliases ]; then
-    .   ${XDG_CONFIG_HOME:-$HOME/.config}/bash/bash_aliases
+if [ -f ${XDG_CONFIG_HOME}/bash/bash_aliases ]; then
+    .   ${XDG_CONFIG_HOME}/bash/bash_aliases
 fi
 
-if [ -f ${XDG_CONFIG_HOME:-$HOME/.config}/bash/azure_functions ]; then
-    .   ${XDG_CONFIG_HOME:-$HOME/.config}/bash/azure_functions
+if [ -f ${XDG_CONFIG_HOME}/bash/azure_functions ]; then
+    .   ${XDG_CONFIG_HOME}/bash/azure_functions
+fi
+
+# 2026-09-06 use uchi
+if [ -f ${XDG_CONFIG_HOME}/uchi/alias ]; then
+    .   ${XDG_CONFIG_HOME}/uchi/alias
+fi
+
+if [ -f ${XDG_CONFIG_HOME}/uchi/env ]; then
+    .   ${XDG_CONFIG_HOME}/uchi/env
+fi
+
+if [ -f ${XDG_CONFIG_HOME}/uchi/functions ]; then
+    .   ${XDG_CONFIG_HOME}/uchi/functions
+fi
+
+if [ -f ${XDG_CONFIG_HOME}/uchi/profile ]; then
+    .   ${XDG_CONFIG_HOME}/uchi/profile
+fi
+
+if [ -f ${XDG_CONFIG_HOME}/uchi/rc ]; then
+    .   ${XDG_CONFIG_HOME}/uchi/rc
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -117,22 +138,6 @@ if ! shopt -oq posix; then
   elif [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
   fi
-fi
-
-# 2024-04-26
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-# cli version manager aqua
-export PATH="$(aqua root-dir)/bin:$PATH"
-export AQUA_GLOBAL_CONFIG=${XDG_CONFIG_HOME:-$HOME/.config}/aqua/aqua.yaml
-if command -v aqua &> /dev/null; then
-    eval "$(aqua completion bash)"
-fi
-
-# 2024-05-20 ssh-agent for git commit ssh signature verification
-if [ -z "${SSH_AGENT_PID}" ]; then
-    eval $(ssh-agent) 1>/dev/null
-    ssh-add ~/.ssh/id_ed25519 1>/dev/null 2>&1
 fi
 
 # 2024-05-21 direnv
@@ -187,11 +192,6 @@ complete -o default -F __start_stern kubectl stern
 
 # GOPATH
 export PATH="$HOME/go/bin:$PATH"
-
-# cd alternative zoxide
-export _ZO_EXCLUDE_DIRS="/tmp/*:/mnt/c/*:/mnt/d/*"
-export _ZO_ECHO=1
-eval "$(zoxide init bash)"
 
 # Set up fzf key bindings and fuzzy completion
 eval "$(fzf --bash)"
