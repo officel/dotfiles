@@ -14,8 +14,6 @@ alias mypath='echo $PATH | tr ":" "\n"'
 alias pwgen='pwgen -c -n -B -1'
 alias treex='tree --charset unicode -aNI "$(paste -sd"|" "${XDG_CONFIG_HOME:-$HOME/.config}/bash/tree_exclude" 2>/dev/null)"'
 
-alias da='direnv allow'
-
 # ansible
 # alias ansible-playbook='TZ="Asia/Tokyo" ANSIBLE_LOG_PATH=logs/ansible_$(date "+%Y%m%d%H%M%S").log ansible-playbook'
 # alias ansible-groups='ansible-inventory --list | jq -r "keys | .[]"'

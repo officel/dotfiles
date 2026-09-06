@@ -140,9 +140,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# 2024-05-21 direnv
-eval "$(direnv hook bash)"
-
 # # 2024-05-24 rye
 # . "$HOME/.rye/env"
 
