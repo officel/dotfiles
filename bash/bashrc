@@ -187,9 +187,3 @@ complete -o default -F __start_stern kubectl stern
 
 # GOPATH
 export PATH="$HOME/go/bin:$PATH"
-
-# Set up fzf key bindings and fuzzy completion
-eval "$(fzf --bash)"
-# https://github.com/lincheney/fzf-tab-completion
-source ${XDG_CONFIG_HOME:-$HOME/.config}/bash/fzf-bash-completion.sh
-bind -x '"\t": fzf_bash_completion'
