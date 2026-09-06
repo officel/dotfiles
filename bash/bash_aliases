@@ -119,24 +119,3 @@ alias pnvm='pnpm env use --global'
 alias pnw='pnpm why'
 alias pnx='pnpm dlx'
 alias aliaspn='alias | grep "pnpm"'
-
-# terraform
-alias tf='terraform'
-alias tfa='terraform apply'
-# terraform-docs -c .terraform-docs.yml .
-# のように使うんだけど、設定ファイルはリポジトリによって異なるので名前だけ alias にする
-alias tfdocs='terraform-docs'
-# terraform destroy (tfd) は頻繁に叩かないし叩くべきでもないので alias にしないことにしている
-alias tfe='terraform init --upgrade && terraform fmt && terraform plan'
-alias tff='terraform fmt'
-alias tfi='terraform init'
-alias tfiu='terraform init --upgrade'
-alias tfir='terraform init -reconfigure'
-alias tfo='terraform output'
-alias tfp='terraform plan'
-alias tfq='terraform query'
-alias tfs='terraform state'
-alias tft='terraform test'
-alias tfv='terraform version'
-alias tfva='terraform validate'
-alias aliastf='alias | grep "terraform"'
