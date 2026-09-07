@@ -121,13 +121,14 @@ if [ -f ${XDG_CONFIG_HOME}/uchi/functions ]; then
     .   ${XDG_CONFIG_HOME}/uchi/functions
 fi
 
+if [ -f ${XDG_CONFIG_HOME}/uchi/rc ]; then
+    .   ${XDG_CONFIG_HOME}/uchi/rc
+fi
+
 if [ -f ${XDG_CONFIG_HOME}/uchi/profile ]; then
     .   ${XDG_CONFIG_HOME}/uchi/profile
 fi
 
-if [ -f ${XDG_CONFIG_HOME}/uchi/rc ]; then
-    .   ${XDG_CONFIG_HOME}/uchi/rc
-fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
