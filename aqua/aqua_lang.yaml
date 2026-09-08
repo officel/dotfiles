@@ -2,7 +2,7 @@
 # 開発寄りのツール
 packages:
   - name: 01mf02/jaq@v3.1.1
-  - name: astral-sh/uv@0.12.9
+  - name: astral-sh/uv@0.12.10
   - name: golang/go@go1.27.1
   - name: google/yamlfmt@v0.21.0
   - name: hairyhenderson/gomplate@v5.2.0
