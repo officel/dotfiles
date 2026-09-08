@@ -40,12 +40,7 @@ alias tfva='terraform validate'
 
 ## environment
 
-- environment variables を定義します
-- 将来的に自動的に `Set-Environment` に変換するか、別の schema を定義する予定です
-
-```sh {schema=env}
-export UCHI_terraform=OK
-```
+- デバッグログや認証情報等を環境変数で宣言できるけど全体で使うものでもない
 
 ## Run Command
 

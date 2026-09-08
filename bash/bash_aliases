@@ -1,19 +1,5 @@
 # .dotfiles/alias
 
-# command
-alias l='ls -al'
-alias ls='ls --group-directories-first'
-alias ll='ls -l'
-alias curlh='curl -D - -s -o /dev/null -sSL'
-alias diffs='diff -y --suppress-common-lines'
-alias diffx='diff --exclude-from=${XDG_CONFIG_HOME:-$HOME/.config}/bash/diff_exclude'
-alias fullpath='find `pwd` -maxdepth 1 -name'
-alias greps='grep -v -e '\''^\s*#'\'' -e '\''^\s*$'\'''
-alias myip='curl -s inet-ip.info'
-alias mypath='echo $PATH | tr ":" "\n"'
-alias pwgen='pwgen -c -n -B -1'
-alias treex='tree --charset unicode -aNI "$(paste -sd"|" "${XDG_CONFIG_HOME:-$HOME/.config}/bash/tree_exclude" 2>/dev/null)"'
-
 # ansible
 # alias ansible-playbook='TZ="Asia/Tokyo" ANSIBLE_LOG_PATH=logs/ansible_$(date "+%Y%m%d%H%M%S").log ansible-playbook'
 # alias ansible-groups='ansible-inventory --list | jq -r "keys | .[]"'
