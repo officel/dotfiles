@@ -104,10 +104,6 @@ if [ -f ${XDG_CONFIG_HOME}/bash/bash_aliases ]; then
     .   ${XDG_CONFIG_HOME}/bash/bash_aliases
 fi
 
-if [ -f ${XDG_CONFIG_HOME}/bash/azure_functions ]; then
-    .   ${XDG_CONFIG_HOME}/bash/azure_functions
-fi
-
 # 2026-09-06 use uchi
 if [ -f ${XDG_CONFIG_HOME}/uchi/env ]; then
     .   ${XDG_CONFIG_HOME}/uchi/env
@@ -140,8 +136,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# completion
-complete -C aws_completer aws
 source <(kubectl completion bash)
 
 # 2024-06-05 https://github.com/cykerway/complete-alias
