@@ -109,16 +109,16 @@ if [ -f ${XDG_CONFIG_HOME}/bash/azure_functions ]; then
 fi
 
 # 2026-09-06 use uchi
+if [ -f ${XDG_CONFIG_HOME}/uchi/env ]; then
+    .   ${XDG_CONFIG_HOME}/uchi/env
+fi
+
 if [ -f ${XDG_CONFIG_HOME}/uchi/rc ]; then
     .   ${XDG_CONFIG_HOME}/uchi/rc
 fi
 
 if [ -f ${XDG_CONFIG_HOME}/uchi/profile ]; then
     .   ${XDG_CONFIG_HOME}/uchi/profile
-fi
-
-if [ -f ${XDG_CONFIG_HOME}/uchi/env ]; then
-    .   ${XDG_CONFIG_HOME}/uchi/env
 fi
 
 if [ -f ${XDG_CONFIG_HOME}/uchi/alias ]; then
@@ -140,9 +140,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# # 2024-05-24 rye
-# . "$HOME/.rye/env"
-
 # completion
 complete -C aws_completer aws
 source <(kubectl completion bash)
@@ -161,25 +158,6 @@ complete -F _complete_alias g
 # 2024-06-05 krew for kubectl
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
-# 2024-07-28 history
-export HISTCONTROL=ignoreboth
-export HISTIGNORE=ls:ll:'ls -l':'ls -la':history:pwd:exit:which:w:task:gr:gst:gau:
-export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
-export HISTSIZE=1000
-export HISTFILESIZE=2000
-
-# 2024-08-06 clip
-# https://qiita.com/tawara_/items/0916eaec6ad09fce86a5
-function clip() {
-  { printf "\xff\xfe"; iconv -t UTF-16LE; } | clip.exe
-}
-
-# 2024-09-15 cargo, install https://github.com/mitsuhiko/minijinja/tree/main/minijinja-cli
-source $HOME/.cargo/env
-
-# uv
-export PATH="$HOME/.local/bin:$PATH"
-
 # stern install from krew
 # https://github.com/stern/stern?tab=readme-ov-file#completion
 source <(kubectl stern --completion bash)
@@ -187,3 +165,6 @@ complete -o default -F __start_stern kubectl stern
 
 # GOPATH
 export PATH="$HOME/go/bin:$PATH"
+
+# 2024-09-15 cargo, install https://github.com/mitsuhiko/minijinja/tree/main/minijinja-cli
+source $HOME/.cargo/env
