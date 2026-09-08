@@ -61,6 +61,14 @@ alias gss='git show --stat'
 alias gst='git status --short --branch'
 ```
 
+## Run Command
+
+- あまり使わないけど `alias g` でも git の補完ができるように
+
+```sh {schema=rc}
+complete -F _complete_alias g
+```
+
 ## profile
 
 ```sh {schema=profile}

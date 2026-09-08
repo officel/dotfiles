@@ -125,38 +125,6 @@ if [ -f ${XDG_CONFIG_HOME}/uchi/functions ]; then
     .   ${XDG_CONFIG_HOME}/uchi/functions
 fi
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
-
-source <(kubectl completion bash)
-
-# 2024-06-05 https://github.com/cykerway/complete-alias
-# brew install bash-completion@2
-# wget  https://raw.githubusercontent.com/cykerway/complete-alias/master/complete_alias
-# chmod +x complete_alias
-# sudo mv complete_alias /usr/local/bin/
-[[ -r "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh" ]] && . "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh"
-. /usr/local/bin/complete_alias
-
-complete -o default -F __start_kubectl kubecolor k
-complete -F _complete_alias g
-
-# 2024-06-05 krew for kubectl
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-
-# stern install from krew
-# https://github.com/stern/stern?tab=readme-ov-file#completion
-source <(kubectl stern --completion bash)
-complete -o default -F __start_stern kubectl stern
-
 # GOPATH
 export PATH="$HOME/go/bin:$PATH"
 
