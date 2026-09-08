@@ -1,6 +1,7 @@
-.git
-.terraform
-.ruff_cache
 .expo
+.git
+.ruff_cache
+.rumdl_cache
+.terraform
 .terraform.lock.hcl
 node_modules

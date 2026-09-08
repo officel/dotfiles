@@ -1,5 +1,0 @@
-# .dotfiles/alias
-
-# ansible
-# alias ansible-playbook='TZ="Asia/Tokyo" ANSIBLE_LOG_PATH=logs/ansible_$(date "+%Y%m%d%H%M%S").log ansible-playbook'
-# alias ansible-groups='ansible-inventory --list | jq -r "keys | .[]"'

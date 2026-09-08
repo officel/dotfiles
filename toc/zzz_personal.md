@@ -44,6 +44,13 @@ export HISTFILESIZE=2000
 - `.`（カレントディレクトリ）は指定しない派閥に属しています
 
 ```sh {schema=rc}
+# GO
+export PATH="$HOME/go/bin:$PATH"
+
+# 2024-09-15 cargo, install https://github.com/mitsuhiko/minijinja/tree/main/minijinja-cli
+source $HOME/.cargo/env
+
+# self
 export PATH="$HOME/.local/bin:$PATH"
 ```
 
