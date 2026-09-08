@@ -4,30 +4,6 @@
 # alias ansible-playbook='TZ="Asia/Tokyo" ANSIBLE_LOG_PATH=logs/ansible_$(date "+%Y%m%d%H%M%S").log ansible-playbook'
 # alias ansible-groups='ansible-inventory --list | jq -r "keys | .[]"'
 
-# docker
-alias     d='docker'
-alias   dce='docker container exec -it'
-alias dclog='docker container logs'
-alias dcrun='docker container run -itd --rm'
-
-alias  dps='docker ps'
-alias dpss="docker ps | awk 'NR <= 1; NR > 1 { print \$0 | \"sort -k7 -V\" };'"
-alias   ds='docker stop'
-
-# alias al2='docker container run -itd --rm -e "TZ=Asia/Tokyo" --name al2 amazonlinux'
-alias alpinx='docker container run -itd --rm -v `pwd`:/usr/share/nginx/html -p 8081:80 -e "TZ=Asia/Tokyo" --name alpinx nginx:alpine'
-# alias alpython='docker container run --rm -it -d -e "TZ=Asia/Tokyo" --name alpython python:alpine'
-# alias jekyll='docker container run -itd --rm -v `pwd`:/srv/jekyll:Z -e "TZ=Asia/Tokyo" --name jekyll jekyll/jekyll jekyll'
-
-alias dc='docker compose'
-alias dcd='docker compose down'
-alias dcu='docker compose up'
-alias dcud='docker compose up -d'
-alias dcr='docker compose run'
-
-# docker をひっかける alias 多いな
-alias aliasd='alias | grep docker'
-
 # k8s use kubecolor
 alias k='kubecolor'
 alias kubectl='kubecolor'
