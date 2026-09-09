@@ -1,0 +1,4 @@
+input_dir: .
+output_dir: ../dist
+template_dir: ""
+auto_comment: true
