@@ -8,6 +8,10 @@ create: 2026-09-06
 - [git](https://git-scm.com/)
 - だいたい brew でインストールしている
 
+## note
+
+- `dandavison/delta` は git-diff を見やすくする
+
 ## alias
 
 - `aliasg`(`alias + g`) と `git alias` の違い
