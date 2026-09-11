@@ -3,6 +3,6 @@
 packages:
   - name: j178/prek@v0.5.2
   - name: owenlamont/ryl@v0.22.0
-  - name: rvben/rumdl@v0.2.68
+  - name: rvben/rumdl@v0.2.72
   - name: suzuki-shunsuke/pinact@v4.1.1
-  - name: zizmorcore/zizmor@v1.30.0
+  - name: zizmorcore/zizmor@v1.30.1
