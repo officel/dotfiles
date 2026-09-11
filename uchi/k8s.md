@@ -11,6 +11,13 @@ create: 2026-09-09
 - [stern](https://github.com/stern/stern)
 - [krew](https://krew.sigs.k8s.io/)
 - [k9s](https://github.com/derailed/k9s)
+- [Argo CD](https://github.com/argoproj/argo-cd)
+- [kubelogin](https://github.com/Azure/kubelogin)
+- [Helm](https://github.com/helm/helm)
+- [istioctl](https://istio.io/latest/docs/ops/diagnostic-tools/istioctl/)
+- [kind](https://github.com/kubernetes-sigs/kind)
+- [kubeadm](https://github.com/kubernetes/kubeadm)
+- [Chainsaw](https://github.com/kyverno/chainsaw)
 - Kubernetes 関係のツールは `aqua/aqua_k8s.yaml` と krew で管理する
 
 ## note
@@ -18,6 +25,12 @@ create: 2026-09-09
 - kubectl は kubecolor を通して実行し、出力を見やすくする
 - stern は krew でインストールする kubectl プラグインとして使用する
 - k9s は Kubernetes リソースを対話的に確認・操作するために使用する
+- Argo CD は Kubernetes への GitOps デプロイを管理する
+- kubelogin は Azure Kubernetes Service の認証に使用する
+- Helm は Kubernetes のパッケージ管理に使用する
+- kind は Docker コンテナー上の Kubernetes クラスターを作成する
+- kubeadm は Kubernetes クラスターの初期化に使用する
+- Chainsaw は Kubernetes の統合テストに使用する
 
 ## alias
 
@@ -54,6 +67,10 @@ complete -o default -F __start_kubectl kubecolor k
 
 source <(kubectl stern --completion bash)
 complete -o default -F __start_stern kubectl stern
+
+if command -v helm &> /dev/null; then
+	source <(helm completion bash)
+fi
 ```
 
 ## environment
