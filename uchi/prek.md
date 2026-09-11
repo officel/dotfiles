@@ -1,5 +1,5 @@
 ---
-uchi: false
+uchi: v1
 create: 2026-09-10
 ---
 
@@ -22,6 +22,13 @@ create: 2026-09-10
 - `.pre-commit-config.yaml` 自体は本家 pre-commit と互換性を保っているが、`prek.toml` で専用に書き直すこともできる
 - `.pre-commit-config.yaml` 自体はこのリポジトリのルートディレクトリにもあるので参照
 
+## よく入れるツール
+
+- [ryl](https://github.com/owenlamont/ryl) は YAML と Markdown の lint に使用する
+- [rumdl](https://github.com/rvben/rumdl) は Markdown の lint と format に使用する
+- [pinact](https://github.com/suzuki-shunsuke/pinact) は GitHub Actions の action version を固定する
+- [zizmor](https://github.com/zizmorcore/zizmor) は GitHub Actions のセキュリティ lint に使用する
+
 ## 使い方
 
 ```sh
@@ -34,3 +41,17 @@ $ prek run -a
 # 設定等のバージョンアップ
 $ prek update --freeze
 ```
+
+## alias
+
+```sh {schema=alias}
+alias prekr='prek run -a'
+alias preku='prek update --freeze'
+alias pin='pinact run'
+alias zsm='zizmor'
+```
+
+## tool settings
+
+- `ryl`、`rumdl`、`pinact`、`zizmor` はリポジトリの `.pre-commit-config.yaml` や CI から実行する
+- 設定ファイルの自動修正を行うツールは、変更内容を確認してからコミットする
