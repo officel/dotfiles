@@ -42,16 +42,33 @@ export HISTFILESIZE=2000
 
 - 個人設定の bin をなるべく後に追加することで使用時に優先されるようにする
 - `.`（カレントディレクトリ）は指定しない派閥に属しています
+- case で PATH 中に指定のパスが含まれていない時だけ追加すると $PATH が混乱しない
+- case を使って if を使わないのは POSIX 準拠らしいけど今のところそうなんだ、としか
+- .cargo/env で同じことをしている
+- @TODO PATH は環境変数なわけで、記載位置についてはもうちょっと検討
 
 ```sh {schema=rc}
-# GO
-export PATH="$HOME/go/bin:$PATH"
-
+# Rust
 # 2024-09-15 cargo, install https://github.com/mitsuhiko/minijinja/tree/main/minijinja-cli
 source $HOME/.cargo/env
 
+# GO
+case ":${PATH}:" in
+    *:"$HOME/go/bin":*)
+        ;;
+    *)
+        export PATH="$HOME/go/bin:$PATH"
+        ;;
+esac
+
 # self
-export PATH="$HOME/.local/bin:$PATH"
+case ":${PATH}:" in
+    *:"$HOME/.local/bin":*)
+        ;;
+    *)
+        export PATH="$HOME/.local/bin:$PATH"
+        ;;
+esac
 ```
 
 ## function
