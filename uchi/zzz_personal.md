@@ -49,7 +49,6 @@ export HISTFILESIZE=2000
 
 ```sh {schema=rc}
 # Rust
-# 2024-09-15 cargo, install https://github.com/mitsuhiko/minijinja/tree/main/minijinja-cli
 source $HOME/.cargo/env
 
 # GO
