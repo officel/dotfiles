@@ -801,31 +801,6 @@
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/mitsuhiko/minijinja/2.24.0/minijinja-cli-aarch64-apple-darwin.tar.xz",
-      "checksum": "A0F1525BCAC485A80313CEC7E835ED03335BD55BC14DC5CF070C7EB9789D9905",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/mitsuhiko/minijinja/2.24.0/minijinja-cli-aarch64-unknown-linux-musl.tar.xz",
-      "checksum": "5FD4D0CA9A37973564A9BA3D4444466DBCA46C4737840B772BA64729CAC4277B",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/mitsuhiko/minijinja/2.24.0/minijinja-cli-x86_64-apple-darwin.tar.xz",
-      "checksum": "283D3E54ED52FF0F97BC4E8B736FA67D5F1BC55B47457FFC8E9310A5FE555997",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/mitsuhiko/minijinja/2.24.0/minijinja-cli-x86_64-pc-windows-msvc.zip",
-      "checksum": "5FCA9CD605EC29B80722B7C8C4B4A8CB8A713117C147D4213AA04EE6AD89AF2C",
-      "algorithm": "sha256"
-    },
-    {
-      "id": "github_release/github.com/mitsuhiko/minijinja/2.24.0/minijinja-cli-x86_64-unknown-linux-musl.tar.xz",
-      "checksum": "40A7B36EB04075D54F0E079CBF632D2FCF9CC32721539F6B799341632D16F50E",
-      "algorithm": "sha256"
-    },
-    {
       "id": "github_release/github.com/neilotoole/sq/v0.55.0/sq-0.55.0-linux-amd64.tar.gz",
       "checksum": "38D6BB91C0FAFD15F99F4D84F5792804D5B44041696F929BDEE1BD5ED76E4A28",
       "algorithm": "sha256"

@@ -24,4 +24,3 @@ packages:
   - name: anchore/grype@v0.118.0
   - name: miniscruff/changie@v1.26.0
   - name: github/copilot-cli@v1.0.83
-  - name: mitsuhiko/minijinja@2.24.0
