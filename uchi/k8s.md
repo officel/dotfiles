@@ -19,6 +19,8 @@ create: 2026-09-09
 - [kubeadm](https://github.com/kubernetes/kubeadm)
 - [Chainsaw](https://github.com/kyverno/chainsaw)
 - Kubernetes 関係のツールは `aqua/aqua_k8s.yaml` と krew で管理する
+- [今更ながら kubectl のプラグインを krew で管理することにしまして](https://zenn.dev/raki/articles/2024-10-14_kubectl_krew)
+- 次の更新の機会がきたら krew は aqua 管理に戻そうかな
 
 ## note
 

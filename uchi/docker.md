@@ -8,6 +8,7 @@ create: 2026-09-08
 - [docker](https://github.com/docker/cli)
 - [docker compose](https://github.com/docker/compose)
 - Docker 関係の alias はこのファイルで管理する
+- WSL Ubuntu には `apt` でインストールした気がするけど定かでない（ダメ
 
 ## note
 

@@ -7,6 +7,7 @@ create: 2026-09-06
 
 - [eza](https://github.com/eza-community/eza)
 - `ls` の代替
+- インストールは `aqua`
 
 ## alias
 
