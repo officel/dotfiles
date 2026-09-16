@@ -7,7 +7,8 @@ create: 2026-09-07
 
 - [pnpm](https://github.com/pnpm/pnpm)
 - node の package manager
-- インストールは `aqua` に任せる
+- インストールは `aqua` に任せるって書いたんだけど、aqua に pnpm の記載がなく、
+  `type` の結果は aqua の PATH にあって、どうやってインストールしたんだっけ？になってる
 
 ## note
 
