@@ -23,7 +23,6 @@ vars:
   USER_HOME: "~"
   # ユーザーフォームにシンボリックリンクを作成する設定ファイルのリスト[TARGET,LINK_NAME]
   USER_HOME_LINKS:
-    - "direnvrc,.direnvrc"
     - "vimrc,.vimrc"
     - "Taskfile.home.yml,Taskfile.yml"
   # XDG_CONFIG_HOME 環境変数のデフォルト値

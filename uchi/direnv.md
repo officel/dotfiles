@@ -29,3 +29,45 @@ alias da='direnv allow'
 ```sh {schema=rc}
 eval "$(direnv hook bash)"
 ```
+
+## 使用をやめたもの
+
+### direnv で alias
+
+- [direnvを使用して、同名のコマンドの挙動をディレクトリ毎に変更したい - eidera log](https://eidera.com/blog/2018/12/28/direnv_alias/)
+- `$HOME/.direnvrc` として配置して使用する
+
+```sh:~/.direnvrc
+ALIASES_DIR=".direnv/aliases"
+
+export_function() {
+  local name=$1
+  local alias_dir=$PWD/${ALIASES_DIR}
+  mkdir -p "$alias_dir"
+  PATH_add "$alias_dir"
+  local target="$alias_dir/$name"
+  if declare -f "$name" >/dev/null; then
+    echo "#!/usr/bin/env bash" > "$target"
+    declare -f "$name" >> "$target" 2>/dev/null
+    echo "$name" '"$@"' >> "$target"
+    chmod +x "$target"
+  fi
+}
+
+clear_direnv_aliases() {
+  local alias_dir=$PWD/${ALIASES_DIR}
+  rm -rf $alias_dir/*
+}
+```
+
+- 使用したいディレクトリの `.envrc` に記載しておくと使える
+
+```sh:.envrc
+clear_direnv_aliases
+m (){
+  make "$@"
+}
+export_function m
+```
+
+- task への置き換えで出番がなくなった
