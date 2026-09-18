@@ -32,7 +32,6 @@ vars:
     - "aqua"
     - "bash"
     - "git"
-    - "task"
 
 tasks:
   default:
