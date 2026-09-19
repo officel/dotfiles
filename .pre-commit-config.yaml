@@ -25,7 +25,7 @@ repos:
       - id: betterleaks
 
   - repo: https://github.com/kjanat/actionlint
-    rev: 662318dd6bbd9c0c120e35b03168bc1be69bf428  # frozen: v1.16.1
+    rev: 08bb2c4f0d039744455b87aef1c647fb8b66d37b  # frozen: v1.17.0
     hooks:
       - id: actionlint
 
@@ -35,7 +35,7 @@ repos:
       - id: zizmor
 
   - repo: https://github.com/rvben/rumdl-pre-commit
-    rev: 5d5d9ecda0a544617f550c84792ea1bd717620e1  # frozen: v0.2.72
+    rev: e5ecce62dbd84b035277acbba3e2667a49079c0a  # frozen: v0.2.74
     hooks:
       - id: rumdl
         args: ["--fix"]
