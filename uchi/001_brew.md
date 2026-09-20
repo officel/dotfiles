@@ -18,12 +18,13 @@ create: 2026-09-06
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-## Run Command
+## environment
 
 - インストールの際に書き込めって出力されるアレ
 - brew のパスや環境変数を設定している
 
 ```sh
+# インストール後に表示される設定用のコマンド
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 ```
 
@@ -34,7 +35,7 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
   - ということなので、並べて対応してみることにした
 - 正直冗長かもしれないが、クリーンな環境構築と学習の一環ということでひとつ
 
-```sh {schema=rc}
+```sh {schema=env}
 if ! type brew >/dev/null 2>&1; then
   for brew_path in \
     /usr/local/bin/brew \
