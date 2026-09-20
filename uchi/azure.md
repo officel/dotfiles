@@ -47,19 +47,19 @@ command = role definition list -o json --name
 # Usage: azrbac <action>
 # Example: azrbac "Microsoft.Storage/storageAccounts/read"
 function azrbac() {
-	local action="$1"
+  local action="$1"
 
-	az role definition list -o json \
-	| jq -r --arg action "$action" '
-			.[]
-			| select(
-					any(.permissions[]?;
-							(any(.actions[]?; . == $action)
-							 or
-							 any(.dataActions[]?; . == $action))
-					)
-				)
-			| .roleName
-		'
+  az role definition list -o json \
+  | jq -r --arg action "$action" '
+      .[]
+      | select(
+          any(.permissions[]?;
+              (any(.actions[]?; . == $action)
+               or
+               any(.dataActions[]?; . == $action))
+          )
+        )
+      | .roleName
+    '
 }
 ```
