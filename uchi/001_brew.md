@@ -5,17 +5,46 @@ create: 2026-09-06
 
 # 001_brew
 
-- brew をパッケージマネージャーにしている
-- aqua でインストールできないもの、aqua より先にインストールが必要なものを中心に管理
-- @TODO インストールや設定方法について別途検討
-- 結合されるファイルはファイル名でソートされるので先に書きたいものは番号ファイル名で対応
+- [Homebrew](https://brew.sh/ja/)
+- パッケージマネージャー
+- 主に `aqua` でインストールできないもの、aqua より先にインストールが必要なものを中心に管理
+- `Brewfile` を参照
+
+## install
+
+- ホームページのトップにあるものと同じ
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
 ## Run Command
 
 - インストールの際に書き込めって出力されるアレ
-- brew のパスを設定する
-- @TODO このままだと環境差やインストールパスが吸収できないので要検討
+- brew のパスや環境変数を設定している
+
+```sh
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+```
+
+- 環境差やインストールパスを吸収することにした
+  - Intel Macでは `/usr/local`
+  - Apple Silicon では `/opt/homebrew`
+  - Linux/WSLでは `/home/linuxbrew/.linuxbrew`
+  - ということなので、並べて対応してみることにした
+- 正直冗長かもしれないが、クリーンな環境構築と学習の一環ということでひとつ
 
 ```sh {schema=rc}
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+if ! type brew >/dev/null 2>&1; then
+  for brew_path in \
+    /usr/local/bin/brew \
+    /opt/homebrew/bin/brew \
+    /home/linuxbrew/.linuxbrew/bin/brew
+  do
+    if [ -x "$brew_path" ]; then
+      eval "$("$brew_path" shellenv)"
+      break
+    fi
+  done
+fi
 ```
