@@ -31,18 +31,23 @@ alias aqup='aqua update'
 
 - @TODO パスを含む設定値の場合に環境差を吸収する必要性？
 - `.config/aqua/aqua.yaml` ではないパスに置きたいなど
+- aqua への PATH は brew の前に必要なので brew の rc が走った後に実行する必要がある
+- これは aqua でインストールしたツールを先に探し、なかったら brew を探す、ということ
 
 ```sh {schema=env}
 export AQUA_GLOBAL_CONFIG=${XDG_CONFIG_HOME:-$HOME/.config}/aqua/aqua.yaml
+case ":${PATH}:" in
+    *:"$(aqua root-dir)/bin":*)
+        ;;
+    *)
+        export PATH="$(aqua root-dir)/bin:$PATH"
+        ;;
+esac
 ```
 
 ## rc
 
-- aqua への PATH は brew の前に必要なので brew の rc が走った後に実行する必要がある
-- これは aqua でインストールしたツールを先に探し、なかったら brew を探す、ということ
-
 ```sh {schema=rc}
-export PATH="$(aqua root-dir)/bin:$PATH"
 if command -v aqua &> /dev/null; then
     eval "$(aqua completion bash)"
 fi

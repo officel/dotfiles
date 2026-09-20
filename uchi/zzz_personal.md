@@ -26,6 +26,8 @@ alias treex='tree --charset unicode -aNI "$(paste -sd"|" "${XDG_CONFIG_HOME:-$HO
 
 ## environment
 
+- 個人設定の bin をなるべく後に追加することで使用時に優先されるようにする
+- `.`（カレントディレクトリ）は指定しない派閥に属しています
 - `HISTxxx` は `history` コマンドの環境変数
 
 ```sh {schema=env}
@@ -36,31 +38,7 @@ export HISTIGNORE=ls:ll:'ls -l':'ls -la':history:pwd:exit:which:w:task:gr:gst:ga
 export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
 export HISTSIZE=1000
 export HISTFILESIZE=2000
-```
 
-## Run Command
-
-- 個人設定の bin をなるべく後に追加することで使用時に優先されるようにする
-- `.`（カレントディレクトリ）は指定しない派閥に属しています
-- case で PATH 中に指定のパスが含まれていない時だけ追加すると $PATH が混乱しない
-- case を使って if を使わないのは POSIX 準拠らしいけど今のところそうなんだ、としか
-- .cargo/env で同じことをしている
-- @TODO PATH は環境変数なわけで、記載位置についてはもうちょっと検討
-
-```sh {schema=rc}
-# Rust
-source $HOME/.cargo/env
-
-# GO
-case ":${PATH}:" in
-    *:"$HOME/go/bin":*)
-        ;;
-    *)
-        export PATH="$HOME/go/bin:$PATH"
-        ;;
-esac
-
-# self
 case ":${PATH}:" in
     *:"$HOME/.local/bin":*)
         ;;
@@ -68,15 +46,4 @@ case ":${PATH}:" in
         export PATH="$HOME/.local/bin:$PATH"
         ;;
 esac
-```
-
-## function
-
-- @TODO シェル関数の違いにも注意
-
-```sh {schema=function}
-# https://qiita.com/tawara_/items/0916eaec6ad09fce86a5
-function clip() {
-  { printf "\xff\xfe"; iconv -t UTF-16LE; } | clip.exe
-}
 ```

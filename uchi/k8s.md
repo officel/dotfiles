@@ -80,5 +80,13 @@ fi
 - krew plugin の PATH
 
 ```sh {schema=env}
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+case ":${PATH}:" in
+    *:"${KREW_ROOT:-$HOME/.krew}/bin":*)
+        ;;
+    *)
+        export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+        ;;
+esac
+
+
 ```
