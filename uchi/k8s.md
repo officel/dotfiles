@@ -87,6 +87,4 @@ case ":${PATH}:" in
         export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
         ;;
 esac
-
-
 ```
