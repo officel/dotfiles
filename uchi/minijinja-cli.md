@@ -1,5 +1,4 @@
 ---
-uchi: false
 create: 2026-09-13
 ---
 
