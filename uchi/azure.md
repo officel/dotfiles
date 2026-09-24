@@ -46,7 +46,7 @@ command = role definition list -o json --name
 # List Azure RBAC roles that have permissions for a specific action
 # Usage: azrbac <action>
 # Example: azrbac "Microsoft.Storage/storageAccounts/read"
-function azrbac() {
+azrbac() {
   local action="$1"
 
   az role definition list -o json \
