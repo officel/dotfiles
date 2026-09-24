@@ -46,6 +46,10 @@ fi
 # wget  https://raw.githubusercontent.com/cykerway/complete-alias/master/complete_alias
 # chmod +x complete_alias
 # sudo mv complete_alias /usr/local/bin/
-[[ -r "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh" ]] && . "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh"
-. /usr/local/bin/complete_alias
+if [ -r /home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh ]; then
+  . "/home/linuxbrew/.linuxbrew/etc/profile.d/bash_completion.sh"
+fi
+if [ -r /usr/local/bin/complete_alias ]; then
+  . /usr/local/bin/complete_alias
+fi
 ```

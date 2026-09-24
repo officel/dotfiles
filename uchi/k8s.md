@@ -63,7 +63,7 @@ alias k9sr='LC_CTYPE="en_US.UTF-8" k9s --readonly'
 
 - kubectl、kubecolor、stern の Bash completion を有効にする
 
-```sh {schema=rc}
+```sh {schema=rc target=bash}
 source <(kubectl completion bash)
 complete -o default -F __start_kubectl kubecolor k
 
