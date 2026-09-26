@@ -34,8 +34,9 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
   - Linux/WSLでは `/home/linuxbrew/.linuxbrew`
   - ということなので、並べて対応してみることにした
 - 正直冗長かもしれないが、クリーンな環境構築と学習の一環ということでひとつ
+- 条件分岐や処理を挟んだ PATH 設定は rc に書くことにしたので注意（↓のコードフェンスは rc ）
 
-```sh {schema=env}
+```sh {schema=rc}
 if ! type brew >/dev/null 2>&1; then
   for brew_path in \
     /usr/local/bin/brew \

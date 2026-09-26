@@ -59,11 +59,24 @@ alias k9s='LC_CTYPE="en_US.UTF-8" k9s'
 alias k9sr='LC_CTYPE="en_US.UTF-8" k9s --readonly'
 ```
 
+## environment
+
+- krew plugin の PATH（↓の rc へ移動した）
+
 ## Run Command
 
 - kubectl、kubecolor、stern の Bash completion を有効にする
 
 ```sh {schema=rc target=bash}
+case ":${PATH}:" in
+  *:"${KREW_ROOT:-$HOME/.krew}/bin":*)
+    ;;
+  *)
+    export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+    ;;
+esac
+
+
 source <(kubectl completion bash)
 complete -o default -F __start_kubectl kubecolor k
 
@@ -73,18 +86,4 @@ complete -o default -F __start_stern kubectl stern
 if command -v helm &> /dev/null; then
 	source <(helm completion bash)
 fi
-```
-
-## environment
-
-- krew plugin の PATH
-
-```sh {schema=env}
-case ":${PATH}:" in
-    *:"${KREW_ROOT:-$HOME/.krew}/bin":*)
-        ;;
-    *)
-        export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-        ;;
-esac
 ```
