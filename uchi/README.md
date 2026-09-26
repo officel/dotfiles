@@ -22,13 +22,15 @@ export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
 ### env(environment)
 
 - 主に環境変数を設定する
-- `PATH` は設定の仕方に依らずなるべくここに寄せる
+- 変数代入のみを記述する（`if`、`for`、`case`、`eval` は記述できない）
+- `PATH` の設定に条件分岐やコマンドの実行が必要な場合は `rc` に記述する
 - `export` もここで設定する
 
 ### rc(Run Command)
 
 - `completion` はなるべくここに寄せる
-- `eval()` もここで設定する（PATHを設定するものを除く）
+- `eval` や条件分岐を含む初期化処理もここで設定する
+- PATH の初期化は、それを使用する補完設定などより前に記述する
 
 ### profile
 

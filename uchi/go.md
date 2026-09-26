@@ -11,12 +11,14 @@ create: 2026-09-11
 
 ## environment
 
-```sh {schema=env}
+- 条件分岐や処理を挟んだ PATH 設定は rc に書くことにしたので注意（↓のコードフェンスは rc ）
+
+```sh {schema=rc}
 case ":${PATH}:" in
-    *:"$HOME/go/bin":*)
-        ;;
-    *)
-        export PATH="$HOME/go/bin:$PATH"
-        ;;
+  *:"$HOME/go/bin":*)
+    ;;
+  *)
+    export PATH="$HOME/go/bin:$PATH"
+    ;;
 esac
 ```

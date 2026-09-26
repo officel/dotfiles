@@ -38,12 +38,16 @@ export HISTIGNORE=ls:ll:'ls -l':'ls -la':history:pwd:exit:which:w:task:gr:gst:ga
 export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
 export HISTSIZE=1000
 export HISTFILESIZE=2000
+```
 
+## run command
+
+```sh {schema=rc}
 case ":${PATH}:" in
-    *:"$HOME/.local/bin":*)
-        ;;
-    *)
-        export PATH="$HOME/.local/bin:$PATH"
-        ;;
+  *:"$HOME/.local/bin":*)
+    ;;
+  *)
+    export PATH="$HOME/.local/bin:$PATH"
+    ;;
 esac
 ```

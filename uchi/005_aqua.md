@@ -36,18 +36,19 @@ alias aqup='aqua update'
 
 ```sh {schema=env}
 export AQUA_GLOBAL_CONFIG=${XDG_CONFIG_HOME:-$HOME/.config}/aqua/aqua.yaml
-case ":${PATH}:" in
-    *:"$(aqua root-dir)/bin":*)
-        ;;
-    *)
-        export PATH="$(aqua root-dir)/bin:$PATH"
-        ;;
-esac
 ```
 
 ## rc
 
 ```sh {schema=rc}
+case ":${PATH}:" in
+  *:"$(aqua root-dir)/bin":*)
+    ;;
+  *)
+    export PATH="$(aqua root-dir)/bin:$PATH"
+    ;;
+esac
+
 if command -v aqua &> /dev/null; then
     eval "$(aqua completion bash)"
 fi
