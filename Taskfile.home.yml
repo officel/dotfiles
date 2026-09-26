@@ -55,6 +55,8 @@ tasks:
       - cmd: prek update --freeze --include-tag 'v*.*.*'
         ignore_error: true
       - git status
+      - git add -u
+      - prek run -a
     dir: "{{.USER_WORKING_DIR}}"
 
   bump:
