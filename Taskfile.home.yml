@@ -42,6 +42,8 @@ tasks:
       GITHUB_TOKEN:
         sh: gh auth token
     cmds:
+      - grep kjanat .pre-commit-config.yaml
+        # actionlint が fork になっていなかったら落とす
       - git fetch --all --prune
       - git checkout origin/HEAD
       - cmd: aqua up
@@ -68,6 +70,8 @@ tasks:
       BRANCH_NAME: "chore/bump-{{ date \"2006-01-02\" now}}"
       PR_BODY: |
         - 使用しているツールのバージョンを更新
+        - actionlint が fork になっていなっていることを確認
+        - betterleaks が v2.0.0-rc を出してきてるけど正式になるまで使用しない（rcを使用しない）
     cmds:
       - git add -u
       - git commit -m "{{.COMMIT_TITLE}}"
