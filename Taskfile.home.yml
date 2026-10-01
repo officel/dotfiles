@@ -70,7 +70,7 @@ tasks:
       BRANCH_NAME: "chore/bump-{{ date \"2006-01-02\" now}}"
       PR_BODY: |
         - 使用しているツールのバージョンを更新
-        - actionlint が fork になっていなっていることを確認
+        - actionlint が fork になっていることを確認
         - betterleaks が v2.0.0-rc を出してきてるけど正式になるまで使用しない（rcを使用しない）
     cmds:
       - git add -u
