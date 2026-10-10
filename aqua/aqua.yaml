@@ -25,3 +25,4 @@ packages:
   - name: miniscruff/changie@v1.26.0
   - name: github/copilot-cli@v1.0.95
   - name: mitsuhiko/minijinja@3.0.0
+  - name: golangci/golangci-lint@v2.14.0
