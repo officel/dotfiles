@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: "3"
+
+# vars:
+
+tasks:
+  uchi:gen:
+    desc: "generate uchi related files"
+    aliases:
+      - ug
+    cmds:
+      - echo "Generating uchi related files..."
+      - uchi gen
+    dir: "{{.TASKFILE_DIR}}/uchi/"
+
+  uchi:test:
+    desc: "test uchi related files"
+    aliases:
+      - ut
+    cmds:
+      - uchi check
+      - uchi diff
+      - uchi gen
+    dir: "{{.TASKFILE_DIR}}/uchi/"
