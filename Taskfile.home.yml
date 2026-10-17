@@ -46,6 +46,13 @@ tasks:
       - git checkout origin/HEAD
       - cmd: sed -i 's/rhysd/kjanat/g' .pre-commit-config.yaml
         ignore_error: true
+      - cmd: |
+          sed -i 's/^\([[:space:]]*\)- id: ryl[[:space:]]*$/\1- id: ryl-check\n\1  args: ["--fix"]/' .pre-commit-config.yaml
+        ignore_error: true
+      - cmd: sed -i -E 's/^([[:space:]]*)\[rules(\.|\])/\1[lint.rules\2/' .config/ryl.toml
+        ignore_error: true
+      - cmd: sed -i -E 's/^([[:space:]]*)ignore([[:space:]]*=)/\1exclude\2/' .config/ryl.toml
+        ignore_error: true
       - cmd: aqua up
         ignore_error: true
       - cmd: aqua upc -prune
@@ -70,6 +77,8 @@ tasks:
       BRANCH_NAME: "chore/bump-{{ date \"2006-01-02\" now}}"
       PR_BODY: |
         - 使用しているツールのバージョンを更新
+        - ryl が更新されてアクションが分離。また設定に少し仕様変更あり
+        - 設定は rumdl と同様に --fix にしているが場合によってはしなくていいところも変更されてしまうことがあるので注意
     cmds:
       - git add -u
       - git commit -m "{{.COMMIT_TITLE}}"
@@ -101,22 +110,22 @@ tasks:
       - date > "{{.LOG_FILE}}"
 
       - echo "$ brew update" 1>> "{{.LOG_FILE}}" 2>&1
-      -         brew update  1>> "{{.LOG_FILE}}" 2>&1
+      - brew update  1>> "{{.LOG_FILE}}" 2>&1
 
       - echo "$ brew outdated --formula" 1>> "{{.LOG_FILE}}" 2>&1
-      -         brew outdated --formula  1>> "{{.LOG_FILE}}" 2>&1
+      - brew outdated --formula  1>> "{{.LOG_FILE}}" 2>&1
 
       - echo "$ brew outdated --cask --greedy-latest" 1>> "{{.LOG_FILE}}" 2>&1
-      -         brew outdated --cask --greedy-latest  1>> "{{.LOG_FILE}}" 2>&1
+      - brew outdated --cask --greedy-latest  1>> "{{.LOG_FILE}}" 2>&1
 
       - echo "$ brew upgrade --yes" 1>> "{{.LOG_FILE}}" 2>&1
-      -         brew upgrade --yes  1>> "{{.LOG_FILE}}" 2>&1
+      - brew upgrade --yes  1>> "{{.LOG_FILE}}" 2>&1
 
       - echo "$ brew cleanup" 1>> "{{.LOG_FILE}}" 2>&1
-      -         brew cleanup  1>> "{{.LOG_FILE}}" 2>&1
+      - brew cleanup  1>> "{{.LOG_FILE}}" 2>&1
 
       - echo "$ brew doctor" 1>> "{{.LOG_FILE}}" 2>&1
-      -         brew doctor  1>> "{{.LOG_FILE}}" 2>&1
+      - brew doctor  1>> "{{.LOG_FILE}}" 2>&1
 
       - echo "$ brew missing" 1>> "{{.LOG_FILE}}" 2>&1
-      -         brew missing  1>> "{{.LOG_FILE}}" 2>&1
+      - brew missing  1>> "{{.LOG_FILE}}" 2>&1

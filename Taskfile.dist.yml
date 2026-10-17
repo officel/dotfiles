@@ -58,7 +58,7 @@ tasks:
         vars:
           TARGET: "{{.TASKFILE_DIR}}/{{.ITEM}}"
           LINK_NAME: "{{.XDG_CONFIG_HOME}}/{{.ITEM}}"
-      - # uchi のディレクトリを決めかねているがとりあえず dist をリンク
+      -  # uchi のディレクトリを決めかねているがとりあえず dist をリンク
         task: _link
         vars:
           TARGET: "{{.TASKFILE_DIR}}/dist"
