@@ -71,3 +71,8 @@ export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
 [[ -f "$XDG_CONFIG_HOME/uchi/profile" ]]   && source "$XDG_CONFIG_HOME/uchi/profile"
 [[ -f "$XDG_CONFIG_HOME/uchi/alias" ]]     && source "$XDG_CONFIG_HOME/uchi/alias"
 [[ -f "$XDG_CONFIG_HOME/uchi/functions" ]] && source "$XDG_CONFIG_HOME/uchi/functions"
+
+# キャッシュ先の実体がなくなったら自動で再検索できるようにする
+# 要は ~/.local/bin から削除したら brew や aqua などを自動で見てくれる
+# uchi でまだシェルの出し分け処理していないのでいったんここに
+shopt -s checkhash

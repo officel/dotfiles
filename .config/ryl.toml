@@ -1,4 +1,4 @@
-ignore = [
+exclude = [
     "backup/",
     "node_modules/",
     "Taskfile.git.yml",
@@ -11,7 +11,13 @@ yaml = [
     ".yamllint",
 ]
 
-[rules]
+[lint]
+fixable = ["ALL"]
+unfixable = [
+    "comments-indentation"
+]
+
+[lint.rules]
 anchors = "enable"
 braces = "enable"
 brackets = "enable"
@@ -29,28 +35,28 @@ octal-values = "disable"
 quoted-strings = "disable"
 trailing-spaces = "enable"
 
-[rules.comments]
+[lint.rules.comments]
 level = "warning"
 
-[rules.comments-indentation]
+[lint.rules.comments-indentation]
 level = "warning"
 
-[rules.empty-lines]
+[lint.rules.empty-lines]
 level = "warning"
 
-[rules.hyphens]
+[lint.rules.hyphens]
 level = "warning"
 # タスクのコマンドを見やすくしたいんだけど悩ましい
 
-[rules.line-length]
+[lint.rules.line-length]
 allow-non-breakable-inline-mappings = false
 allow-non-breakable-words = true
 max = 160
 
-[rules.new-lines]
+[lint.rules.new-lines]
 level = "warning"
 
-[rules.truthy]
+[lint.rules.truthy]
 allowed-values = [
     "true",
     "false",
