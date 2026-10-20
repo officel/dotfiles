@@ -17,6 +17,6 @@ create: 2026-10-17
 - terraform の alias とバッティングしないように注意
 
 ```sh {schema=alias}
-alias tfsc="tfstylus check --recursive --diff"
-alias tfsr="tfstylus run --recursive --diff"
+alias tfsp="tfstylus plan --recursive"
+alias tfsa="tfstylus apply --recursive --diff"
 ```
