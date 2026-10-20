@@ -21,8 +21,7 @@ packages:
   - name: ericchiang/pup@v0.4.0
   - name: newrelic/newrelic-cli@v0.115.2
   - name: marp-team/marp-cli@v4.5.1
-  - name: anchore/grype@v0.120.1
+  - name: anchore/grype@v0.121.0
   - name: miniscruff/changie@v1.26.0
-  - name: github/copilot-cli@v1.0.98
+  - name: github/copilot-cli@v1.0.101
   - name: mitsuhiko/minijinja@3.0.1
-  - name: golangci/golangci-lint@v2.15.0
