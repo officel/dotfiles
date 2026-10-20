@@ -7,13 +7,22 @@ create: 2026-09-07
 
 - [pnpm](https://github.com/pnpm/pnpm)
 - node の package manager
-- インストールは `aqua` に任せるって書いたんだけど、aqua に pnpm の記載がなく、
-  `type` の結果は aqua の PATH にあって、どうやってインストールしたんだっけ？になってる
+- インストールは `aqua` に任せる
 
 ## note
 
 - npm -> yarn -> pnpm
 - v12 で rust 実装になった
+- `pnpm setup` を実行すると aqua でインストールされてる pnpm だとエラーになってしまうっぽい
+- AI に聞いたらパスだけ指定すればいけるってことだったのでそうした
+
+```sh
+export PNPM_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/pnpm"
+export PATH="$PATH:$PNPM_HOME/bin"
+
+pnpm bin -g
+pnpm add -g <使いたいパッケージ>
+```
 
 ## alias
 
@@ -43,4 +52,11 @@ alias pnvm='pnpm env use --global'
 alias pnw='pnpm why'
 alias pnx='pnpm dlx'
 alias aliaspn='alias | grep "pnpm"'
+```
+
+## environment
+
+```sh {schema=env}
+export PNPM_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/pnpm"
+export PATH="$PNPM_HOME/bin:$PATH"
 ```
