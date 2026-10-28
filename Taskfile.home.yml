@@ -75,16 +75,13 @@ tasks:
     vars:
       COMMIT_TITLE: "chore: bump tools version"
       BRANCH_NAME: "chore/bump-{{ date \"2006-01-02\" now}}"
-      PR_BODY: |
-        - 使用しているツールのバージョンを更新
-        - ryl が更新されてアクションが分離。また設定に少し仕様変更あり
-        - 設定は rumdl と同様に --fix にしているが場合によってはしなくていいところも変更されてしまうことがあるので注意
+      PR_BODY_FILE: "{{.TASKFILE_DIR}}/__bump_tool_pr_body.txt"
     cmds:
       - git add -u
       - git commit -m "{{.COMMIT_TITLE}}"
       - git push origin HEAD:refs/heads/{{.BRANCH_NAME}}
       - sleep 1
-      - gh pr create -t "{{.COMMIT_TITLE}}" -b "{{.PR_BODY}}" -H "{{.BRANCH_NAME}}" -B "main"
+      - gh pr create -t "{{.COMMIT_TITLE}}" -F "{{.PR_BODY_FILE}}" -H "{{.BRANCH_NAME}}" -B "main"
       - sleep 1
       - gh pr merge "{{.BRANCH_NAME}}" --auto -s
       - git show
