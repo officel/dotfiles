@@ -20,21 +20,18 @@ tasks:
       - task --list --sort alphanumeric -t {{.TASKFILE}}
     silent: true
 
-  update_repository_tools:
-    desc: "update repository tools"
-    summary: |
-      リポジトリで使用しているツール類を一斉に更新する
-      - aqua-checksums.json は蓄積されるため、一度削除してから更新する
-      - aqua up で aqua.yaml が更新（バージョンアップ）される
-      - aqua upc で aqua-checksums.json が更新される
-      - pinact run -u で .github/workflows/ 下のワークフローなどが更新される
-      - zizmor . で .github/workflows/ 下のワークフローなどがチェックされる
-      - prek update --freeze --include-tag 'v*.*.*' で .pre-commit-config.yaml が更新される
-      - 各ツールがインストールされていなくてエラーになっても無視する（ignore_error: true）
-      - 注: 各コマンドの実行時エラーも無視してしまう（ログは見ましょう）
-      - 注: アップデートされたバージョンが必要なバージョンであるかの確認はしましょう
-      - 注: prek auto-update は廃止になった。update に統一した
-      - 注: prek update の際にリポジトリのタグ付け順序によって必要なバージョンが選択されないケースを確認した。 --include-tag 'v*.*.*' を付けることで回避
+  up:auto:
+    desc: "Update repository tools automatically"
+    aliases:
+      - auto
+      - "= u and p"
+    cmds:
+      - task: up:work
+      - task: up:push
+    dir: "{{.USER_WORKING_DIR}}"
+
+  up:work:
+    desc: "Update repository tools"
     aliases:
       - u
     env:
@@ -42,36 +39,20 @@ tasks:
       GITHUB_TOKEN:
         sh: gh auth token
     cmds:
-      - git fetch --all --prune
-      - git checkout origin/HEAD
-      - cmd: sed -i 's/rhysd/kjanat/g' .pre-commit-config.yaml
-        ignore_error: true
-      - cmd: |
-          sed -i 's/^\([[:space:]]*\)- id: ryl[[:space:]]*$/\1- id: ryl-check\n\1  args: ["--fix"]/' .pre-commit-config.yaml
-        ignore_error: true
-      - cmd: sed -i -E 's/^([[:space:]]*)\[rules(\.|\])/\1[lint.rules\2/' .config/ryl.toml
-        ignore_error: true
-      - cmd: sed -i -E 's/^([[:space:]]*)ignore([[:space:]]*=)/\1exclude\2/' .config/ryl.toml
-        ignore_error: true
-      - cmd: aqua up
-        ignore_error: true
-      - cmd: aqua upc -prune
-        ignore_error: true
-      - cmd: pinact run -u
-        ignore_error: true
-      - cmd: zizmor .
-        ignore_error: true
-      - cmd: prek update --freeze --include-tag 'v*.*.*' --exclude-tag '*-{alpha,beta,rc}*'
-        ignore_error: true
-      - git status
-      - git add -u
+      - task: up:gr
+      - task: up:config
+      - task: up:aqua
+      - task: up:pinact
+      - task: up:zizmor
+      - task: up:prek
+      - task: up:gau
       - prek run -a
     dir: "{{.USER_WORKING_DIR}}"
 
-  bump:
-    desc: "bump version commit"
+  up:push:
+    desc: "Bump tools version commit"
     aliases:
-      - b
+      - p
     vars:
       COMMIT_TITLE: "chore: bump tools version"
       BRANCH_NAME: "chore/bump-{{ date \"2006-01-02\" now}}"
@@ -87,42 +68,66 @@ tasks:
       - git show
     dir: "{{.USER_WORKING_DIR}}"
 
-  auto_update_tools:
-    desc: "auto update tools"
-    aliases:
-      - au
+  up:gr:
     cmds:
-      - task: update_repository_tools
-      - task: bump
+      - git fetch --all --prune
+      - git checkout origin/HEAD
     dir: "{{.USER_WORKING_DIR}}"
 
-  brew:
-    desc: "brew all update"
-    silent: false
-    vars:
-      LOG_FILE: '{{.USER_WORKING_DIR}}/brew_update_{{now | date "20060102"}}.log'
-    env:
-      HOMEBREW_NO_SANDBOX_LINUX: 1
+  up:gau:
     cmds:
-      - date > "{{.LOG_FILE}}"
+      - git status
+      - git add -u
+    dir: "{{.USER_WORKING_DIR}}"
 
-      - echo "$ brew update" 1>> "{{.LOG_FILE}}" 2>&1
-      - brew update  1>> "{{.LOG_FILE}}" 2>&1
+  up:aqua:
+    desc: "update aqua"
+    cmds:
+      - cmd: aqua up
+        ignore_error: true
+      - cmd: aqua upc -prune
+        ignore_error: true
+    dir: "{{.USER_WORKING_DIR}}"
 
-      - echo "$ brew outdated --formula" 1>> "{{.LOG_FILE}}" 2>&1
-      - brew outdated --formula  1>> "{{.LOG_FILE}}" 2>&1
+  up:pinact:
+    summary: |
+      - `.github/workflows/` 下のワークフロー中の使用バージョンを更新
+    cmds:
+      - cmd: pinact run -u
+        ignore_error: true
+    dir: "{{.USER_WORKING_DIR}}"
 
-      - echo "$ brew outdated --cask --greedy-latest" 1>> "{{.LOG_FILE}}" 2>&1
-      - brew outdated --cask --greedy-latest  1>> "{{.LOG_FILE}}" 2>&1
+  up:zizmor:
+    summary: |
+      - `.github/workflows/` 下のワークフローをチェック
+    cmds:
+      - cmd: zizmor .
+        ignore_error: true
+    dir: "{{.USER_WORKING_DIR}}"
 
-      - echo "$ brew upgrade --yes" 1>> "{{.LOG_FILE}}" 2>&1
-      - brew upgrade --yes  1>> "{{.LOG_FILE}}" 2>&1
+  up:prek:
+    desc: "run prek update --freeze"
+    summary: |
+      - .pre-commit-config.yaml を更新
+      - include-tag, exclude-tag でセマンティックバージョニングに基づいたバージョン選択
+      - `-rc` や `-alpha`, `-beta` を除外
+    cmds:
+      - cmd: prek update --freeze --include-tag 'v*.*.*' --exclude-tag '*-{alpha,beta,rc}*'
+        ignore_error: true
+    dir: "{{.USER_WORKING_DIR}}"
 
-      - echo "$ brew cleanup" 1>> "{{.LOG_FILE}}" 2>&1
-      - brew cleanup  1>> "{{.LOG_FILE}}" 2>&1
-
-      - echo "$ brew doctor" 1>> "{{.LOG_FILE}}" 2>&1
-      - brew doctor  1>> "{{.LOG_FILE}}" 2>&1
-
-      - echo "$ brew missing" 1>> "{{.LOG_FILE}}" 2>&1
-      - brew missing  1>> "{{.LOG_FILE}}" 2>&1
+  up:config:
+    summary: |
+      設定ファイル類を最初に更新しておく
+      配布が終わった処理は削除してもよい
+    cmds:
+      - cmd: sed -i 's/rhysd/kjanat/g' .pre-commit-config.yaml
+        ignore_error: true
+      - cmd: |
+          sed -i 's/^\([[:space:]]*\)- id: ryl[[:space:]]*$/\1- id: ryl-check\n\1  args: ["--fix"]/' .pre-commit-config.yaml
+        ignore_error: true
+      - cmd: sed -i -E 's/^([[:space:]]*)\[rules(\.|\])/\1[lint.rules\2/' .config/ryl.toml
+        ignore_error: true
+      - cmd: sed -i -E 's/^([[:space:]]*)ignore([[:space:]]*=)/\1exclude\2/' .config/ryl.toml
+        ignore_error: true
+    dir: "{{.USER_WORKING_DIR}}"
