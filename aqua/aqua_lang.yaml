@@ -10,6 +10,6 @@ packages:
   - name: jqlang/jq@jq-1.8.2
   - name: mikefarah/yq@v4.54.1
   - name: neilotoole/sq@v0.55.0
-  - name: nodejs/node@v26.12.1
-  - name: pnpm/pnpm@v12.16.0
+  - name: nodejs/node@v26.13.0
+  - name: pnpm/pnpm@v12.17.0
   - name: twistedpair/google-cloud-sdk@562.0.0
