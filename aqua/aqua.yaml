@@ -8,7 +8,7 @@ checksum:
     - all
 registries:
   - type: standard
-    ref: v4.578.0  # renovate: depName=aquaproj/aqua-registry
+    ref: v4.579.0  # renovate: depName=aquaproj/aqua-registry
 packages:
   - import: aqua_aws.yaml
   - import: aqua_fav.yaml
@@ -19,11 +19,12 @@ packages:
   - name: cli/cli@v2.103.3
   - name: stateful/runme@v3.17.6
   - name: ericchiang/pup@v0.4.0
-  - name: newrelic/newrelic-cli@v0.115.2
+  - name: newrelic/newrelic-cli@v0.115.7
   - name: marp-team/marp-cli@v4.5.1
   - name: miniscruff/changie@v1.26.0
-  - name: github/copilot-cli@v1.0.104
-  - name: mitsuhiko/minijinja@3.0.4
-  - name: openai/codex@rust-v0.164.0
-  - name: anthropics/claude-code@v2.1.311
-  - name: google-antigravity/antigravity-cli@1.4.8
+  - name: github/copilot-cli@v1.0.105
+  - name: mitsuhiko/minijinja@3.0.5
+  - name: openai/codex@rust-v0.166.0
+  - name: anthropics/claude-code@v2.1.316
+  - name: google-antigravity/antigravity-cli@1.4.12
+  - name: koalaman/shellcheck@v0.11.0
