@@ -62,10 +62,10 @@ tasks:
       - git commit -m "{{.COMMIT_TITLE}}"
       - git push origin HEAD:refs/heads/{{.BRANCH_NAME}}
       - sleep 1
-      - gh pr create -t "{{.COMMIT_TITLE}}" -F "{{.PR_BODY_FILE}}" -H "{{.BRANCH_NAME}}" -B "main"
+      - gh pr create -t "{{.COMMIT_TITLE}}" -F "{{.PR_BODY_FILE}}" -H "{{.BRANCH_NAME}}" -B "main" | tee -a /tmp/{{date "2006-01-02" now}}.log
       - sleep 1
       - gh pr merge "{{.BRANCH_NAME}}" --auto -s
-      - git show
+      - git --no-pager show
     dir: "{{.USER_WORKING_DIR}}"
 
   up:gr:
@@ -127,6 +127,8 @@ tasks:
           sed -i 's/^\([[:space:]]*\)- id: ryl[[:space:]]*$/\1- id: ryl-check\n\1  args: ["--fix"]/' .pre-commit-config.yaml
         ignore_error: true
       - cmd: sed -i -E 's/^([[:space:]]*)\[rules(\.|\])/\1[lint.rules\2/' .config/ryl.toml
+        ignore_error: true
+      - cmd: sed -i 's/^\[\[per-line-ignores\]\]$/[[lint.per-line-ignores]]/' .config/ryl.toml
         ignore_error: true
       - cmd: sed -i -E 's/^([[:space:]]*)ignore([[:space:]]*=)/\1exclude\2/' .config/ryl.toml
         ignore_error: true

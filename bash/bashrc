@@ -66,11 +66,11 @@ unset color_prompt force_color_prompt
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
 
 # 2026-09-06 use uchi
-[[ -f "$XDG_CONFIG_HOME/uchi/env" ]]       && source "$XDG_CONFIG_HOME/uchi/env"
-[[ -f "$XDG_CONFIG_HOME/uchi/rc" ]]        && source "$XDG_CONFIG_HOME/uchi/rc"
-[[ -f "$XDG_CONFIG_HOME/uchi/profile" ]]   && source "$XDG_CONFIG_HOME/uchi/profile"
-[[ -f "$XDG_CONFIG_HOME/uchi/alias" ]]     && source "$XDG_CONFIG_HOME/uchi/alias"
-[[ -f "$XDG_CONFIG_HOME/uchi/functions" ]] && source "$XDG_CONFIG_HOME/uchi/functions"
+[[ -f "$XDG_CONFIG_HOME/uchi/env" ]]      && source "$XDG_CONFIG_HOME/uchi/env"
+[[ -f "$XDG_CONFIG_HOME/uchi/rc" ]]       && source "$XDG_CONFIG_HOME/uchi/rc"
+[[ -f "$XDG_CONFIG_HOME/uchi/profile" ]]  && source "$XDG_CONFIG_HOME/uchi/profile"
+[[ -f "$XDG_CONFIG_HOME/uchi/alias" ]]    && source "$XDG_CONFIG_HOME/uchi/alias"
+[[ -f "$XDG_CONFIG_HOME/uchi/function" ]] && source "$XDG_CONFIG_HOME/uchi/function"
 
 # キャッシュ先の実体がなくなったら自動で再検索できるようにする
 # 要は ~/.local/bin から削除したら brew や aqua などを自動で見てくれる
