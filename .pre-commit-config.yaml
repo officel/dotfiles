@@ -20,7 +20,7 @@ repos:
       - id: check-merge-conflict
 
   - repo: https://github.com/betterleaks/betterleaks
-    rev: 81aff7a638638aae3a659845d089043e1d8fe9ac  # frozen: v1.9.0
+    rev: 8d77e1712fb06fd14444cc648686f1d5655e28a8  # frozen: v1.10.0
     hooks:
       - id: betterleaks
 
@@ -30,7 +30,7 @@ repos:
       - id: actionlint
 
   - repo: https://github.com/zizmorcore/zizmor-pre-commit
-    rev: c92afdf2c6ca336aaa8f39e2bd8d48f62dbd8e1f  # frozen: v1.31.1
+    rev: 06a39750ec31860bb44f2acf67182c40016cd1e7  # frozen: v1.32.0
     hooks:
       - id: zizmor
 
@@ -42,7 +42,7 @@ repos:
       - id: rumdl-fmt
 
   - repo: https://github.com/owenlamont/ryl-pre-commit
-    rev: 3ab4c166a9fd21ec20548f9675a1b3eb56eb361c  # frozen: v0.27.0
+    rev: 28e47001bb1d516a8197b1f60ef6c526029ed9d5  # frozen: v0.29.0
     hooks:
       - id: ryl-check
         args: ["--fix"]
