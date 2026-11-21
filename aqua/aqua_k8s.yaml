@@ -1,7 +1,7 @@
 ---
 # k8s 関係のツール
 packages:
-  - name: argoproj/argo-cd@v3.6.1
+  - name: argoproj/argo-cd@v3.6.2
   - name: Azure/kubelogin@v0.2.22
   - name: derailed/k9s@v0.51.0
   - name: hadolint/hadolint@v2.15.1
