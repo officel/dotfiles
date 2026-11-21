@@ -1,8 +1,8 @@
 ---
 # 開発寄りのツール
 packages:
-  - name: 01mf02/jaq@v3.1.2
-  - name: astral-sh/uv@0.13.8
+  - name: 01mf02/jaq@v3.2.0
+  - name: astral-sh/uv@0.13.9
   - name: golang/go@go1.27.4
   - name: golangci/golangci-lint@v2.15.0
   - name: google/yamlfmt@v0.21.0
@@ -11,5 +11,5 @@ packages:
   - name: mikefarah/yq@v4.54.3
   - name: neilotoole/sq@v0.55.0
   - name: nodejs/node@v26.13.1
-  - name: pnpm/pnpm@v12.21.0
+  - name: pnpm/pnpm@v12.22.0
   - name: twistedpair/google-cloud-sdk@562.0.0

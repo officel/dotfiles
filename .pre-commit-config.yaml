@@ -35,14 +35,14 @@ repos:
       - id: zizmor
 
   - repo: https://github.com/rvben/rumdl-pre-commit
-    rev: df5a947a3af0dba56640e644c6b9316184749168  # frozen: v0.3.4
+    rev: 539ea2e1c5a0eb8adeb5fe0b1e2eb66fa5827042  # frozen: v0.3.5
     hooks:
       - id: rumdl
         args: ["--fix"]
       - id: rumdl-fmt
 
   - repo: https://github.com/owenlamont/ryl-pre-commit
-    rev: 28e47001bb1d516a8197b1f60ef6c526029ed9d5  # frozen: v0.29.0
+    rev: 912c178098b5f856c8e81ec2a5b6e3fdcf240a27  # frozen: v0.30.0
     hooks:
       - id: ryl-check
         args: ["--fix"]
