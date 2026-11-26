@@ -63,6 +63,9 @@ alias gpr='git pr'
 alias gr='git fetch --prune --all && git checkout origin/HEAD && git plog --all -10 && git status'
 alias gss='git show --stat'
 alias gst='git status --short --branch'
+
+# AI 生成したコミットメッセージを開く
+alias gcvc='git commit -v --edit -F .git/copilot-commit-message.txt'
 ```
 
 ## Run Command
