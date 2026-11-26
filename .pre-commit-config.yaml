@@ -30,12 +30,12 @@ repos:
       - id: actionlint
 
   - repo: https://github.com/zizmorcore/zizmor-pre-commit
-    rev: 06a39750ec31860bb44f2acf67182c40016cd1e7  # frozen: v1.32.0
+    rev: c7d31dc612dffdd4d3b2f2b88b9660d3ab057ee8  # frozen: v1.33.1
     hooks:
       - id: zizmor
 
   - repo: https://github.com/rvben/rumdl-pre-commit
-    rev: 539ea2e1c5a0eb8adeb5fe0b1e2eb66fa5827042  # frozen: v0.3.5
+    rev: bee5361e50c9567f79945d8f6f5743b4c77a8bd9  # frozen: v0.3.7
     hooks:
       - id: rumdl
         args: ["--fix"]
